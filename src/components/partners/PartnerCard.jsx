@@ -6,12 +6,11 @@ const PartnerCard = ({
         rate = 26
     }) => {
 
-
   return (
     <Fragment>
-        <div className="partner-1 col-md-6 d-flex">
+        <div className="d-flex">
             <div className="content-left">
-                {/* <img src="images\demo-prof.jpg" alt="Service Provider Img"/> */}
+                {/* <img src=".\images\demo-prof.jpg" alt="Service Provider Img"/> */}
             </div>
             <div className="content-right">
                 <h2 className="partner-name">{ name }</h2>

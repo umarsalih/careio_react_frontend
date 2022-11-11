@@ -1,9 +1,5 @@
 import React, { useState, useEffect, Fragment} from 'react';
-// import { Link } from 'react-router-dom';
-
-const Hero = ({ 
-    //
-}) => {
+const Hero = () => {
   return (
     <Fragment>
         <div className="r-banner">
