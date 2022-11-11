@@ -1,8 +1,11 @@
 import React from 'react'
+import "./signup.css";
 
 function Signup() {
   return (
-    <div>Signup</div>
+    <div>
+      <h1>Signup Header</h1>
+    </div>
   )
 }
 
