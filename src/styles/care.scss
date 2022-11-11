@@ -1,2 +1,8 @@
+// import care variables ex: $CARE_GREEN
+@import "./utils-colors.scss";
+
 // this command imports home styling
-@import "./layout-home.scss"
+@import "./layout-home.scss";
+
+// this command import components styling
+@import "./components/partner-card.scss";

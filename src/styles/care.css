@@ -11,5 +11,32 @@
   min-height: 50vh;
   align-items: center;
 }
+#CareHome .care-partner-tabs .tab-pane:not(.show) {
+  display: none;
+}
+
+.care-partner-card {
+  display: flex;
+  padding: 0;
+  box-shadow: 1rem 1rem 1rem rgba(40, 45, 55, 0.2);
+  margin-bottom: 1rem;
+}
+.care-partner-card .image img {
+  height: 20rem;
+}
+.care-partner-card .meta__outter {
+  display: flex;
+  align-items: center;
+}
+.care-partner-card .meta {
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  text-align: center;
+}
+.care-partner-card .meta li {
+  list-style: none;
+  display: inline;
+}
 
 /*# sourceMappingURL=care.css.map */

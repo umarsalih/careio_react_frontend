@@ -8,24 +8,26 @@ const PartnerCard = ({
 
   return (
     <Fragment>
-        <div className="d-flex">
-            <div className="content-left">
-                {/* <img src=".\images\demo-prof.jpg" alt="Service Provider Img"/> */}
+        <div className="care-partner-card col-md-6">
+            <div className="image">
+                <img src={require('./../../images/demo-prof.jpg')} alt="Service Provider Img"/>
             </div>
-            <div className="content-right">
-                <h2 className="partner-name">{ name }</h2>
-                <ul className="partner-services">
-                    <li>Cleaning</li>
-                    <li>Lawn Maintenance</li>
-                </ul>
-                <p>$<strong>{rate} </strong></p>
-                <button 
-                    type="button" 
-                    className="btn btn-primary"
-                    data-toggle="modal" data-target="#modalBooking"
-                >
-                    Book
-                </button>
+            <div className="meta__outter">
+                <div className='meta'>
+                    <h2 className="partner-name">{ name }</h2>
+                    <ul className="partner-services">
+                        <li>Cleaning</li>
+                        <li>Lawn Maintenance</li>
+                    </ul>
+                    <p>$<strong>{rate} </strong></p>
+                    <button 
+                        type="button" 
+                        className="btn btn-primary"
+                        data-toggle="modal" data-target="#modalBooking"
+                    >
+                        Book
+                    </button>
+                </div>
             </div>
         </div>
     </Fragment>

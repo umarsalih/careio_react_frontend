@@ -13,5 +13,12 @@
             align-items: center;
         }
     }
+    .care-partner-tabs{
+        .tab-pane{
+            &:not(.show){
+                display: none;
+            }
+        }
+    }
 
 }

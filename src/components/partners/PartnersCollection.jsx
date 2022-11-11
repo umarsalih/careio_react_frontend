@@ -4,7 +4,13 @@ import PartnerCard from './PartnerCard'
 const PartnerCollection = () =>{
     return(
         <Fragment>
-            <PartnerCard/>
+            <div className="row">
+                <PartnerCard/>
+                <PartnerCard/>
+                <PartnerCard/>
+                <PartnerCard/>
+                <PartnerCard/>
+            </div>
         </Fragment>
 
     )
