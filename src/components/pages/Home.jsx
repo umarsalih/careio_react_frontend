@@ -11,6 +11,7 @@ const Home = () => {
         <div id="CareHome">
         <div className="careio__superwrapper">
             <div className="hero__holder">
+                <Hero/>
             </div>
             <div className="careio__body">
                 <TabsPartners/>
