@@ -1,9 +1,10 @@
-import React, { useState, useEffect, Fragment} from 'react';
+import React, {Fragment} from 'react';
 
 const PartnerCard = ({
         name = "John Smith",
         services = ["Carpentry", "Moving"],
-        rate = 26
+        rate = 26,
+        id = 1
     }) => {
 
   return (
@@ -20,12 +21,12 @@ const PartnerCard = ({
                         <li>Lawn Maintenance</li>
                     </ul>
                     <p>$<strong>{rate} </strong></p>
-                    <button 
-                        type="button" 
-                        className="btn btn-primary"
-                        data-toggle="modal" data-target="#modalBooking"
-                    >
-                        Book
+                    
+                    <button type="button" 
+                        className="btn btn-primary" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#bookingModal">
+                      Book
                     </button>
                 </div>
             </div>

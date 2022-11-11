@@ -1,17 +1,17 @@
-#CareHome .care-hero {
+#CareIOHome .care-hero {
   background-image: url("./../images/banner1.jpg");
   background-size: cover;
   margin: 0;
   background-position: center;
 }
-#CareHome .care-hero__inner {
+#CareIOHome .care-hero__inner {
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   background-color: rgba(255, 255, 255, 0.5);
   min-height: 50vh;
   align-items: center;
 }
-#CareHome .care-partner-tabs .tab-pane:not(.show) {
+#CareIOHome .care-partner-tabs .tab-pane:not(.show) {
   display: none;
 }
 
