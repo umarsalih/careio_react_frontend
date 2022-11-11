@@ -1,7 +1,12 @@
 import React, { useState, useEffect, Fragment} from 'react';
 
-const PartnerCard = (props) => {
-    const {name, services, price} = props
+const PartnerCard = ({
+        name = "John Smith",
+        services = ["Carpentry", "Moving"],
+        rate = 26
+    }) => {
+
+
   return (
     <Fragment>
         <div className="partner-1 col-md-6 d-flex">
@@ -9,12 +14,12 @@ const PartnerCard = (props) => {
                 {/* <img src="images\demo-prof.jpg" alt="Service Provider Img"/> */}
             </div>
             <div className="content-right">
-                <h2 className="partner-name">{name}</h2>
+                <h2 className="partner-name">{ name }</h2>
                 <ul className="partner-services">
                     <li>Cleaning</li>
                     <li>Lawn Maintenance</li>
                 </ul>
-                <p>$<strong>24</strong></p>
+                <p>$<strong>{rate} </strong></p>
                 <button 
                     type="button" 
                     className="btn btn-primary"

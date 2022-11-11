@@ -14,11 +14,6 @@ const Home = () => {
             </div>
             <div className="careio__body">
                 <TabsPartners/>
-                <PartnerCard
-                    name="John Smith"
-                    services={["Carpentry", "Moving"]}
-                    rate="26"
-                />
             </div>
             { /* end of careio__body */ }
             <div id="CareIOMOdals">
