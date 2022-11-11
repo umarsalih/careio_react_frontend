@@ -21,10 +21,15 @@
   box-shadow: 1rem 1rem 1rem rgba(40, 45, 55, 0.2);
   margin-bottom: 1rem;
 }
+.care-partner-card .image {
+  width: 50%;
+}
 .care-partner-card .image img {
-  height: 20rem;
+  width: 100%;
+  min-width: 10rem;
 }
 .care-partner-card .meta__outter {
+  width: 50%;
   display: flex;
   align-items: center;
 }

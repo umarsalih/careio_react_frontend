@@ -14,6 +14,13 @@ const Hero = () => {
                             <a href="/signup" className="btn btn-primary">
                                 Sign Up
                             </a>
+                            &nbsp;
+                            <button type="button" 
+                                className="btn btn-primary" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#loginModal">
+                                Log In
+                            </button>
                         </div>
                     </div>
                 </div>

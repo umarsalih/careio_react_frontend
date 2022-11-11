@@ -3,10 +3,14 @@ import React, { Fragment } from 'react'
 export default function BookingModal() {
   return (
     <Fragment>
-        <div className="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog">
+        <div className="modal fade" id="bookingModal" tabIndex="-1" aria-labelledby="bookingModal" aria-hidden="true">
+
+            <div className="modal-dialog p-5">
                 <div className="modal-content">
-                    <div className="modal-body p-0">
+                    
+                    <button type="button" className="btn-close align-self-end d-inline p-2" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    <div className="modal-body p-5">
                         <div className="row m-0">
                         <div id="bookingForm" className="x-col-md-8 p-5">
                             <h3>
@@ -53,7 +57,7 @@ export default function BookingModal() {
                             <h4>Appointment Time</h4>
                             <div className="form-group d-flex">
                                 <div className="booking-input--start-time mr-4 ">
-                                    <label for="inputStartIme">Start time</label>
+                                    <label htmlFor="inputStartIme">Start time</label>
                                     <select className="form-control" id="inputStartTime">
                                     <option>7 am</option>
                                     <option>8 am</option>
@@ -64,7 +68,7 @@ export default function BookingModal() {
                                 </div>
                                 <div>&nbsp;</div>
                                 <div className="booking-input--end-time">
-                                    <label for="inputStartIme">End time</label>
+                                    <label htmlFor="inputStartIme">End time</label>
                                     <select className="form-control" id="inputEndTime">
                                     <option>4 pm</option>
                                     <option>5 pm</option>

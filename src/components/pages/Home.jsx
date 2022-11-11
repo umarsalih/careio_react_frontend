@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import Hero from '../home/Hero'
 import TabsPartners from './../home/TabsPartners'
 import BookingModal from './../booking/BookingModal'
+import LoginModal from './../login/LoginModal'
 
 const Home = () => {
-    const showBooking = useState(false)
+    
     return (
         <Fragment>
             <div id="CareIOHome">
@@ -17,15 +18,10 @@ const Home = () => {
                         <TabsPartners/>
                     </div>
                     { /* end of careio__body */ }
-                    <div id="CareIOMOdals">
-                        <div id="CareIOModalLogin" className="careio__modal-holder">
-                            { /* Sign up modal dynamically loaded here*/ }
-                        </div> 
-                        <div id="CareIOModalBooking" className="careio__modal-holder">
-                            <BookingModal/>
-                        </div> 
-                        { /* <div className="modal-backdrop fade show"></div> */ }
 
+                    <div id="CareIOMOdals">
+                        <LoginModal/>
+                        <BookingModal/>
                     </div>
                 </div>    
             </div>
