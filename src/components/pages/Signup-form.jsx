@@ -37,7 +37,7 @@ function SignupForm() {
                             id='home'
                             role="tabpanel"
                             aria-labelledby='home-tab'>
-                            <div className='formElementContainer'>
+                            <div className='formElementsContainer'>
                                 <input type="text" placeholder="First name"/>
 
                                 <input type="text" placeholder="Last name"/>
@@ -63,7 +63,7 @@ function SignupForm() {
                             aria-labelledby="profile-tab">
 
                             <div className="formElementsContainer">
-                                <input type="text" placeholder="First name"/>
+                                <input type="text" placeholder="First name toto"/>
 
                                 <input type="text" placeholder="Last name"/>
 
