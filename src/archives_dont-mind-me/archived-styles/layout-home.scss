@@ -1,4 +1,14 @@
-#CareHome{
+#CareIOHome{
+    
+    .care-hero{
+        border: 1px solid red;
+        .logo__holder{
+            max-width: 10rem;
+            img{
+                width: 100%;
+            }
+        }
+    }
     .careio-partner-catalogue{
         h2{
             font-height: 18px;

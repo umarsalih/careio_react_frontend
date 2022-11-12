@@ -11,6 +11,8 @@ export default function BookingModal() {
 
     const [startDate, setStartDate] = useState(new Date());
     const [bookingDetails, setBookingDetails] = useState({
+        timeEnd: '09:00',
+        timeStart: '07:00',
         ...bookingMeta,
         date: startDate.toDateString(),
         selectedServices: []
@@ -22,13 +24,12 @@ export default function BookingModal() {
     const [jobLength, setJobLength] = useState(2);
 
     useEffect(()=>{
+        if(!bookingDetails.timeStart || !bookingDetails.timeEnd) return
         let strInt = `${bookingDetails.timeStart}`.replace(':00', '')
         strInt = parseInt(strInt)
         let endInt = `${bookingDetails.timeEnd}`.replace(':00', '')
         endInt = parseInt(endInt)
-        console.log({strInt, endInt})
-        
-        setJobLength(endInt-strInt)
+        if (endInt && strInt) setJobLength(endInt-strInt)
     }, [bookingDetails.timeStart, bookingDetails.timeEnd])
 
 
@@ -79,17 +80,17 @@ export default function BookingModal() {
         
         <div className="modal modal-lg fade" id="bookingModal" tabIndex="-1" aria-labelledby="bookingModal" aria-hidden="true">
 
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <button type="button" className="btn-close align-self-end d-inline p-2" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div className="modal-body p-2">
+            <div className="modal-dialog modal-dialog-centered">
+                <div className="modal-content p-0">
+                    <button type="button" className="btn-close btn-close-white align-self-end d-inline p-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div className="modal-body p-0">
                         <div className="row m-0">
-                        <div id="bookingForm" className="col-md-6 p-4">
+                        <div id="bookingForm" className="col-md-6">
                             <h3>
                             Booking {partner.firstName} {partner.lastName}
                             </h3>
 
-                            <div className='text-left'>
+                            <div className='booking-form text-left'>
                                 <div className="my-4">
                                     <h4>Price Per Hour</h4>
                                     $<strong id="partnerRate">{partner.rate}</strong>/hr
@@ -100,7 +101,7 @@ export default function BookingModal() {
                                     <div id="partnerServices" className="form-group">
                                         {
                                             partner.services.map( (serv, i) =>(
-                                                <div className="form-check d-inline-block mx-3">
+                                                <div className="form-check d-inline-block mr-3">
                                                     <input className="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
                                                     <label className="form-check-label">{serv}</label>
                                                 </div>
@@ -162,7 +163,7 @@ export default function BookingModal() {
                                         >
                                             {
                                                 operatingHours.map((timeObj, i) => {
-                                                    if(i >2) return (
+                                                    if(i >= 2) return (
                                                         <option 
                                                             value={timeObj.val} 
                                                             className={`time-opts time-${i+6}`} data-index={i}
@@ -180,23 +181,27 @@ export default function BookingModal() {
                                 </div>
                             </div>
                         </div>
-                        <div id="bookingSummary" className="booking-summary col-md-6 bg--dark p-4">
-                            <h3>Your booking details</h3>
-                            <div className='partner-details'>
-                                <div className='img-holder' 
-                                >
-                                    {/*     style={`backgroundImage: url({require('./../../images/partners/partner-${partner.partnerId}.jpg')`} */}
+                        <div id="bookingSummary" className="booking-summary col-md-6 bg--dark">
+                            <div>
+                                <h3>Your booking details</h3>
+                                <div className='partner-details my-4'>
+                                    <div className='img-holder' 
+                                    >
+                                        <img src={require(`./../../images/partners/partner-${partner.partnerId}.jpg`)} alt={partner.firstName}/>
+                                    </div>
+                                    
+                                    <div>
+                                        <strong>{partner.firstName} {partner.lastName}</strong>
+                                        <p>{partner.desc}</p>
+                                    </div>
                                 </div>
-                                
-                                <div>
-                                    <strong>{partner.firstName} {partner.lastName}</strong>
-                                    <p>{partner.desc}</p>
+                                <div className='booking-summary-meta'>
+                                    <h4>You are booking {partner.firstName} for {jobLength} hours for the total price of ${jobLength*partner.rate} on {bookingDetails.date}</h4>
+                                    
+                                    <button id="SubmitBooking" className="login btn btn-primary
+                                    my-2">Book</button>
                                 </div>
                             </div>
-                            <p>You are booking {partner.firstName} for {jobLength} hours for the total price of ${jobLength*partner.rate} on {bookingDetails.date}</p>
-
-                            <button id="SubmitBooking" className="login btn btn-primary">Book</button>
-
                         </div>
 
                         </div>

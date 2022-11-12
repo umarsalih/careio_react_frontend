@@ -13,9 +13,9 @@ export default function LoginModal() {
   return (
     <Fragment>
         <div className="modal fade" id="loginModal" tabIndex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
-            <div className="modal-dialog">
+            <div className="modal-dialog modal-dialog-centered">
                 <div className="modal-content">
-                    <button type="button" className="btn-close align-self-end d-inline p-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" className="btn-close btn-close-white align-self-end d-inline p-2" data-bs-dismiss="modal" aria-label="Close"></button>
                     
                     <div className="modal-body p-5">
                     <h3>
@@ -34,7 +34,7 @@ export default function LoginModal() {
                             id="submitLogin" 
                             x-type="submit" 
                             data-bs-dismiss="modal"
-                            className="login btn btn-primary"
+                            className="login btn btn-primary my-2"
                             onClick={login}
                         >
                                 Log In

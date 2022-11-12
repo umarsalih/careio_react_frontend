@@ -26,14 +26,17 @@ const PartnerCard = ({
 
   return (
     <Fragment>
-        <div className="care-partner-card col-md-6 p-0">
+        <div className="care-partner-card__outter mx-md-4 col-md-12 mx-lg-0 col-lg-6 p-1">
+        <div className='care-partner-card'>
             <div className="image">
                 <img src={require(`./../../images/partners/partner-${partnerId}.jpg`)} alt={firstName}/>
             </div>
             <div className="meta__outter">
                 <div className='meta'>
                     <h4 className="partner-name">{firstName} {lastName}</h4>
-                    <h5>{desc}</h5>
+                    <h5><strong>${rate}</strong><small>/hr</small></h5>
+                    <p>{desc}</p>
+                    
                     <ul className="partner-services">
                         {
                             services.map( (s, i) => (
@@ -41,7 +44,7 @@ const PartnerCard = ({
                             ))
                         }
                     </ul>
-                    <p>$<strong>{rate} </strong></p>
+                    
 
                     {isLogged ?
                         <button type="button" 
@@ -74,6 +77,9 @@ const PartnerCard = ({
                 </div>
             </div>
         </div>
+        </div>
+        {/* end */}
+        
     </Fragment>
     
   )

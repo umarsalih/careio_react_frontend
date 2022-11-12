@@ -1,6 +1,7 @@
 .modal{
     .care--modal-close__wrapper{
         color:#fff;
+        border: 0 none !important;
         background-color: transparent;
         height: 2rem;
         margin-top: -2rem;
@@ -8,17 +9,19 @@
         display: flex;
         justify-content: flex-end;
     }
-    button.close{
+    button.btn-close{
+        position: absolute;
+        margin-top: -3rem;
+        background-color: transparent !important;
+        padding: 0.25rem !important;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 1rem;
         border: none;
-        background-color: transparent;
-        font-size: 24px;
-        color: $CARE_LIGHTEST;
-    }
-    h4{
-        font-weight: 400;
-        font-size: 13px;
-        letter-spacing: 3px;
-        text-transform: uppercase;
+        &:hover{
+            border-color: transparent;
+            outline-color: transparent;
+        }
     }
     .modal-content{
         border: none
@@ -29,15 +32,22 @@
             margin-top: 2rem;
         }
     }
-    &#modalBooking{
+    &#bookingModal{
         .modal-dialog{
-            min-width: 50%;
+            text-align: left
         }
-
-        #bookingForm{
-            width: auto;
-            h4, div{
-                text-align: left !important;
+        .modal-body>.row>div{
+            padding: 3rem;
+        }
+        .booking-form{
+            h4{
+                font-weight: 400;
+                font-size: 13px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+            .form-check{
+                margin-right: 1rem;
             }
         }
         #bookingDatepicker{
@@ -45,15 +55,46 @@
             max-width: 240px;
         }
         .booking-summary{
-            border-bottom-right-radius: 8px;
-            border-top-right-radius: 8px;
+            border-bottom-right-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+            background-color: $CARE_BLACK;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            
+            h3, h2, h4{
+                color: #fff;
+            }
+            
+            .booking-summary-meta{
+                text-align: center;
+                h4{
+                    font-size: 1.5rem;
+                    font-weight: 100;
+                }
+            }
             .partner-details{
-                background-color: $CARE_LIGHTEST;
+                display: flex;
+                align-items: center;
+                background-color: $CARE_SHADOW;
                 padding: 1rem;
-                img{
-                    height: 2rem;
-                    width: 2rem;
-                    border-radius: 2rem;
+                border-radius: 0.5rem;
+                margin-bottom: 1rem;
+                strong, p{
+                    color: $CARE_LIGHT;
+                }
+                .img-holder{
+                    height: 5rem;
+                    width: 5rem;
+                    min-height: 5rem;
+                    min-width: 5rem;
+                    border-radius: 5rem;
+                    margin-right: 0.5rem;
+                    overflow: hidden;
+                    img{
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
                 }
             }
         }
