@@ -1,0 +1,208 @@
+#CareIOHome button:not(.react-datepicker__navigation), #CareIOHome .btn, #CareIOHome .btn-primary {
+  background-color: #5FAB8F;
+  border: 0;
+  padding: 1rem 3rem;
+}
+#CareIOHome .careio__body {
+  background-color: #F7F7F2;
+}
+#CareIOHome .care-hero {
+  background-image: url("./../images/banner1.jpg");
+  background-size: cover;
+  margin: 0;
+  background-position: center;
+}
+#CareIOHome .care-hero__inner {
+  background-color: rgba(60, 79, 117, 0.8);
+  display: flex;
+  min-height: 50vh;
+  align-items: center;
+}
+#CareIOHome .care-hero__inner h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+#CareIOHome .care-hero .logo__holder {
+  margin: 0 auto;
+  max-width: 10rem;
+  margin-bottom: 1rem;
+}
+#CareIOHome .care-hero .logo__holder img {
+  width: 100%;
+}
+#CareIOHome .care-partner-tabs .nav-link {
+  background-color: #F7F7F2;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: #3C4F75;
+}
+#CareIOHome .care-partner-tabs .nav-link i {
+  color: #3C4F75;
+}
+#CareIOHome .care-partner-tabs .nav-link.active {
+  color: #fff;
+  background-color: #3C4F75;
+}
+#CareIOHome .care-partner-tabs .nav-link.active i {
+  color: #fff;
+}
+#CareIOHome .care-partner-tabs .tab-pane:not(.show) {
+  display: none;
+}
+
+.modal .care--modal-close__wrapper {
+  color: #fff;
+  border: 0 none !important;
+  background-color: transparent;
+  height: 2rem;
+  margin-top: -2rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.modal button.btn-close {
+  position: absolute;
+  margin-top: -3rem;
+  background-color: transparent !important;
+  padding: 0.25rem !important;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  border: none;
+}
+.modal button.btn-close:hover {
+  border-color: transparent;
+  outline-color: transparent;
+}
+.modal .modal-content {
+  border: none;
+}
+.modal#modalLogin button.login {
+  margin-top: 2rem;
+}
+.modal#bookingModal .modal-dialog {
+  text-align: left;
+}
+.modal#bookingModal .modal-body > .row > div {
+  padding: 3rem;
+}
+.modal#bookingModal .booking-form h4 {
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.modal#bookingModal .booking-form .form-check {
+  margin-right: 1rem;
+}
+.modal#bookingModal .booking-form .react-datepicker__input-container input, .modal#bookingModal .booking-form .react-datepicker-ignore-onclickoutside {
+  padding: 1rem;
+  outline: none;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+.modal#bookingModal #bookingDatepicker {
+  z-index: 1;
+  max-width: 240px;
+}
+.modal#bookingModal .booking-summary {
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: #222;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.modal#bookingModal .booking-summary h3, .modal#bookingModal .booking-summary h2, .modal#bookingModal .booking-summary h4 {
+  color: #fff;
+}
+.modal#bookingModal .booking-summary .booking-summary-meta {
+  text-align: center;
+}
+.modal#bookingModal .booking-summary .booking-summary-meta h4 {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.modal#bookingModal .booking-summary .partner-details {
+  display: flex;
+  align-items: center;
+  background-color: rgba(40, 45, 55, 0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.modal#bookingModal .booking-summary .partner-details strong, .modal#bookingModal .booking-summary .partner-details p {
+  color: #BEBEBE;
+}
+.modal#bookingModal .booking-summary .partner-details .img-holder {
+  height: 5rem;
+  width: 5rem;
+  min-height: 5rem;
+  min-width: 5rem;
+  border-radius: 5rem;
+  margin-right: 0.5rem;
+  overflow: hidden;
+}
+.modal#bookingModal .booking-summary .partner-details .img-holder img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#ui-datepicker-div {
+  filter: drop-shadow(12px 12px 40px #282D37);
+}
+
+.care-partner-card {
+  display: flex;
+  padding: 0;
+  box-shadow: 0.25rem 0.75rem 0.75rem rgba(40, 45, 55, 0.1);
+  margin-bottom: 1rem;
+  background-color: #fff;
+}
+.care-partner-card .image {
+  max-width: 45%;
+  text-align: left;
+}
+.care-partner-card .image img {
+  width: 100%;
+  min-width: 10rem;
+}
+.care-partner-card .meta__outter {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+.care-partner-card .meta {
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  text-align: center;
+}
+.care-partner-card .meta ul {
+  padding-left: 0;
+  padding-right: 0;
+}
+.care-partner-card .meta li {
+  list-style: none;
+  display: inline-block;
+  font-size: 0.875rem;
+  background-color: rgba(60, 79, 117, 0.2);
+  color: #3C4F75;
+  padding: 2px 8px;
+  text-transform: capitalize;
+  border-radius: 4px;
+  margin: 2px 4px;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #666;
+  font-weight: 400;
+}
+* h1, * h2, * h3, * h4, * h5 {
+  color: #282D37;
+}
+
+/*# sourceMappingURL=care.css.map */

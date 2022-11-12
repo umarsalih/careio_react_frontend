@@ -1,0 +1,61 @@
+#CareIOHome{
+    //utils
+    button:not(.react-datepicker__navigation), .btn, .btn-primary{
+        background-color: $CARE_GREEN;
+        border: 0;
+        padding: 1rem 3rem;
+    }
+    .careio__body{
+        background-color: $CARE_LIGHTEST;
+    }
+    .care-hero{
+        background-image: url("./../images/banner1.jpg");
+        background-size: cover;
+        margin: 0;
+        background-position: center;
+        &__inner{
+            background-color: $CARE_PURPLE_TRANS_DARK;
+            display: flex;
+            min-height: 50vh;
+            align-items: center;
+            h1{
+                color: #fff;
+                font-size: 2.5rem;
+                font-weight: 200;
+            }
+        }
+        .logo__holder{
+            margin: 0 auto;
+            max-width: 10rem;
+            margin-bottom: 1rem;
+            img{
+                width: 100%;
+            }
+        }
+        
+    }
+    .care-partner-tabs{
+        .nav-link{
+            background-color: $CARE_LIGHTEST;
+            margin: 0 0.5rem;
+            border-radius: 0.5rem 0.5rem 0 0;
+            color: $CARE_PURPLE;
+            i{
+                color: $CARE_PURPLE;
+            }
+            &.active{ 
+                color: #fff;
+                background-color: $CARE_PURPLE;
+                i{
+                    color: #fff;
+                }
+            }
+        }
+        .tab-pane{
+            &:not(.show){
+                display: none;
+            }
+        }
+    }
+
+}

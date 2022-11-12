@@ -1,0 +1,521 @@
+[{
+  "partner_id": 1,
+  "first_name": "Rollie",
+  "last_name": "Shedd",
+  "email": "rshedd0@rediff.com",
+  "hourly_rate": 51.28,
+  "services": [
+    "moving",
+    "manicure and pedicure",
+    "cleaning"
+  ],
+  "service_categories": "care aid",
+  "desc": "Customizable next generation capability"
+}, {
+  "partner_id": 2,
+  "first_name": "Nicoline",
+  "last_name": "Gleave",
+  "email": "ngleave1@xing.com",
+  "hourly_rate": 18.88,
+  "services": [
+    "massage and facials",
+    "nanny service",
+    "aged care"
+  ],
+  "service_categories": "care aid",
+  "desc": "Compatible full-range extranet"
+}, {
+  "partner_id": 3,
+  "first_name": "Karolina",
+  "last_name": "Govett",
+  "email": "kgovett2@netscape.com",
+  "hourly_rate": 67.51,
+  "services": [
+    "massage and facials",
+    "lawn maintenance",
+    "moving"
+  ],
+  "service_categories": "care aid",
+  "desc": "Mandatory full-range application"
+}, {
+  "partner_id": 4,
+  "first_name": "Claude",
+  "last_name": "Itzcak",
+  "email": "citzcak3@opera.com",
+  "hourly_rate": 15.9,
+  "services": [
+    "haircut",
+    "manicure and pedicure",
+    "aged care"
+  ],
+  "service_categories": "care aid",
+  "desc": "Monitored well-modulated function"
+}, {
+  "partner_id": 5,
+  "first_name": "Bealle",
+  "last_name": "Bonner",
+  "email": "bbonner4@imgur.com",
+  "hourly_rate": 33.45,
+  "services": [
+    "manicure and pedicure",
+    "cleaning",
+    "lawn maintenance"
+  ],
+  "service_categories": "care aid",
+  "desc": "Expanded zero defect matrix"
+}, {
+  "partner_id": 6,
+  "first_name": "Joanne",
+  "last_name": "Merrgen",
+  "email": "jmerrgen5@bizjournals.com",
+  "hourly_rate": 34.05,
+  "services": [
+    "manicure and pedicure",
+    "lawn maintenance",
+    "nanny service"
+  ],
+  "service_categories": "grooming",
+  "desc": "Fundamental transitional archive"
+}, {
+  "partner_id": 7,
+  "first_name": "Alisander",
+  "last_name": "Olyff",
+  "email": "aolyff6@w3.org",
+  "hourly_rate": 46.3,
+  "services": [
+    "manicure and pedicure",
+    "massage and facials",
+    "nanny service"
+  ],
+  "service_categories": "grooming",
+  "desc": "Extended disintermediate benchmark"
+}, {
+  "partner_id": 8,
+  "first_name": "Garvey",
+  "last_name": "Graffham",
+  "email": "ggraffham7@jiathis.com",
+  "hourly_rate": 53.85,
+  "services": [
+    "repairs",
+    "nanny service",
+    "moving"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Compatible coherent budgetary management"
+}, {
+  "partner_id": 9,
+  "first_name": "Diannne",
+  "last_name": "Clemmett",
+  "email": "dclemmett8@unc.edu",
+  "hourly_rate": 62.28,
+  "services": [
+    "massage and facials",
+    "moving",
+    "cleaning"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Reduced even-keeled utilisation"
+}, {
+  "partner_id": 10,
+  "first_name": "Guido",
+  "last_name": "Thornebarrow",
+  "email": "gthornebarrow9@blogtalkradio.com",
+  "hourly_rate": 74.96,
+  "services": [
+    "haircut",
+    "repairs",
+    "massage and facials"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Public-key mobile help-desk"
+}, {
+  "partner_id": 11,
+  "first_name": "Susanne",
+  "last_name": "Mc Cahey",
+  "email": "smccaheya@jimdo.com",
+  "hourly_rate": 32.23,
+  "services": [
+    "moving",
+    "lawn maintenance",
+    "nanny service"
+  ],
+  "service_categories": "grooming",
+  "desc": "Reduced discrete initiative"
+}, {
+  "partner_id": 12,
+  "first_name": "Kariotta",
+  "last_name": "Heaney`",
+  "email": "kheaneyb@wiley.com",
+  "hourly_rate": 22.02,
+  "services": [
+    "moving",
+    "manicure and pedicure",
+    "haircut"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Focused grid-enabled support"
+}, {
+  "partner_id": 13,
+  "first_name": "Atlante",
+  "last_name": "Stickland",
+  "email": "asticklandc@deviantart.com",
+  "hourly_rate": 35.14,
+  "services": [
+    "nanny service",
+    "moving",
+    "aged care"
+  ],
+  "service_categories": "grooming",
+  "desc": "Assimilated leading edge parallelism"
+}, {
+  "partner_id": 14,
+  "first_name": "Danice",
+  "last_name": "Hlavecek",
+  "email": "dhlavecekd@cnet.com",
+  "hourly_rate": 18.51,
+  "services": [
+    "manicure and pedicure",
+    "repairs",
+    "moving"
+  ],
+  "service_categories": "care aid",
+  "desc": "Function-based eco-centric methodology"
+}, {
+  "partner_id": 15,
+  "first_name": "Wynnie",
+  "last_name": "Duffyn",
+  "email": "wduffyne@storify.com",
+  "hourly_rate": 29.66,
+  "services": [
+    "lawn maintenance",
+    "aged care",
+    "cleaning"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Self-enabling attitude-oriented architecture"
+}, {
+  "partner_id": 16,
+  "first_name": "Odelia",
+  "last_name": "Carlick",
+  "email": "ocarlickf@godaddy.com",
+  "hourly_rate": 16.7,
+  "services": [
+    "aged care",
+    "repairs",
+    "nanny service"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Business-focused heuristic infrastructure"
+}, {
+  "partner_id": 17,
+  "first_name": "Shae",
+  "last_name": "Dowyer",
+  "email": "sdowyerg@amazon.de",
+  "hourly_rate": 30.42,
+  "services": [
+    "manicure and pedicure",
+    "moving",
+    "nanny service"
+  ],
+  "service_categories": "care aid",
+  "desc": "Pre-emptive dedicated productivity"
+}, {
+  "partner_id": 18,
+  "first_name": "Salmon",
+  "last_name": "Fleckney",
+  "email": "sfleckneyh@geocities.jp",
+  "hourly_rate": 33.74,
+  "services": [
+    "aged care",
+    "cleaning",
+    "lawn maintenance"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Vision-oriented reciprocal database"
+}, {
+  "partner_id": 19,
+  "first_name": "Maurizia",
+  "last_name": "Lamberth",
+  "email": "mlamberthi@reuters.com",
+  "hourly_rate": 43.67,
+  "services": [
+    "aged care",
+    "manicure and pedicure",
+    "haircut"
+  ],
+  "service_categories": "grooming",
+  "desc": "Business-focused bi-directional capability"
+}, {
+  "partner_id": 20,
+  "first_name": "Flora",
+  "last_name": "O'Hallihane",
+  "email": "fohallihanej@alexa.com",
+  "hourly_rate": 67.45,
+  "services": [
+    "repairs",
+    "massage and facials",
+    "lawn maintenance"
+  ],
+  "service_categories": "care aid",
+  "desc": "Upgradable radical moderator"
+}, {
+  "partner_id": 21,
+  "first_name": "Cyndi",
+  "last_name": "Fishpoole",
+  "email": "cfishpoolek@washington.edu",
+  "hourly_rate": 68.28,
+  "services": [
+    "repairs",
+    "cleaning",
+    "lawn maintenance"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Networked solution-oriented functionalities"
+}, {
+  "partner_id": 22,
+  "first_name": "El",
+  "last_name": "Bigglestone",
+  "email": "ebigglestonel@booking.com",
+  "hourly_rate": 62.25,
+  "services": [
+    "lawn maintenance",
+    "aged care",
+    "moving"
+  ],
+  "service_categories": "care aid",
+  "desc": "Balanced mission-critical archive"
+}, {
+  "partner_id": 23,
+  "first_name": "Jeanine",
+  "last_name": "Sturte",
+  "email": "jsturtem@seattletimes.com",
+  "hourly_rate": 51.42,
+  "services": [
+    "cleaning",
+    "aged care",
+    "manicure and pedicure"
+  ],
+  "service_categories": "care aid",
+  "desc": "Re-engineered bi-directional data-warehouse"
+}, {
+  "partner_id": 24,
+  "first_name": "Demetra",
+  "last_name": "Gledhill",
+  "email": "dgledhilln@github.com",
+  "hourly_rate": 22.14,
+  "services": [
+    "manicure and pedicure",
+    "aged care",
+    "lawn maintenance"
+  ],
+  "service_categories": "care aid",
+  "desc": "Fully-configurable static neural-net"
+}, {
+  "partner_id": 25,
+  "first_name": "Carolin",
+  "last_name": "Beauvais",
+  "email": "cbeauvaiso@businessweek.com",
+  "hourly_rate": 56.44,
+  "services": [
+    "lawn maintenance",
+    "aged care",
+    "massage and facials"
+  ],
+  "service_categories": "grooming",
+  "desc": "Balanced impactful implementation"
+}, {
+  "partner_id": 26,
+  "first_name": "Happy",
+  "last_name": "Molan",
+  "email": "hmolanp@newyorker.com",
+  "hourly_rate": 56.38,
+  "services": [
+    "moving",
+    "nanny service",
+    "cleaning"
+  ],
+  "service_categories": "care aid",
+  "desc": "Stand-alone homogeneous functionalities"
+}, {
+  "partner_id": 27,
+  "first_name": "Quentin",
+  "last_name": "Filipov",
+  "email": "qfilipovq@phoca.cz",
+  "hourly_rate": 57.12,
+  "services": [
+    "manicure and pedicure",
+    "repairs",
+    "lawn maintenance"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Universal web-enabled productivity"
+}, {
+  "partner_id": 28,
+  "first_name": "Betty",
+  "last_name": "Szymaniak",
+  "email": "bszymaniakr@ibm.com",
+  "hourly_rate": 74.75,
+  "services": [
+    "massage and facials",
+    "repairs",
+    "nanny service"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Innovative 24/7 time-frame"
+}, {
+  "partner_id": 29,
+  "first_name": "Arnold",
+  "last_name": "Marling",
+  "email": "amarlings@usa.gov",
+  "hourly_rate": 26.29,
+  "services": [
+    "lawn maintenance",
+    "haircut",
+    "nanny service"
+  ],
+  "service_categories": "grooming",
+  "desc": "Universal secondary hub"
+}, {
+  "partner_id": 30,
+  "first_name": "Maisey",
+  "last_name": "Lightewood",
+  "email": "mlightewoodt@nytimes.com",
+  "hourly_rate": 59.57,
+  "services": [
+    "cleaning",
+    "aged care",
+    "haircut"
+  ],
+  "service_categories": "grooming",
+  "desc": "Multi-tiered executive adapter"
+}, {
+  "partner_id": 31,
+  "first_name": "Lazaro",
+  "last_name": "Stanbridge",
+  "email": "lstanbridgeu@cocolog-nifty.com",
+  "hourly_rate": 51.75,
+  "services": [
+    "lawn maintenance",
+    "moving",
+    "massage and facials"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Optional holistic portal"
+}, {
+  "partner_id": 32,
+  "first_name": "Konrad",
+  "last_name": "Henriksson",
+  "email": "khenrikssonv@typepad.com",
+  "hourly_rate": 44.93,
+  "services": [
+    "cleaning",
+    "lawn maintenance",
+    "massage and facials"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Polarised mission-critical customer loyalty"
+}, {
+  "partner_id": 33,
+  "first_name": "Alverta",
+  "last_name": "Olland",
+  "email": "aollandw@istockphoto.com",
+  "hourly_rate": 68.2,
+  "services": [
+    "aged care",
+    "massage and facials",
+    "nanny service"
+  ],
+  "service_categories": "grooming",
+  "desc": "Centralized clear-thinking hardware"
+}, {
+  "partner_id": 34,
+  "first_name": "Mortie",
+  "last_name": "Taylder",
+  "email": "mtaylderx@jimdo.com",
+  "hourly_rate": 60.79,
+  "services": [
+    "lawn maintenance",
+    "haircut",
+    "manicure and pedicure"
+  ],
+  "service_categories": "grooming",
+  "desc": "Phased optimizing Graphical User Interface"
+}, {
+  "partner_id": 35,
+  "first_name": "Hoebart",
+  "last_name": "Keighley",
+  "email": "hkeighleyy@seesaa.net",
+  "hourly_rate": 49.1,
+  "services": [
+    "cleaning",
+    "haircut",
+    "lawn maintenance"
+  ],
+  "service_categories": "care aid",
+  "desc": "Reactive optimal task-force"
+}, {
+  "partner_id": 36,
+  "first_name": "Heindrick",
+  "last_name": "Hune",
+  "email": "hhunez@hatena.ne.jp",
+  "hourly_rate": 26.17,
+  "services": [
+    "aged care",
+    "cleaning",
+    "nanny service"
+  ],
+  "service_categories": "grooming",
+  "desc": "Phased human-resource collaboration"
+}, {
+  "partner_id": 37,
+  "first_name": "Coleen",
+  "last_name": "Calwell",
+  "email": "ccalwell10@sciencedirect.com",
+  "hourly_rate": 53.92,
+  "services": [
+    "cleaning",
+    "nanny service",
+    "haircut"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Right-sized cohesive encoding"
+}, {
+  "partner_id": 38,
+  "first_name": "Rube",
+  "last_name": "Rizzelli",
+  "email": "rrizzelli11@google.cn",
+  "hourly_rate": 59.23,
+  "services": [
+    "massage and facials",
+    "haircut",
+    "aged care"
+  ],
+  "service_categories": "care aid",
+  "desc": "Upgradable logistical contingency"
+}, {
+  "partner_id": 39,
+  "first_name": "Hillary",
+  "last_name": "Giddons",
+  "email": "hgiddons12@printfriendly.com",
+  "hourly_rate": 33.18,
+  "services": [
+    "repairs",
+    "aged care",
+    "cleaning"
+  ],
+  "service_categories": "grooming",
+  "desc": "Inverse coherent migration"
+}, {
+  "partner_id": 40,
+  "first_name": "Adrian",
+  "last_name": "Huttley",
+  "email": "ahuttley13@webs.com",
+  "hourly_rate": 36.63,
+  "services": [
+    "manicure and pedicure",
+    "haircut",
+    "massage and facials"
+  ],
+  "service_categories": "home maintenance",
+  "desc": "Re-engineered multi-tasking secured line"
+}]
