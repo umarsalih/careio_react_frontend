@@ -2,12 +2,22 @@ import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { setLogin } from '../../store/login-store';
+import axios from 'axios'
 
 export default function LoginModal() {
     const dispatch = useDispatch()
     const login = (evt) =>{
         evt.preventDefault()
         return dispatch(setLogin(true))
+    }
+    
+    const sampleFetch = async() => {
+        const res = await axios.get('/mock-data/partners-all.json', {
+            headers : { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                   }
+        })
     }
 
   return (
