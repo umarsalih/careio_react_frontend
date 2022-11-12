@@ -1,6 +1,12 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function BookingModal() {
+
+const [startDate, setStartDate] = useState(new Date());
+
+
   return (
     <Fragment>
         <div className="modal fade" id="bookingModal" tabIndex="-1" aria-labelledby="bookingModal" aria-hidden="true">
@@ -12,7 +18,7 @@ export default function BookingModal() {
 
                     <div className="modal-body p-5">
                         <div className="row m-0">
-                        <div id="bookingForm" className="x-col-md-8 p-5">
+                        <div id="bookingForm" className="x-col-md-8 p-2">
                             <h3>
                             Book
                             <span id="partnerName">
@@ -46,11 +52,12 @@ export default function BookingModal() {
                             <div className="my-4">
                             <h4>Appointment Date</h4>
                             <div className="input-group date">
-                                <input type="text"  id="bookingDatepicker" className="form-control"/>
+                                <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                                {/* <input type="text"  id="bookingDatepicker" className="form-control"/>
                                 <div className="input-group-addon">
                                     <span className="glyphicon glyphicon-th"></span>
                                 </div>
-                                <div id="careio-datepicker"></div>
+                                <div id="careio-datepicker"></div> */}
                             </div>  
                             </div>
                             <div className="my-4">
@@ -103,4 +110,63 @@ export default function BookingModal() {
 
     </Fragment>
   )
+}
+
+
+const operatingHours = [
+    { label: '6 am', val: '06:00'},
+    { label: '7 am', val: '07:00'},
+    { label: '8 am', val: '08:00'},
+    { label: '9 am', val: '09:00'},
+    { label: '10 am', val: '10:00'},
+    { label: '11 am', val: '11:00'},
+    { label: '12 nn', val: '12:00'},
+    { label: '1 pm', val: '13:00'},
+    { label: '2 pm', val: '14:00'},
+    { label: '3 pm', val: '15:00'},
+    { label: '4 pm', val: '16:00'},
+    { label: '5 pm', val: '17:00'},
+    { label: '6 pm', val: '18:00'},
+    { label: '7 pm', val: '19:00'},
+    { label: '8 pm', val: '20:00'},
+    { label: '9 pm', val: '21:00'},
+    { label: '10 pm', val: '22:00'},
+]
+const setupHoursDropdown = () => {
+    const dropdownStartHrs = document.getElementById('inputStartTime')
+    const dropdownEndHrs = document.getElementById('inputEndTime')
+    if(!dropdownStartHrs | !dropdownEndHrs) return
+
+    let htmlOptionsStart = ""
+    let htmlOptionsEnd = ""
+
+    operatingHours.map((timeObj, i) => {
+        const strOpt = `<option value="${timeObj.val}" class="time-opts time-${i+6}" data-index="${i}">
+            ${timeObj.label}
+        </option>`
+
+        if(i< (operatingHours.length-2)){
+            htmlOptionsStart += strOpt
+        }
+        if(i>1){
+            htmlOptionsEnd += strOpt
+        }
+        
+    });
+    dropdownStartHrs.innerHTML = htmlOptionsStart
+    dropdownEndHrs.innerHTML = htmlOptionsEnd
+
+    dropdownStartHrs.addEventListener('input', evt =>{
+        const valIndex = evt.target.selectedOptions[0].dataset.index
+
+        const endHrs = dropdownEndHrs.children
+        endHrs[valIndex].selected = true;
+        for (let i = 0; i < endHrs.length; i++) {
+            if(i < valIndex){
+                endHrs[i].disabled = true
+            }else{
+                endHrs[i].disabled = false
+            }
+        }
+    })
 }
