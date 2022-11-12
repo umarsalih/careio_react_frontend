@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react'
 import { useDispatch } from 'react-redux';
-import { toggleLogin } from '../../store/login-store';
+import { setLogin } from '../../store/login-store';
 
 export default function LoginModal() {
     const dispatch = useDispatch()
     const login = (evt) =>{
         evt.preventDefault()
-        return dispatch(toggleLogin())
+        return dispatch(setLogin(true))
     }
 
   return (

@@ -9,20 +9,11 @@ const loginSlice = createSlice({
     toggleLogin(state){
         state.isLoggedIn = !state.isLoggedIn
     },
-
-    todoAdded(state, action) {
-      state.push({
-        id: action.payload.id,
-        text: action.payload.text,
-        completed: false
-      })
+    setLogin(state, action){
+      state.isLoggedIn = action.payload
     },
-    todoToggled(state, action) {
-      const todo = state.find(todo => todo.id === action.payload)
-      todo.completed = !todo.completed
-    }
   }
 })
 export const isLoggedIn = (state) => state.login.isLoggedIn
-export const { toggleLogin, todoAdded, todoToggled } = loginSlice.actions
+export const { toggleLogin, setLogin } = loginSlice.actions
 export default loginSlice.reducer

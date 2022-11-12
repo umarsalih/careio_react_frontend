@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { isLoggedIn, toggleLogin } from '../../store/login-store';
+import { isLoggedIn, toggleLogin, setLogin } from '../../store/login-store';
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
     const isLogged = useSelector(isLoggedIn);
@@ -17,12 +18,13 @@ const Hero = () => {
                         </div>
                         <div className="bg-text">
                             <h1>We care. Metro Vancouver’s <br/>Home Service Finder</h1>
+                            
                             {
-                                isLogged ?  (
+                                !isLogged ?  (
                                     <div>
-                                        <a href="/signup" className="btn btn-primary">
+                                        <Link to="/signup" className="btn btn-primary">
                                             Sign Up
-                                        </a>
+                                        </Link>
                                         &nbsp;
                                         <button type="button" 
                                             className="btn btn-primary" 
@@ -36,7 +38,7 @@ const Hero = () => {
                                         <button type="button" 
                                             className="btn btn-primary" 
                                             data-bs-toggle="modal" 
-                                            onClick={() => dispatch(toggleLogin())}
+                                            onClick={() => dispatch(setLogin(false))}
                                         >
                                             Log Out
                                         </button>
