@@ -16,8 +16,8 @@ MACCI:
 
 [✓] redux
 [] your bookings
-    [] store partner details
-    [] store booking details: date and time
+    [✓] store partner details
+    [✓] store booking details: date and time
     [] only enable to book if logged in
 
 [] user

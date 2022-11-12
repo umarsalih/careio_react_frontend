@@ -22,7 +22,6 @@ const bookingSlice = createSlice({
       state.partner = action.payload
     },
     updateBookingMeta(state, action) {
-      alert('reached')
       state.bookingMeta = action.payload
     }
   }

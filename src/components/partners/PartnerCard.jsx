@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { updatePartner } from '../../store/booking-store';
+import { isLoggedIn } from '../../store/login-store';
 
 const PartnerCard = ({
         partnerId = 41,
@@ -10,6 +11,8 @@ const PartnerCard = ({
         rate = 26,
         desc = "Fixer of things"
     }) => {
+
+    const isLogged = useSelector(isLoggedIn)
 
     const [partnerObj] = useState({
             partnerId,
@@ -39,8 +42,9 @@ const PartnerCard = ({
                         }
                     </ul>
                     <p>$<strong>{rate} </strong></p>
-                    
-                    <button type="button" 
+
+                    {isLogged ?
+                        <button type="button" 
                         className="btn btn-primary" 
                         data-bs-toggle="modal" 
                         data-bs-target="#bookingModal"
@@ -52,9 +56,21 @@ const PartnerCard = ({
                             rate,
                             desc
                         }))}
-                    >
-                      Book
-                    </button>
+                        >
+                        Book
+                        </button>
+                        :
+                        <button 
+                            type="button" 
+                            className="btn btn-primary" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#loginModal"
+                        >
+                            Book
+                        </button>
+                    }
+                    
+                    
                 </div>
             </div>
         </div>

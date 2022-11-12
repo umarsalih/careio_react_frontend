@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { setLogin } from '../../store/login-store';
 
@@ -17,6 +18,9 @@ export default function LoginModal() {
                     <button type="button" className="btn-close align-self-end d-inline p-2" data-bs-dismiss="modal" aria-label="Close"></button>
                     
                     <div className="modal-body p-5">
+                    <h3>
+                        Log In To Book A Partner
+                    </h3>
                     <form action="/">
                         <div className="form-group">
                             <label htmlFor="care-user-un">Username</label>
@@ -36,6 +40,13 @@ export default function LoginModal() {
                                 Log In
                         </button>
                         </form>
+                        <hr/>
+                        <h3>
+                            No account yet?
+                        </h3>
+                        <Link to='/signup'>
+                            Sign up with us
+                        </Link>
                     </div>
                 </div> {/* /.modal-content */}
             </div>
