@@ -18,25 +18,20 @@ export default function BookingModal() {
     <Fragment>
         <div className="modal fade" id="bookingModal" tabIndex="-1" aria-labelledby="bookingModal" aria-hidden="true">
 
-            <div className="modal-dialog p-5">
+            <div className="modal-dialog">
                 <div className="modal-content">
-                    
                     <button type="button" className="btn-close align-self-end d-inline p-2" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                    <div className="modal-body p-5">
+                    <div className="modal-body p-2">
                         <div className="row m-0">
                         <div id="bookingForm" className="x-col-md-8 p-2">
                             <h3>
-                            Book
-                            <span id="partnerName">
-                                {partner.firstName}
-                            </span>
+                            Booking {partner.firstName} {partner.lastName}
                             </h3>
 
                             <form>
                             <div className="my-4">
                                 <h4>Price Per Hour</h4>
-                                $<strong id="partnerRate">26</strong>/hr
+                                $<strong id="partnerRate">{partner.rate}</strong>/hr
                             </div>
                             
                             <div className="my-4">
@@ -50,18 +45,7 @@ export default function BookingModal() {
                                             </div>
                                         ))
                                     }
-                                    {/* <div className="form-check d-inline-block mx-3">
-                                        <input className="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
-                                        <label className="form-check-label">Service 1</label>
-                                    </div>
-                                    <div className="form-check d-inline-block mx-3">
-                                        <input className="form-check-input" type="checkbox" id="check2" name="option2" value="something" defaultChecked/>
-                                        <label className="form-check-label">Service 2</label>
-                                    </div>
-                                    <div className="form-check d-inline-block mx-3">
-                                        <input className="form-check-input" type="checkbox" id="check3" name="option3" value="something"/>
-                                        <label className="form-check-label">Service 3</label> 
-                                    </div> */}
+                                    
                             </div> 
                             </div>
                             <div className="my-4">
