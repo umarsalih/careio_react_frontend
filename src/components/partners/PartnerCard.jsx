@@ -6,7 +6,6 @@ const PartnerCard = ({
         lastName = "Smith",
         services = ["carpentry", "moving"],
         rate = 26,
-        
     }) => {
 
   return (
@@ -21,7 +20,7 @@ const PartnerCard = ({
                     <ul className="partner-services">
                         {
                             services.map( (s, i) => (
-                                <li> {s} </li>
+                                <li className="badge badge-pill badge-light" key={i}> {s} </li>
                             ))
                         }
                     </ul>

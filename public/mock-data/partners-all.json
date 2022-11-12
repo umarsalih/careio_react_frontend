@@ -1,0 +1,481 @@
+[{
+  "partner_id": 1,
+  "first_name": "Sybilla",
+  "last_name": "Kingsnod",
+  "email": "skingsnod0@tumblr.com",
+  "hourly_rate": 40.1,
+  "services": [
+    "cleaning",
+    "manicure and pedicure",
+    "nanny service"
+  ],
+  "service_categories": "home maintenance"
+}, {
+  "partner_id": 2,
+  "first_name": "Corliss",
+  "last_name": "Sparrow",
+  "email": "csparrow1@google.com.hk",
+  "hourly_rate": 56.86,
+  "services": [
+    "repairs",
+    "massage and facials",
+    "lawn maintenance"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 3,
+  "first_name": "Constance",
+  "last_name": "Bilbie",
+  "email": "cbilbie2@house.gov",
+  "hourly_rate": 23.03,
+  "services": [
+    "manicure and pedicure",
+    "repairs",
+    "nanny service"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 4,
+  "first_name": "Nonie",
+  "last_name": "Sivior",
+  "email": "nsivior3@istockphoto.com",
+  "hourly_rate": 44.84,
+  "services": [
+    "moving",
+    "massage and facials",
+    "lawn maintenance"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 5,
+  "first_name": "Giacobo",
+  "last_name": "Attard",
+  "email": "gattard4@ihg.com",
+  "hourly_rate": 22.02,
+  "services": [
+    "repairs",
+    "manicure and pedicure",
+    "lawn maintenance"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 6,
+  "first_name": "Ashia",
+  "last_name": "Kuller",
+  "email": "akuller5@google.com.hk",
+  "hourly_rate": 68.81,
+  "services": [
+    "massage and facials",
+    "aged care",
+    "manicure and pedicure"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 7,
+  "first_name": "Prentiss",
+  "last_name": "Salaman",
+  "email": "psalaman6@goodreads.com",
+  "hourly_rate": 25.01,
+  "services": [
+    "aged care",
+    "haircut",
+    "moving"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 8,
+  "first_name": "Misti",
+  "last_name": "Penhale",
+  "email": "mpenhale7@phpbb.com",
+  "hourly_rate": 57.89,
+  "services": [
+    "moving",
+    "manicure and pedicure",
+    "haircut"
+  ],
+  "service_categories": "home maintenance"
+}, {
+  "partner_id": 9,
+  "first_name": "Ivy",
+  "last_name": "Cato",
+  "email": "icato8@cyberchimps.com",
+  "hourly_rate": 22.68,
+  "services": [
+    "lawn maintenance",
+    "haircut",
+    "massage and facials"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 10,
+  "first_name": "Sela",
+  "last_name": "Sparey",
+  "email": "ssparey9@elpais.com",
+  "hourly_rate": 20.42,
+  "services": [
+    "moving",
+    "aged care",
+    "lawn maintenance"
+  ],
+  "service_categories": "home maintenance"
+}, {
+  "partner_id": 11,
+  "first_name": "Tate",
+  "last_name": "Blumson",
+  "email": "tblumsona@hostgator.com",
+  "hourly_rate": 22.29,
+  "services": [
+    "nanny service",
+    "manicure and pedicure",
+    "aged care"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 12,
+  "first_name": "Gavan",
+  "last_name": "Jados",
+  "email": "gjadosb@ibm.com",
+  "hourly_rate": 22.32,
+  "services": [
+    "haircut",
+    "aged care",
+    "massage and facials"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 13,
+  "first_name": "Brett",
+  "last_name": "McMaster",
+  "email": "bmcmasterc@state.gov",
+  "hourly_rate": 34.25,
+  "services": [
+    "lawn maintenance",
+    "aged care",
+    "haircut"
+  ],
+  "service_categories": "grooming"
+}, {
+  "partner_id": 14,
+  "first_name": "Whitaker",
+  "last_name": "Adams",
+  "email": "wadamsd@wiley.com",
+  "hourly_rate": 24.12,
+  "services": [
+    "lawn maintenance",
+    "repairs",
+    "moving"
+  ],
+  "service_categories": "home maintenance"
+}, {
+  "partner_id": 15,
+  "first_name": "Haydon",
+  "last_name": "Aveyard",
+  "email": "haveyarde@uiuc.edu",
+  "hourly_rate": 20.83,
+  "services": [
+    "haircut",
+    "cleaning",
+    "nanny service"
+  ],
+  "service_categories": "home maintenance"
+}, {
+  "partner_id": 16,
+  "first_name": "Vera",
+  "last_name": "Vevers",
+  "email": "vveversf@goodreads.com",
+  "hourly_rate": 71.19,
+  "services": [
+    "moving",
+    "massage and facials",
+    "repairs"
+  ],
+  "service_categories": "grooming"
+}, {
+  "partner_id": 17,
+  "first_name": "Betsey",
+  "last_name": "Brookz",
+  "email": "bbrookzg@mozilla.org",
+  "hourly_rate": 59.81,
+  "services": [
+    "moving",
+    "nanny service",
+    "aged care"
+  ],
+  "service_categories": "grooming"
+}, {
+  "partner_id": 18,
+  "first_name": "Aliza",
+  "last_name": "Maevela",
+  "email": "amaevelah@usda.gov",
+  "hourly_rate": 19.73,
+  "services": [
+    "lawn maintenance",
+    "nanny service",
+    "manicure and pedicure"
+  ],
+  "service_categories": "home maintenance"
+}, {
+  "partner_id": 19,
+  "first_name": "Gertruda",
+  "last_name": "Foucar",
+  "email": "gfoucari@yelp.com",
+  "hourly_rate": 56.17,
+  "services": [
+    "repairs",
+    "manicure and pedicure",
+    "lawn maintenance"
+  ],
+  "service_categories": "grooming"
+}, {
+  "partner_id": 20,
+  "first_name": "Ches",
+  "last_name": "Jizhaki",
+  "email": "cjizhakij@com.com",
+  "hourly_rate": 55.63,
+  "services": [
+    "lawn maintenance",
+    "cleaning",
+    "nanny service"
+  ],
+  "service_categories": "grooming"
+}, {
+  "partner_id": 21,
+  "first_name": "Kendall",
+  "last_name": "Bruckental",
+  "email": "kbruckentalk@printfriendly.com",
+  "hourly_rate": 28.79,
+  "services": [
+    "nanny service",
+    "aged care",
+    "repairs"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 22,
+  "first_name": "Axel",
+  "last_name": "Grenkov",
+  "email": "agrenkovl@jalbum.net",
+  "hourly_rate": 51.42,
+  "services": [
+    "haircut",
+    "nanny service",
+    "repairs"
+  ],
+  "service_categories": "home maintenance"
+}, {
+  "partner_id": 23,
+  "first_name": "Jillie",
+  "last_name": "Pattesall",
+  "email": "jpattesallm@artisteer.com",
+  "hourly_rate": 42.95,
+  "services": [
+    "massage and facials",
+    "moving",
+    "manicure and pedicure"
+  ],
+  "service_categories": "home maintenance"
+}, {
+  "partner_id": 24,
+  "first_name": "Laurice",
+  "last_name": "Mauvin",
+  "email": "lmauvinn@sciencedirect.com",
+  "hourly_rate": 56.7,
+  "services": [
+    "manicure and pedicure",
+    "moving",
+    "cleaning"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 25,
+  "first_name": "Lorettalorna",
+  "last_name": "Tyers",
+  "email": "ltyerso@nifty.com",
+  "hourly_rate": 66.73,
+  "services": [
+    "nanny service",
+    "cleaning",
+    "manicure and pedicure"
+  ],
+  "service_categories": "grooming"
+}, {
+  "partner_id": 26,
+  "first_name": "Roselin",
+  "last_name": "Arderne",
+  "email": "rardernep@prlog.org",
+  "hourly_rate": 62.79,
+  "services": [
+    "lawn maintenance",
+    "moving",
+    "cleaning"
+  ],
+  "service_categories": "grooming"
+}, {
+  "partner_id": 27,
+  "first_name": "Julee",
+  "last_name": "Waith",
+  "email": "jwaithq@opera.com",
+  "hourly_rate": 60.0,
+  "services": [
+    "nanny service",
+    "haircut",
+    "moving"
+  ],
+  "service_categories": "grooming"
+}, {
+  "partner_id": 28,
+  "first_name": "Dorolisa",
+  "last_name": "Lounds",
+  "email": "dloundsr@ed.gov",
+  "hourly_rate": 45.16,
+  "services": [
+    "haircut",
+    "manicure and pedicure",
+    "cleaning"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 29,
+  "first_name": "Pierre",
+  "last_name": "Pariso",
+  "email": "pparisos@blogs.com",
+  "hourly_rate": 19.98,
+  "services": [
+    "nanny service",
+    "moving",
+    "lawn maintenance"
+  ],
+  "service_categories": "home maintenance"
+}, {
+  "partner_id": 30,
+  "first_name": "Arlee",
+  "last_name": "Craddock",
+  "email": "acraddockt@php.net",
+  "hourly_rate": 49.41,
+  "services": [
+    "lawn maintenance",
+    "massage and facials",
+    "moving"
+  ],
+  "service_categories": "grooming"
+}, {
+  "partner_id": 31,
+  "first_name": "Sasha",
+  "last_name": "Brealey",
+  "email": "sbrealeyu@yelp.com",
+  "hourly_rate": 64.92,
+  "services": [
+    "nanny service",
+    "manicure and pedicure",
+    "moving"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 32,
+  "first_name": "Annecorinne",
+  "last_name": "Voelker",
+  "email": "avoelkerv@fastcompany.com",
+  "hourly_rate": 49.95,
+  "services": [
+    "aged care",
+    "moving",
+    "manicure and pedicure"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 33,
+  "first_name": "Nance",
+  "last_name": "Vala",
+  "email": "nvalaw@ca.gov",
+  "hourly_rate": 47.02,
+  "services": [
+    "nanny service",
+    "lawn maintenance",
+    "cleaning"
+  ],
+  "service_categories": "home maintenance"
+}, {
+  "partner_id": 34,
+  "first_name": "Rodolfo",
+  "last_name": "Alejandre",
+  "email": "ralejandrex@bbc.co.uk",
+  "hourly_rate": 59.3,
+  "services": [
+    "massage and facials",
+    "manicure and pedicure",
+    "moving"
+  ],
+  "service_categories": "grooming"
+}, {
+  "partner_id": 35,
+  "first_name": "Brigitta",
+  "last_name": "Rudgard",
+  "email": "brudgardy@eepurl.com",
+  "hourly_rate": 41.12,
+  "services": [
+    "moving",
+    "cleaning",
+    "lawn maintenance"
+  ],
+  "service_categories": "home maintenance"
+}, {
+  "partner_id": 36,
+  "first_name": "Noreen",
+  "last_name": "McTerlagh",
+  "email": "nmcterlaghz@g.co",
+  "hourly_rate": 33.7,
+  "services": [
+    "massage and facials",
+    "haircut",
+    "cleaning"
+  ],
+  "service_categories": "grooming"
+}, {
+  "partner_id": 37,
+  "first_name": "Orel",
+  "last_name": "Hargey",
+  "email": "ohargey10@lycos.com",
+  "hourly_rate": 18.48,
+  "services": [
+    "cleaning",
+    "lawn maintenance",
+    "massage and facials"
+  ],
+  "service_categories": "care aid"
+}, {
+  "partner_id": 38,
+  "first_name": "Quint",
+  "last_name": "Kristiansen",
+  "email": "qkristiansen11@tuttocitta.it",
+  "hourly_rate": 43.75,
+  "services": [
+    "lawn maintenance",
+    "cleaning",
+    "manicure and pedicure"
+  ],
+  "service_categories": "home maintenance"
+}, {
+  "partner_id": 39,
+  "first_name": "Claude",
+  "last_name": "Jewer",
+  "email": "cjewer12@devhub.com",
+  "hourly_rate": 24.75,
+  "services": [
+    "nanny service",
+    "manicure and pedicure",
+    "aged care"
+  ],
+  "service_categories": "home maintenance"
+}, {
+  "partner_id": 40,
+  "first_name": "Camel",
+  "last_name": "Conradsen",
+  "email": "cconradsen13@java.com",
+  "hourly_rate": 54.56,
+  "services": [
+    "manicure and pedicure",
+    "aged care",
+    "nanny service"
+  ],
+  "service_categories": "home maintenance"
+}]

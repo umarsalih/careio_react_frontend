@@ -3,11 +3,3 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.careio__body{
-    width: 80%;
-    height: 600px;
-    position: relative;
-    margin: 50px  auto;
-    overflow: hidden; /*hiddid the right side tabs*/    
-}

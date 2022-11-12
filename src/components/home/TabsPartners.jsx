@@ -26,13 +26,13 @@ const TabsPartners = (props) => {
                 
             <div id="row care-tabs-content tab-content">
                 <div className="tab-pane fade " id="care-maintenance" role="tabpanel" aria-labelledby="care-maintenance-tab">
-                    <PartnerCollection/>
+                    <PartnerCollection category="home maintenance"/>
                 </div>
                 <div className="tab-pane fade show active" id="care-grooming" role="tabpanel" aria-labelledby="care-grooming-tab">
-                    <PartnerCollection/>
+                    <PartnerCollection category="grooming"/>
                 </div>
                 <div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="care-aid">
-                    <PartnerCollection/>
+                    <PartnerCollection category='care aid'/>
                 </div>
             </div>
         </div> {/* .care-partner-tabs */}

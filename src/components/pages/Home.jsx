@@ -14,7 +14,7 @@ const Home = () => {
                     <div className="hero__holder">
                         <Hero/>
                     </div>
-                    <div className="careio__body">
+                    <div className="careio__body py-5">
                         <TabsPartners/>
                     </div>
                     { /* end of careio__body */ }
