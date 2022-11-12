@@ -1,17 +1,19 @@
 .care-partner-card{
     display: flex;
     padding: 0;
-    box-shadow: 1rem 1rem 1rem $CARE_SHADOW;
+    box-shadow: 0.25rem 0.75rem 0.75rem $CARE_SHADOW;
     margin-bottom: 1rem;
+    // border-radius: 0.75rem;
     .image{
-        width: 50%;
+        max-width: 40%;
+        text-align: left;
         img{
             width: 100%;
             min-width: 10rem;
         }
     }
     .meta__outter{
-        width: 50%;
+        width: 60%;
         display: flex;
         align-items: center;
     }
@@ -20,9 +22,20 @@
         display: block;
         padding: 1rem;
         text-align: center;
+        ul{
+            padding-left: 0;
+            padding-right: 0;
+        }
         li{
             list-style: none;
-            display: inline;
+            display: inline-block;
+            font-size: 0.875rem;
+            background-color: $CARE_PURPLE_BRIGHT_LT;
+            color: #fff;
+            padding: 2px 4px;
+            text-transform: capitalize;
+            border-radius: 4px;
+            margin: 2px 4px;
         }
     }
 }

@@ -4,11 +4,13 @@ SAL:
 [] 
 
 MACCI:
-[] fetch partners
-[] 
+[✓] fetch partners
+[✓] dynamic partners
 
 [] time picker
 [] date picker
 
 [] redux
 [] your bookings
+
+[] user

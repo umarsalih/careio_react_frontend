@@ -1,4 +1,9 @@
 #CareIOHome{
+    //utils
+    .btn, .btn-primary{
+        background-color: $CARE_GREEN;
+        border: 0;
+    }
     .care-hero{
         background-image: url("./../images/banner1.jpg");
         background-size: cover;

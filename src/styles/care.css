@@ -1,3 +1,7 @@
+#CareIOHome .btn, #CareIOHome .btn-primary {
+  background-color: #5FAB8F;
+  border: 0;
+}
 #CareIOHome .care-hero {
   background-image: url("./../images/banner1.jpg");
   background-size: cover;
@@ -18,18 +22,19 @@
 .care-partner-card {
   display: flex;
   padding: 0;
-  box-shadow: 1rem 1rem 1rem rgba(40, 45, 55, 0.2);
+  box-shadow: 0.25rem 0.75rem 0.75rem rgba(40, 45, 55, 0.1);
   margin-bottom: 1rem;
 }
 .care-partner-card .image {
-  width: 50%;
+  max-width: 40%;
+  text-align: left;
 }
 .care-partner-card .image img {
   width: 100%;
   min-width: 10rem;
 }
 .care-partner-card .meta__outter {
-  width: 50%;
+  width: 60%;
   display: flex;
   align-items: center;
 }
@@ -39,9 +44,20 @@
   padding: 1rem;
   text-align: center;
 }
+.care-partner-card .meta ul {
+  padding-left: 0;
+  padding-right: 0;
+}
 .care-partner-card .meta li {
   list-style: none;
-  display: inline;
+  display: inline-block;
+  font-size: 0.875rem;
+  background-color: #92B6FF;
+  color: #fff;
+  padding: 2px 4px;
+  text-transform: capitalize;
+  border-radius: 4px;
+  margin: 2px 4px;
 }
 
 /*# sourceMappingURL=care.css.map */

@@ -3,7 +3,7 @@ import PartnerCollection from '../partners/PartnersCollection';
 const TabsPartners = (props) => {
   return (
     <Fragment>
-        <div className="care-partner-tabs container ">
+        <div className="care-partner-tabs container">
             <div className="row care-tabs-nav">
                 <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li className="nav-item" role="presentation">

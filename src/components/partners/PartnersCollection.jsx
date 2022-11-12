@@ -41,7 +41,7 @@ const PartnerCollection = ({
                             partnerId={partner.partner_id}
                             firstName={partner.first_name}
                             lastName={partner.last_name}
-                            services={partners.services}
+                            services={partner.services}
                             hourlyRate={partner.hourly_rate}
                         />
                     }
