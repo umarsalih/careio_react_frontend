@@ -1,34 +1,11 @@
-import { Fragment, useState, useEffect } from 'react'
+import { Fragment } from 'react'
 import PartnerCard from './PartnerCard'
-import axios from 'axios'
 
 const PartnerCollection = ({
-    category="grooming"
+    category="grooming",
+    partners=[]
 }) =>{   
-    const [partners, setPartners] = useState([])
-    
-    const fetchPartners = async () =>{
-        if(partners.length) return
-        const res = await axios.get('/mock-data/partners-all.json', {
-            headers : { 
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                   }
-        })
-        console.log({res})
-        if(res.status === 200 && res.data.length){
-            try{
-                setPartners(res.data)
-            }catch(e){
-                console.error(e)
-            }
-        } 
-    }
-
-    useEffect(()=>{
-        fetchPartners()
-    },[])
-    
+   
     return(
         <Fragment>
             <div className="row">

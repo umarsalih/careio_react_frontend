@@ -1,6 +1,32 @@
-import React, { Fragment} from 'react';
+import React, { Fragment,  useState, useEffect} from 'react';
 import PartnerCollection from '../partners/PartnersCollection';
+import axios from 'axios'
+
 const TabsPartners = (props) => {
+    const [partners, setPartners] = useState([])
+    
+    const fetchPartners = async () =>{
+        if(partners.length) return
+        const res = await axios.get('/mock-data/partners-all.json', {
+            headers : { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                   }
+        })
+        console.log({res})
+        if(res.status === 200 && res.data.length){
+            try{
+                setPartners(res.data)
+            }catch(e){
+                console.error(e)
+            }
+        } 
+    }
+
+    useEffect(()=>{
+        fetchPartners()
+    },[])
+
   return (
     <Fragment>
         <div className="care-partner-tabs container">
@@ -26,13 +52,13 @@ const TabsPartners = (props) => {
                 
             <div id="row care-tabs-content tab-content">
                 <div className="tab-pane fade " id="care-maintenance" role="tabpanel" aria-labelledby="care-maintenance-tab">
-                    <PartnerCollection category="home maintenance"/>
+                    <PartnerCollection partners={partners} category="home maintenance"/>
                 </div>
                 <div className="tab-pane fade show active" id="care-grooming" role="tabpanel" aria-labelledby="care-grooming-tab">
-                    <PartnerCollection category="grooming"/>
+                    <PartnerCollection partners={partners} category="grooming"/>
                 </div>
                 <div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="care-aid">
-                    <PartnerCollection category='care aid'/>
+                    <PartnerCollection partners={partners} category='care aid'/>
                 </div>
             </div>
         </div> {/* .care-partner-tabs */}

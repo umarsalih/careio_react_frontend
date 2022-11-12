@@ -47,10 +47,11 @@ export default function BookingModal() {
         })
         _updateBookingMeta()
     }
-    const handleDateChange = () =>{
+    const handleDateChange = (date) =>{
+        setStartDate(date)
         setBookingDetails({
             ...bookingDetails,
-            date: startDate.toDateString(),
+            date: date.toDateString(),
         })
         _updateBookingMeta()
     }
@@ -115,8 +116,10 @@ export default function BookingModal() {
                                 <div className="input-group date">
                                     <DatePicker 
                                             selected={startDate} 
-                                            onChange={(date) => setStartDate(date)}
-                                            onSelect={handleDateChange}
+                                            onChange={(date) => {    
+                                                handleDateChange(date)
+                                            }}
+                                            
                                         />
                                         {/* // onChange={handleChange()} */}
                                     {/* <input type="text"  id="bookingDatepicker" className="form-control"/>
