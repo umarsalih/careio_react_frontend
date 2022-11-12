@@ -5,7 +5,6 @@ import axios from 'axios'
 const PartnerCollection = ({
     category="grooming"
 }) =>{   
-    // const [isFetched, setIsFetched] = useState(false) 
     const [partners, setPartners] = useState([])
     
     const fetchPartners = async () =>{
@@ -43,6 +42,7 @@ const PartnerCollection = ({
                             lastName={partner.last_name}
                             services={partner.services}
                             hourlyRate={partner.hourly_rate}
+                            desc={partner.desc}
                         />
                     }
                 })

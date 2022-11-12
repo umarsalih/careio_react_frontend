@@ -8,6 +8,7 @@ const PartnerCard = ({
         lastName = "Smith",
         services = ["cleaning", "lawn maintenance"],
         rate = 26,
+        desc = "Fixer of things"
     }) => {
 
     const [partnerObj] = useState({
@@ -15,7 +16,8 @@ const PartnerCard = ({
             firstName,
             lastName,
             services,
-            rate
+            rate,
+            desc
     })
     const dispatch = useDispatch()
 
@@ -28,6 +30,7 @@ const PartnerCard = ({
             <div className="meta__outter">
                 <div className='meta'>
                     <h4 className="partner-name">{firstName} {lastName}</h4>
+                    <h5>{desc}</h5>
                     <ul className="partner-services">
                         {
                             services.map( (s, i) => (
@@ -38,7 +41,7 @@ const PartnerCard = ({
                     <p>$<strong>{rate} </strong></p>
                     
                     <button type="button" 
-                        className="btn btn-primary w-100" 
+                        className="btn btn-primary" 
                         data-bs-toggle="modal" 
                         data-bs-target="#bookingModal"
                         onClick={() => dispatch(updatePartner({
@@ -46,7 +49,8 @@ const PartnerCard = ({
                             firstName,
                             lastName,
                             services,
-                            rate
+                            rate,
+                            desc
                         }))}
                     >
                       Book

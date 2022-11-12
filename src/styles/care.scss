@@ -5,4 +5,8 @@
 @import "./layout-home.scss";
 
 // this command import components styling
-@import "./components/partner-card.scss";
+@import "./components/layout-modals.scss", "./components/partner-card.scss";
+
+* {
+    font-family: 'Roboto', sans-serif;
+}

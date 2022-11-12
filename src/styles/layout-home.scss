@@ -1,6 +1,6 @@
 #CareIOHome{
     //utils
-    .btn, .btn-primary{
+    button, .btn, .btn-primary{
         background-color: $CARE_GREEN;
         border: 0;
     }
@@ -18,6 +18,16 @@
         }
     }
     .care-partner-tabs{
+        .nav-link{
+            background-color: $CARE_LIGHTEST;
+            margin: 0 0.5rem;
+            border-radius: 0.5rem 0.5rem 0 0;
+            color: $CARE_PURPLE;
+            &.active{ 
+                color: #fff;
+                background-color: $CARE_PURPLE;
+            }
+        }
         .tab-pane{
             &:not(.show){
                 display: none;

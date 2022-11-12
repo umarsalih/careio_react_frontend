@@ -20,11 +20,15 @@ const bookingSlice = createSlice({
   reducers: {
     updatePartner(state, action) {
       state.partner = action.payload
+    },
+    updateBookingMeta(state, action) {
+      alert('reached')
+      state.bookingMeta = action.payload
     }
   }
 })
 
-export const { updatePartner } = bookingSlice.actions
+export const { updatePartner, updateBookingMeta } = bookingSlice.actions
 export const bookingPartner = (state) => state.booking.partner
 export const bookingMeta = (state) => state.booking
 

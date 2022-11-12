@@ -25,7 +25,6 @@
     }
 
     &#modalLogin{
-        
         button.login{
             margin-top: 2rem;
         }
@@ -33,7 +32,13 @@
     &#modalBooking{
         .modal-dialog{
             min-width: 50%;
-            max-width: 480px;
+        }
+
+        #bookingForm{
+            width: auto;
+            h4, div{
+                text-align: left !important;
+            }
         }
         #bookingDatepicker{
             z-index: 1;
@@ -42,6 +47,15 @@
         .booking-summary{
             border-bottom-right-radius: 8px;
             border-top-right-radius: 8px;
+            .partner-details{
+                background-color: $CARE_LIGHTEST;
+                padding: 1rem;
+                img{
+                    height: 2rem;
+                    width: 2rem;
+                    border-radius: 2rem;
+                }
+            }
         }
 
     }

@@ -16,7 +16,7 @@ export default function LoginModal() {
                 <div className="modal-content">
                     <button type="button" className="btn-close align-self-end d-inline p-2" data-bs-dismiss="modal" aria-label="Close"></button>
                     
-                    <div className="modal-body p-5`">
+                    <div className="modal-body p-5">
                     <form action="/">
                         <div className="form-group">
                             <label htmlFor="care-user-un">Username</label>

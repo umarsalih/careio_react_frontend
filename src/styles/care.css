@@ -1,4 +1,4 @@
-#CareIOHome .btn, #CareIOHome .btn-primary {
+#CareIOHome button, #CareIOHome .btn, #CareIOHome .btn-primary {
   background-color: #5FAB8F;
   border: 0;
 }
@@ -15,8 +15,76 @@
   min-height: 50vh;
   align-items: center;
 }
+#CareIOHome .care-partner-tabs .nav-link {
+  background-color: #F7F7F2;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: #3C4F75;
+}
+#CareIOHome .care-partner-tabs .nav-link.active {
+  color: #fff;
+  background-color: #3C4F75;
+}
 #CareIOHome .care-partner-tabs .tab-pane:not(.show) {
   display: none;
+}
+
+.modal .care--modal-close__wrapper {
+  color: #fff;
+  background-color: transparent;
+  height: 2rem;
+  margin-top: -2rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.modal button.close {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  color: #F7F7F2;
+}
+.modal h4 {
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.modal .modal-content {
+  border: none;
+}
+.modal#modalLogin button.login {
+  margin-top: 2rem;
+}
+.modal#modalBooking .modal-dialog {
+  min-width: 50%;
+}
+.modal#modalBooking #bookingForm {
+  width: auto;
+}
+.modal#modalBooking #bookingForm h4, .modal#modalBooking #bookingForm div {
+  text-align: left !important;
+}
+.modal#modalBooking #bookingDatepicker {
+  z-index: 1;
+  max-width: 240px;
+}
+.modal#modalBooking .booking-summary {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.modal#modalBooking .booking-summary .partner-details {
+  background-color: #F7F7F2;
+  padding: 1rem;
+}
+.modal#modalBooking .booking-summary .partner-details img {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
+}
+
+#ui-datepicker-div {
+  filter: drop-shadow(12px 12px 40px #282D37);
 }
 
 .care-partner-card {
@@ -52,12 +120,16 @@
   list-style: none;
   display: inline-block;
   font-size: 0.875rem;
-  background-color: #92B6FF;
+  background-color: rgba(60, 79, 117, 0.5);
   color: #fff;
   padding: 2px 4px;
   text-transform: capitalize;
   border-radius: 4px;
   margin: 2px 4px;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=care.css.map */
