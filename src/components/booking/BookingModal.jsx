@@ -15,7 +15,8 @@ export default function BookingModal() {
         timeStart: '07:00',
         ...bookingMeta,
         date: startDate.toDateString(),
-        selectedServices: []
+        selectedServices: [],
+        totalPrice: 0
     });
     const partner = useSelector(bookingPartner)
     useEffect(()=>{
@@ -29,13 +30,20 @@ export default function BookingModal() {
         strInt = parseInt(strInt)
         let endInt = `${bookingDetails.timeEnd}`.replace(':00', '')
         endInt = parseInt(endInt)
-        if (endInt && strInt) setJobLength(endInt-strInt)
+        if (endInt && strInt) {
+            setJobLength(endInt-strInt)
+            setBookingDetails({
+                ...bookingDetails,
+                totalPrice: endInt-strInt
+            })
+            _updateBookingMeta()
+        }
+        
     }, [bookingDetails.timeStart, bookingDetails.timeEnd])
 
 
     const _updateBookingMeta = async () =>{
         const meta = await bookingDetails
-        console.log({meta})
         return dispatch(updateBookingMeta(meta))
     }
     const handleChange = async(evt) =>{
@@ -199,10 +207,10 @@ export default function BookingModal() {
                                     </div>
                                 </div>
                                 <div className='booking-summary-meta'>
-                                    <h4>You are booking {partner.firstName} for {jobLength} hours for the total price of ${jobLength*partner.rate} on {bookingDetails.date}</h4>
+                                    <h4>You are booking {partner.firstName} for {jobLength} hours for the total price of ${jobLength*partner.rate} on<br/>{bookingDetails.date}</h4>
                                     
                                     <button id="SubmitBooking" className="login btn btn-primary
-                                    my-2">Book</button>
+                                    my-2">Confirm and checkout</button>
                                 </div>
                             </div>
                         </div>

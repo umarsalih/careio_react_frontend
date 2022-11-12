@@ -49,6 +49,12 @@
             .form-check{
                 margin-right: 1rem;
             }
+            .react-datepicker__input-container input, .react-datepicker-ignore-onclickoutside{
+                padding: 1rem;
+                outline: none;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+            }
         }
         #bookingDatepicker{
             z-index: 1;

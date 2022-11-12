@@ -1,6 +1,7 @@
-#CareIOHome button, #CareIOHome .btn, #CareIOHome .btn-primary {
+#CareIOHome button:not(.react-datepicker__navigation), #CareIOHome .btn, #CareIOHome .btn-primary {
   background-color: #5FAB8F;
   border: 0;
+  padding: 1rem 3rem;
 }
 #CareIOHome .careio__body {
   background-color: #F7F7F2;
@@ -94,6 +95,12 @@
 }
 .modal#bookingModal .booking-form .form-check {
   margin-right: 1rem;
+}
+.modal#bookingModal .booking-form .react-datepicker__input-container input, .modal#bookingModal .booking-form .react-datepicker-ignore-onclickoutside {
+  padding: 1rem;
+  outline: none;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
 }
 .modal#bookingModal #bookingDatepicker {
   z-index: 1;

@@ -1,8 +1,9 @@
 #CareIOHome{
     //utils
-    button, .btn, .btn-primary{
+    button:not(.react-datepicker__navigation), .btn, .btn-primary{
         background-color: $CARE_GREEN;
         border: 0;
+        padding: 1rem 3rem;
     }
     .careio__body{
         background-color: $CARE_LIGHTEST;

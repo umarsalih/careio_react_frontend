@@ -14,7 +14,8 @@ const bookingSlice = createSlice({
       date: "10-11-2022",
       timeStart: "07:00",
       timeEnd: "09:00",
-      selectedServices: ["cleaning"]
+      selectedServices: ["cleaning"],
+      totalPrice: 25
     }
   },
   reducers: {
