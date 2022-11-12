@@ -2,10 +2,17 @@ import React, { Fragment, useEffect, useState } from 'react'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
+import { useSelector } from 'react-redux';
+import { bookingPartner, bookingMeta } from '../../store/booking-store';
+
+
 export default function BookingModal() {
 
-const [startDate, setStartDate] = useState(new Date());
-
+    const [startDate, setStartDate] = useState(new Date());
+    const partner = useSelector(bookingPartner)
+    useEffect(()=>{
+        console.log({partner})
+    },[])
 
   return (
     <Fragment>
@@ -22,7 +29,7 @@ const [startDate, setStartDate] = useState(new Date());
                             <h3>
                             Book
                             <span id="partnerName">
-                                John Sharma
+                                {partner.firstName}
                             </span>
                             </h3>
 
@@ -35,18 +42,26 @@ const [startDate, setStartDate] = useState(new Date());
                             <div className="my-4">
                                 <h4>Service Type</h4>
                                 <div id="partnerServices" className="form-group">
-                                <div className="form-check d-inline-block mx-3">
-                                    <input className="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
-                                    <label className="form-check-label">Service 1</label>
-                                </div>
-                                <div className="form-check d-inline-block mx-3">
-                                    <input className="form-check-input" type="checkbox" id="check2" name="option2" value="something" defaultChecked/>
-                                    <label className="form-check-label">Service 2</label>
-                                </div>
-                                <div className="form-check d-inline-block mx-3">
-                                    <input className="form-check-input" type="checkbox" id="check3" name="option3" value="something"/>
-                                    <label className="form-check-label">Service 3</label>
-                                </div>
+                                    {
+                                        partner.services.map( (serv, i) =>(
+                                            <div className="form-check d-inline-block mx-3">
+                                                <input className="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
+                                                <label className="form-check-label">{serv}</label>
+                                            </div>
+                                        ))
+                                    }
+                                    {/* <div className="form-check d-inline-block mx-3">
+                                        <input className="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
+                                        <label className="form-check-label">Service 1</label>
+                                    </div>
+                                    <div className="form-check d-inline-block mx-3">
+                                        <input className="form-check-input" type="checkbox" id="check2" name="option2" value="something" defaultChecked/>
+                                        <label className="form-check-label">Service 2</label>
+                                    </div>
+                                    <div className="form-check d-inline-block mx-3">
+                                        <input className="form-check-input" type="checkbox" id="check3" name="option3" value="something"/>
+                                        <label className="form-check-label">Service 3</label> 
+                                    </div> */}
                             </div> 
                             </div>
                             <div className="my-4">

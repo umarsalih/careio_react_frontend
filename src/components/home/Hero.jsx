@@ -1,10 +1,28 @@
 import React, { useState, useEffect, Fragment} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { isLoggedIn, toggleLogin } from '../../store/login-store';
+
 const Hero = () => {
+
+    const login = useSelector(isLoggedIn);
+    const dispatch = useDispatch()
+
   return (
     <Fragment>
         <div className="care-hero">
             <div className="care-hero__inner">
                 <div className="container">
+
+                    <div className="row">
+                        state check: 
+                        {login ? "y": "n"}
+                        <button
+                            aria-label="Increment value"
+                            onClick={() => dispatch(toggleLogin())}
+                            >
+                            +
+                            </button>
+                    </div>
                     <div className='row p-5'>
                         <div className="header-img">
                             Logo here

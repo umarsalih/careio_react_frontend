@@ -1,12 +1,23 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
+import { useDispatch } from 'react-redux';
+import { updatePartner } from '../../store/booking-store';
 
 const PartnerCard = ({
-        partnerId = 1,
+        partnerId = 41,
         firstName = "John",
         lastName = "Smith",
-        services = ["carpentry", "moving"],
+        services = ["cleaning", "lawn maintenance"],
         rate = 26,
     }) => {
+
+    const [partnerObj] = useState({
+            partnerId,
+            firstName,
+            lastName,
+            services,
+            rate
+    })
+    const dispatch = useDispatch()
 
   return (
     <Fragment>
@@ -29,7 +40,15 @@ const PartnerCard = ({
                     <button type="button" 
                         className="btn btn-primary w-100" 
                         data-bs-toggle="modal" 
-                        data-bs-target="#bookingModal">
+                        data-bs-target="#bookingModal"
+                        onClick={() => dispatch(updatePartner({
+                            partnerId,
+                            firstName,
+                            lastName,
+                            services,
+                            rate
+                        }))}
+                    >
                       Book
                     </button>
                 </div>
