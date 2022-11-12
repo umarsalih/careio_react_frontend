@@ -1,10 +1,10 @@
 import './App.css';
 // import './styles/main.css';
 import './styles/style.css';
-import Main from "./components/Main";
 import Home from "./components/pages/Home";
 import Signup from './components/pages/Signup';
-import { Routes,Route, Link } from 'react-router-dom';
+import MyBookings from './components/pages/MyBookings';
+import { Routes,Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/signup' element={<Signup/>} />
+        <Route path='/my-bookings' element={<MyBookings/>} />
       </Routes>
     </div>
   );
