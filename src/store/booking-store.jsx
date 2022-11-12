@@ -7,8 +7,14 @@ const bookingSlice = createSlice({
       partnerId : 41,
       firstName : "John",
       lastName : "Smith",
-      services : ["cleaning", "lawn maintenance"],
+      services : ["cleaning", "lawn maintenance", "aged care"],
       rate : 26,
+    },
+    bookingMeta:{
+      date: "10-11-2022",
+      timeStart: "07:00",
+      timeEnd: "09:00",
+      selectedServices: ["cleaning"]
     }
   },
   reducers: {

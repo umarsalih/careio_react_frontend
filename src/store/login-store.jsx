@@ -3,7 +3,15 @@ import { createSlice } from '@reduxjs/toolkit'
 const loginSlice = createSlice({
   name: 'login',
   initialState: {
-    isLoggedIn: true
+    isLoggedIn: true,
+    user: {
+      userId: 1,
+      firstName: "Bob",
+      lastName: "Doe",
+      address: "Burnaby",
+      phone: "+1 234 567 8900",
+      email: "bob@mail.com"
+    }
   },
   reducers: {
     toggleLogin(state){
