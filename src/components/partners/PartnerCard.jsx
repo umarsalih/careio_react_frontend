@@ -1,24 +1,29 @@
 import React, {Fragment} from 'react';
 
 const PartnerCard = ({
-        name = "John Smith",
-        services = ["Carpentry", "Moving"],
+        partnerId = 1,
+        firstName = "John",
+        lastName = "Smith",
+        services = ["carpentry", "moving"],
         rate = 26,
-        id = 1
+        
     }) => {
 
   return (
     <Fragment>
         <div className="care-partner-card col-md-6">
             <div className="image">
-                <img src={require('./../../images/demo-prof.jpg')} alt="Service Provider Img"/>
+                <img src={require(`./../../images/partners/partner-${partnerId}.jpg`)} alt={firstName}/>
             </div>
             <div className="meta__outter">
                 <div className='meta'>
-                    <h2 className="partner-name">{ name }</h2>
+                    <h2 className="partner-name">{firstName} {lastName}</h2>
                     <ul className="partner-services">
-                        <li>Cleaning</li>
-                        <li>Lawn Maintenance</li>
+                        {
+                            services.map( (s, i) => (
+                                <li> {s} </li>
+                            ))
+                        }
                     </ul>
                     <p>$<strong>{rate} </strong></p>
                     
