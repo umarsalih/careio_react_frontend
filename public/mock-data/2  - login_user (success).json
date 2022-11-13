@@ -1,0 +1,16 @@
+{
+    "status_msg": "success",
+    "login": {
+      "login_id": 4321,
+      "token": "#243fsfd"
+    },
+    "user": {
+      "first_name": "Umar",
+      "last_name": "Salih",
+      "phone": "+1 234 567 8900",
+      "street": "123 Cumberland St",
+      "city": "New Westminster",
+      "province": "British Columbia",
+      "country": "Canada"
+    }
+  }

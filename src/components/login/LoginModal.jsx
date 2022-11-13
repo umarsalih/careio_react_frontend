@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux';
+import { useDispatch,} from 'react-redux';
 import { setLogin } from '../../store/login-store';
 import axios from 'axios'
 
@@ -11,48 +11,36 @@ export default function LoginModal() {
         password: 'password'
     });
 
-    const initLogin = async () =>{
-        const res = await axios.post('/login/client', {
-            headers : { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
+    const initLogin = async (evt) =>{
+        evt.preventDefault()
+        const data = {
+            username: loginMeta.username,
+            password: loginMeta.password
+        }
+        try{
+            const res = await axios.post('/login/client', {
+                headers : { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
-                data:{
-                username: loginMeta.username,
-                password: loginMeta.password
-                }
+                data
             })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-        console.log({res})
-
+            console.log({res})
+        } catch(e) {
+            console.error(`[careio::error] ${e}`)
+        }
         // return dispatch(setLogin(true))
     }
 
     const handleChange = async(evt) =>{
         const val = evt.target.value
         const propKey = evt.target.dataset.name
-        console.log({propKey, val})
         setLoginMeta({
             ...loginMeta,
             [propKey]: val
-        })
-        
+        })    
     }
     
-    // const initLogin = async() => {
-    //     const res = await axios.get('/mock-data/partners-all.json', {
-    //         headers : { 
-    //                 'Content-Type': 'application/json',
-    //                 'Accept': 'application/json'
-    //                }
-    //     })
-    // }
-
   return (
     <Fragment>
         <div className="modal fade" id="loginModal" tabIndex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
@@ -64,7 +52,6 @@ export default function LoginModal() {
                     <h3>
                         Log In To Book A Partner
                     </h3>
-                    {loginMeta.username} {loginMeta.password}
                     <form action="/">
                         <div className="form-group">
                             <label htmlFor="care-user-un">Username</label>

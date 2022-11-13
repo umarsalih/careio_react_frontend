@@ -6,24 +6,30 @@ const TabsPartners = (props) => {
     const [partners, setPartners] = useState([])
     
     const fetchPartners = async () =>{
-        if(partners.length) return
-        const res = await axios.get('/mock-data/partners-all.json', {
-            headers : { 
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                   }
-        })
-        console.log({res})
+        let res
+        try{
+            res = await axios.get('/mock-data/1 -  partners_all.json', {
+                headers : { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                       }
+            })
+            console.log({res})
+        }catch(e){
+            console.error(`[careio::error] ${e.message}`)
+        }
+        
         if(res.status === 200 && res.data.length){
             try{
                 setPartners(res.data)
             }catch(e){
-                console.error(e)
+                console.error(`[careio::error] ${e}`)
             }
         } 
     }
 
     useEffect(()=>{
+        if(partners.length) return
         fetchPartners()
     },[])
 

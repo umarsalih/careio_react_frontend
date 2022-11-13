@@ -1,9 +1,12 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
 import { useSelector, useDispatch } from 'react-redux';
-import { bookingPartner, bookingMeta, updateBookingMeta } from '../../store/booking-store';
+import axios from 'axios'
+import { bookingPartner, bookingMeta, updateBookingMeta } 
+from '../../store/booking-store';
+import { currentUser } from '../../store/login-store';
+import { useResolvedPath } from 'react-router-dom';
 
 
 export default function BookingModal() {
@@ -19,6 +22,8 @@ export default function BookingModal() {
         totalPrice: 0
     });
     const partner = useSelector(bookingPartner)
+    const user = useSelector(currentUser)
+
     useEffect(()=>{
         console.log({partner})
     },[])
@@ -41,7 +46,6 @@ export default function BookingModal() {
         
     }, [bookingDetails.timeStart, bookingDetails.timeEnd])
 
-
     const _updateBookingMeta = async () =>{
         const meta = await bookingDetails
         return dispatch(updateBookingMeta(meta))
@@ -55,6 +59,7 @@ export default function BookingModal() {
         })
         _updateBookingMeta()
     }
+    
     const handleDateChange = (date) =>{
         setStartDate(date)
         setBookingDetails({
@@ -62,6 +67,33 @@ export default function BookingModal() {
             date: date.toDateString(),
         })
         _updateBookingMeta()
+    }
+
+    const initCreateBooking = async () =>{
+        const data = {
+            user_id: user.userId,
+            partner_id: partner.partnerId,
+            time_start: bookingDetails.timeStart,
+            time_end: bookingDetails.timeEnd,
+            date: bookingDetails.date,
+            services: bookingDetails.services,
+            total_price: bookingDetails.total_price
+        }
+        const res = await axios.post('/booking', {
+            headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+                },
+                data
+            })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+        // return dispatch(setLogin(true))
     }
 
     const operatingHours = [

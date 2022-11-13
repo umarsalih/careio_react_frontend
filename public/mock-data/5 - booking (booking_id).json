@@ -1,0 +1,12 @@
+{
+  "booking_id": 3545,
+  "user_id": 1,
+  "partner_id": 2,
+  "date": "2023-11-10",
+  "time_start": "07:00",
+  "time_end": "09:00",
+  "services": [
+    "cleaning"
+  ],
+  "total_price": 88
+}

@@ -11,6 +11,8 @@ const bookingSlice = createSlice({
       rate : 26,
     },
     bookingMeta:{
+      userId: 1,
+      partnerId: 2,
       date: "10-11-2022",
       timeStart: "07:00",
       timeEnd: "09:00",

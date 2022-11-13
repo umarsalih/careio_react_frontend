@@ -21,5 +21,11 @@ MACCI:
     [] store booking total
     [✓] only enable to book if logged in
 
-[] user
-    [] is logged in logged out
+[✓] user
+    [✓] is logged in logged out
+
+[] test eclipse call
+[] data templates
+    [] partners
+    [] user
+    [] bookings
