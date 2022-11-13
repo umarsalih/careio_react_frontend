@@ -19,6 +19,7 @@ MACCI:
     [] user
     [] bookings
 [] apply constraint to start end time
+[] add home to nav
 
 [✓] fetch partners
 [✓] dynamic partners
