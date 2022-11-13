@@ -1,11 +1,11 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { isLoggedIn, toggleLogin, setLogin , currentUser} from '../../store/login-store';
+import { isLoggedIn, setLogin , currentUser} from '../../store/login-store';
 import { Link } from 'react-router-dom'
 
 function Nav() {
-    const isLogged = useSelector(isLoggedIn);
-    const user = useSelector(currentUser);
+    const isLogged = useSelector(isLoggedIn)
+    const user = useSelector(currentUser)
     const dispatch = useDispatch()
 
   return (
@@ -32,7 +32,7 @@ function Nav() {
                         ) : (
                             <div>
                                 <span>
-                                    You are logged in as {}
+                                    You are logged in as {user.username}
                                 </span>
                                 <span type="button" 
                                     className="text-white mx-3" 
