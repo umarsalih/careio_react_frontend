@@ -4,11 +4,13 @@ import Hero from '../home/Hero'
 import TabsPartners from './../home/TabsPartners'
 import BookingModal from './../booking/BookingModal'
 import LoginModal from './../login/LoginModal'
+import Nav from '../templates/Nav';
 
 const Home = () => {
     
     return (
         <Fragment>
+            <Nav />
             <div id="CareIOHome">
                 <div className="careio__superwrapper">
                     <div className="hero__holder">
