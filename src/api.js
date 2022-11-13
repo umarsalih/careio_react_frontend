@@ -59,3 +59,30 @@ export const getBookings = async(cb) => {
         console.error(`[careio::error] ${e}`)
     }
 }
+
+
+// this was at booking modal
+export const initCreateBooking = async (user, partner, bookingDetails) =>{
+    const data = {
+        user_id: user.userId,
+        partner_id: partner.partnerId,
+        time_start: bookingDetails.timeStart,
+        time_end: bookingDetails.timeEnd,
+        date: bookingDetails.date,
+        services: bookingDetails.services,
+        total_price: bookingDetails.total_price
+    }
+    const res = await axios.post('/booking', {
+        headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+            },
+            data
+        })
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
+}

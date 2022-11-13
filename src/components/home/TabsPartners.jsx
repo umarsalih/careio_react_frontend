@@ -8,7 +8,7 @@ const TabsPartners = (props) => {
     const fetchPartners = async () =>{
         let res
         try{
-            res = await axios.get('/mock-data/1 -  partners_all.json', {
+            res = await axios.get('/mock-data/1 - partners_all.json', {
                 headers : { 
                         'Content-Type': 'application/json',
                         'Accept': 'application/json'

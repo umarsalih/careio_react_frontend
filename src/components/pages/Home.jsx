@@ -4,25 +4,8 @@ import Hero from '../home/Hero'
 import TabsPartners from './../home/TabsPartners'
 import BookingModal from './../booking/BookingModal'
 import LoginModal from './../login/LoginModal'
-import axios from 'axios';
-import {getBookings} from './../../api'
 
 const Home = () => {
-    // let fetched = useRef(false)
-    console.log(
-        Date.parse('10-11-2022 07:00')
-    )
-
-
-    
-    useEffect(()=>{
-        // if(fetched) return
-        // const newBooking = getBookings( ()=>{
-        //     fetched = true
-        // })
-        // console.log({newBooking})
-    },[])
-    
     return (
         <Fragment>
             <div id="CareIOHome">

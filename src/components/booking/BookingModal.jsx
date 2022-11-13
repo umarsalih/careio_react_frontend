@@ -64,33 +64,6 @@ export default function BookingModal() {
         _updateBookingMeta()
     }
 
-    const initCreateBooking = async () =>{
-        const data = {
-            user_id: user.userId,
-            partner_id: partner.partnerId,
-            time_start: bookingDetails.timeStart,
-            time_end: bookingDetails.timeEnd,
-            date: bookingDetails.date,
-            services: bookingDetails.services,
-            total_price: bookingDetails.total_price
-        }
-        const res = await axios.post('/booking', {
-            headers : { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-                },
-                data
-            })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.error(error);
-            });
-
-        // return dispatch(setLogin(true))
-    }
-
     const operatingHours = [
         { label: '6 am', val: '06:00'},
         { label: '7 am', val: '07:00'},

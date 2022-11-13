@@ -8,6 +8,6 @@
   "services": [
     "cleaning"
   ],
-  "total_price": 88
-  "is_finished" : 
+  "total_price": 88,
+  "is_finished" : true
 }
