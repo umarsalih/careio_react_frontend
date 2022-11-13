@@ -9,7 +9,7 @@ function Nav() {
     const dispatch = useDispatch()
 
   return (
-    <div id="CareNav" class="navbar careio-nav">
+    <div id="CareNav" className="navbar careio-nav">
             <Link to="/" className='logo-holder'>
                 <img src={require('./../../images/brand/care-logo-white.png')}/>
             </Link>

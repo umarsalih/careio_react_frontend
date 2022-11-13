@@ -27,10 +27,6 @@ const loginSlice = createSlice({
   }
 })
 export const isLoggedIn = (state) => state.login.isLoggedIn
-<<<<<<< HEAD
 export const currentUser = (state) => state.login.user
-=======
-export const currentUser = (state) => state.user
->>>>>>> macci/api/planning
-export const { toggleLogin, setLogin } = loginSlice.actions
+export const { toggleLogin, setLogin, setUser } = loginSlice.actions
 export default loginSlice.reducer

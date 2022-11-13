@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch,} from 'react-redux';
-import { setLogin } from '../../store/login-store';
+import { useDispatch, useSelector} from 'react-redux';
+import { setLogin, setUser, currentUser } from '../../store/login-store';
 import axios from 'axios'
 
 export default function LoginModal() {
@@ -10,25 +10,33 @@ export default function LoginModal() {
         username: 'user',
         password: 'password'
     });
-
+    const user = useSelector(currentUser)
     const initLogin = async (evt) =>{
         evt.preventDefault()
-        const data = {
-            username: loginMeta.username,
-            password: loginMeta.password
-        }
-        try{
-            const res = await axios.post('/login/client', {
-                headers : { 
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                data
-            })
-        } catch(e) {
-            console.error(`[careio::error] ${e}`)
-        }
-        // return dispatch(setLogin(true))
+        // const data = {
+        //     username: loginMeta.username,
+        //     password: loginMeta.password
+        // }
+        // try{
+        //     const res = await axios.post('/login/client', {
+        //         headers : { 
+        //             'Content-Type': 'application/json',
+        //             'Accept': 'application/json'
+        //         },
+        //         data
+        //     })
+        // } catch(e) {
+        //     console.error(`[careio::error] ${e}`)
+        // }
+        dispatch(setUser({
+            ...currentUser,
+            username: loginMeta.username
+        }))
+        dispatch(setLogin(true))
+        setLoginMeta({
+            username: '',
+            password: ''
+        })
     }
 
     const handleChange = async(evt) =>{
