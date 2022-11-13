@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { isLoggedIn, setLogin , currentUser} from '../../store/login-store';
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 function Nav() {
     const isLogged = useSelector(isLoggedIn)
     const user = useSelector(currentUser)
     const dispatch = useDispatch()
+    const path = useLocation().pathname
+    
 
   return (
     <div id="CareNav" className="navbar careio-nav">
@@ -15,36 +17,48 @@ function Nav() {
             </Link>
             <nav>
                 <ul>
-                    <li>
+                    {(path!=='/')?
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                    : ''
+                    }
+                    
                         { !isLogged ?  (
-                            <div>
+                            <Fragment>
+                            <li>
                                 <Link to="/signup" className="text-white mx-3">
                                     Sign Up
                                 </Link>
-                                &nbsp;
+                            </li>
+                            <li>
                                 <span type="button" 
                                     className="text-white mx-3" 
                                     data-bs-toggle="modal" 
                                     data-bs-target="#loginModal">
                                     Log In
                                 </span>
-                            </div>
+                            </li>    
+                            </Fragment>
                         ) : (
-                            <div>
-                                <span className='text-light'>
+                            <Fragment>
+                                
+                                <li>
+                                    <span className='text-light'>
                                     Welcome, {user.username}
-                                </span>
-                                <span type="button" 
-                                    className="text-white mx-3" 
-                                    data-bs-toggle="modal" 
-                                    onClick={() => dispatch(setLogin(false))}
-                                >
-                                    Log Out
-                                </span>
-                            </div>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span type="button" 
+                                        className="text-white mx-3" 
+                                        data-bs-toggle="modal" 
+                                        onClick={() => dispatch(setLogin(false))}
+                                    >
+                                        Log Out
+                                    </span>
+                                </li>
+                            </Fragment>
                         )}
-                    </li>
-                    
                 </ul>
             </nav>
     </div>

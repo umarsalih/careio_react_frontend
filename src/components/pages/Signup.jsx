@@ -6,31 +6,19 @@ import SignupForm from './Signup-form';
 import { useSelector } from 'react-redux';
 import { isLoggedIn } from '../../store/login-store';
 import { Link } from 'react-router-dom'
-import Nav from '../templates/Nav';
 
 function Signup() {
     const isLogged = useSelector(isLoggedIn);
     return (
-        <div>
-            <body id="CareIOSignup">
-                <Nav />
-                <div className='careio_superwrapper'>
-                    <div>
-                        {isLogged 
-                            ? <span> You are logged in</span> 
-                            : <span> Not logged in yet </span>
-                        }
-                        <Link to="/">Back to home</Link>
+        <div id="CareIOSignup">
+            <div className='careio_superwrapper'>
+                <section id="container-01" className="section-full">
+                    <div className='row'>
+                        <SignupInfo/>
+                        <SignupForm/>
                     </div>
-                    
-                    <section id="container-01" className="section-full">
-                        <div className='row'>
-                            <SignupInfo/>
-                            <SignupForm/>
-                        </div>
-                    </section>
-                </div>
-            </body>
+                </section>
+            </div>
         </div>
     )
 }
