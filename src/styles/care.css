@@ -195,6 +195,53 @@
   margin: 2px 4px;
 }
 
+.navbar.careio-nav {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #282D37;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.logo {
+  color: #FFFFFF;
+  font-size: 25px;
+  margin-left: 1em;
+}
+
+.logo-holder {
+  max-width: 160px;
+}
+.logo-holder img {
+  width: 100%;
+}
+
+p {
+  color: #555;
+}
+
 * {
   font-family: "Roboto", sans-serif;
   font-size: 13px;

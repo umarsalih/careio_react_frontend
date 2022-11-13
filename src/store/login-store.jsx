@@ -23,5 +23,6 @@ const loginSlice = createSlice({
   }
 })
 export const isLoggedIn = (state) => state.login.isLoggedIn
+export const currentUser = (state) => state.login.user
 export const { toggleLogin, setLogin } = loginSlice.actions
 export default loginSlice.reducer

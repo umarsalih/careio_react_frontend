@@ -18,8 +18,7 @@ const Home = () => {
                     </div>
                     <div className="careio__body py-5">
                         <TabsPartners/>
-                    </div>
-                    { /* end of careio__body */ }
+                    </div>{ /* end of careio__body */ }
 
                     <div id="CareIOMOdals">
                         <LoginModal/>
