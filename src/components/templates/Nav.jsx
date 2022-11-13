@@ -31,8 +31,8 @@ function Nav() {
                             </div>
                         ) : (
                             <div>
-                                <span>
-                                    You are logged in as {user.username}
+                                <span className='text-light'>
+                                    Welcome, {user.username}
                                 </span>
                                 <span type="button" 
                                     className="text-white mx-3" 
