@@ -8,7 +8,6 @@ from '../../store/booking-store';
 import { currentUser } from '../../store/login-store';
 import { useResolvedPath } from 'react-router-dom';
 
-
 export default function BookingModal() {
     const dispatch = useDispatch()
 
@@ -24,9 +23,6 @@ export default function BookingModal() {
     const partner = useSelector(bookingPartner)
     const user = useSelector(currentUser)
 
-    useEffect(()=>{
-        console.log({partner})
-    },[])
     const [jobLength, setJobLength] = useState(2);
 
     useEffect(()=>{
@@ -52,7 +48,6 @@ export default function BookingModal() {
     }
     const handleChange = async(evt) =>{
         const propKey = evt.target.dataset.value
-        console.log({propKey})
         setBookingDetails({
             ...bookingDetails,
             [propKey]: evt.target.value
@@ -90,7 +85,7 @@ export default function BookingModal() {
                 console.log(response);
             })
             .catch(function (error) {
-                console.log(error);
+                console.error(error);
             });
 
         // return dispatch(setLogin(true))
@@ -142,8 +137,10 @@ export default function BookingModal() {
                                     <div id="partnerServices" className="form-group">
                                         {
                                             partner.services.map( (serv, i) =>(
-                                                <div className="form-check d-inline-block mr-3">
-                                                    <input className="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
+                                                <div className="form-check d-inline-block mr-3" key={i}>
+                                                    <input 
+                                                    key={i}
+                                                    className="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
                                                     <label className="form-check-label">{serv}</label>
                                                 </div>
                                             ))
@@ -286,7 +283,7 @@ const setupHoursDropdown = () => {
     let htmlOptionsEnd = ""
 
     operatingHours.map((timeObj, i) => {
-        const strOpt = `<option value="${timeObj.val}" class="time-opts time-${i+6}" data-index="${i}">
+        const strOpt = `<option value="${timeObj.val}" class="time-opts time-${i+6}" data-index="${i} key=${i}">
             ${timeObj.label}
         </option>`
 
@@ -303,7 +300,6 @@ const setupHoursDropdown = () => {
 
     dropdownStartHrs.addEventListener('input', evt =>{
         const valIndex = evt.target.selectedOptions[0].dataset.index
-
         const endHrs = dropdownEndHrs.children
         endHrs[valIndex].selected = true;
         for (let i = 0; i < endHrs.length; i++) {

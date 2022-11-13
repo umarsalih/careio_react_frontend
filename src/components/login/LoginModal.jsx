@@ -25,7 +25,6 @@ export default function LoginModal() {
                 },
                 data
             })
-            console.log({res})
         } catch(e) {
             console.error(`[careio::error] ${e}`)
         }

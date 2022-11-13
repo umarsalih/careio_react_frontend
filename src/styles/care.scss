@@ -1,11 +1,11 @@
 // import care variables ex: $CARE_GREEN
 @import "./utils-colors.scss";
 
-// this imports home styling
-@import "./layout-home.scss";
+// this imports layout styling
+@import "./layout-home.scss", "./components/layout-modals.scss"; 
 
 // this import components styling
-@import "./components/layout-modals.scss", "./components/partner-card.scss";
+@import  "./components/partner-card.scss" ; // <- @SAL INCLUDE HERE 
 
 * {
     font-family: 'Roboto', sans-serif;
