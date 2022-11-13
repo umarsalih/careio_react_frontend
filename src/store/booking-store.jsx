@@ -11,11 +11,15 @@ const bookingSlice = createSlice({
       rate : 26,
     },
     bookingMeta:{
+      userId: 1,
+      partnerId: 2,
       date: "10-11-2022",
       timeStart: "07:00",
       timeEnd: "09:00",
       selectedServices: ["cleaning"],
-      totalPrice: 25
+      totalPrice: 25,
+      isFinished: null,
+      bookingKey: null,
     }
   },
   reducers: {

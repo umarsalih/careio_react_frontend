@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const loginSlice = createSlice({
   name: 'login',
   initialState: {
-    isLoggedIn: true,
+    isLoggedIn: false,
     user: {
       username: 'username',
       userId: 1,
@@ -21,9 +21,16 @@ const loginSlice = createSlice({
     setLogin(state, action){
       state.isLoggedIn = action.payload
     },
+    setUser(state, action){
+      state.user = action.payload
+    },
   }
 })
 export const isLoggedIn = (state) => state.login.isLoggedIn
+<<<<<<< HEAD
 export const currentUser = (state) => state.login.user
+=======
+export const currentUser = (state) => state.user
+>>>>>>> macci/api/planning
 export const { toggleLogin, setLogin } = loginSlice.actions
 export default loginSlice.reducer

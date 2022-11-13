@@ -1,10 +1,12 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
 import { useSelector, useDispatch } from 'react-redux';
-import { bookingPartner, bookingMeta, updateBookingMeta } from '../../store/booking-store';
-
+import axios from 'axios'
+import { bookingPartner, bookingMeta, updateBookingMeta } 
+from '../../store/booking-store';
+import { currentUser } from '../../store/login-store';
+import { useResolvedPath } from 'react-router-dom';
 
 export default function BookingModal() {
     const dispatch = useDispatch()
@@ -19,9 +21,8 @@ export default function BookingModal() {
         totalPrice: 0
     });
     const partner = useSelector(bookingPartner)
-    useEffect(()=>{
-        console.log({partner})
-    },[])
+    const user = useSelector(currentUser)
+
     const [jobLength, setJobLength] = useState(2);
 
     useEffect(()=>{
@@ -41,20 +42,19 @@ export default function BookingModal() {
         
     }, [bookingDetails.timeStart, bookingDetails.timeEnd])
 
-
     const _updateBookingMeta = async () =>{
         const meta = await bookingDetails
         return dispatch(updateBookingMeta(meta))
     }
     const handleChange = async(evt) =>{
         const propKey = evt.target.dataset.value
-        console.log({propKey})
         setBookingDetails({
             ...bookingDetails,
             [propKey]: evt.target.value
         })
         _updateBookingMeta()
     }
+    
     const handleDateChange = (date) =>{
         setStartDate(date)
         setBookingDetails({
@@ -110,8 +110,10 @@ export default function BookingModal() {
                                     <div id="partnerServices" className="form-group">
                                         {
                                             partner.services.map( (serv, i) =>(
-                                                <div className="form-check d-inline-block mr-3">
-                                                    <input className="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
+                                                <div className="form-check d-inline-block mr-3" key={i}>
+                                                    <input 
+                                                    key={i}
+                                                    className="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
                                                     <label className="form-check-label">{serv}</label>
                                                 </div>
                                             ))
@@ -254,7 +256,7 @@ const setupHoursDropdown = () => {
     let htmlOptionsEnd = ""
 
     operatingHours.map((timeObj, i) => {
-        const strOpt = `<option value="${timeObj.val}" class="time-opts time-${i+6}" data-index="${i}">
+        const strOpt = `<option value="${timeObj.val}" class="time-opts time-${i+6}" data-index="${i} key=${i}">
             ${timeObj.label}
         </option>`
 
@@ -271,7 +273,6 @@ const setupHoursDropdown = () => {
 
     dropdownStartHrs.addEventListener('input', evt =>{
         const valIndex = evt.target.selectedOptions[0].dataset.index
-
         const endHrs = dropdownEndHrs.children
         endHrs[valIndex].selected = true;
         for (let i = 0; i < endHrs.length; i++) {

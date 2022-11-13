@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment} from 'react';
+import React, { useRef, useState, useEffect, Fragment} from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../home/Hero'
 import TabsPartners from './../home/TabsPartners'
@@ -7,7 +7,6 @@ import LoginModal from './../login/LoginModal'
 import Nav from '../templates/Nav';
 
 const Home = () => {
-    
     return (
         <Fragment>
             <Nav />

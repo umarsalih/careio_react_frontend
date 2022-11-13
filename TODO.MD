@@ -1,3 +1,6 @@
+DEEPAK
+[] test api.js using ApiTester component
+
 AMAN:
 [] my bookings frontend
 
@@ -8,6 +11,14 @@ SAL:
 [] 
 
 MACCI:
+[] setup ApiTest component
+[] setup api.js
+[] fix api booking timeStart and timeEnd datatype from string to date
+[] data templates
+    [] partners
+    [] user
+    [] bookings
+
 [✓] fetch partners
 [✓] dynamic partners
 
@@ -21,5 +32,8 @@ MACCI:
     [] store booking total
     [✓] only enable to book if logged in
 
-[] user
-    [] is logged in logged out
+[✓] user
+    [✓] is logged in logged out
+
+[✓] test eclipse call
+
