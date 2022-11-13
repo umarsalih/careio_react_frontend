@@ -7,6 +7,9 @@
 // this import components styling
 @import "./components/layout-modals.scss", "./components/partner-card.scss";
 
+// import nav styling
+@import "./nav.scss";
+
 * {
     font-family: 'Roboto', sans-serif;
     font-size: 13px;

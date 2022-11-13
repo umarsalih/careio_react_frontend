@@ -8,19 +8,21 @@
 }
 
 .signupInfo {
-    width: 45%;
-    /* background-image: url(../images/image\ 6.png); */
+    width: 60%;
     padding: 100px 0;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: left;
+    /* background-image: url(../images/image\ 6.png); */
+    background-repeat: no-repeat;
 }
 
 .signupInfo-headertext h1 {
     font-size: 3em;
     font-weight: 100;
+    padding-left: 1em;
 }
 
 .signupInfo-headertext {

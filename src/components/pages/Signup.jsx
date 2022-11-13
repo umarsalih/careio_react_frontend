@@ -6,13 +6,14 @@ import SignupForm from './Signup-form';
 import { useSelector } from 'react-redux';
 import { isLoggedIn } from '../../store/login-store';
 import { Link } from 'react-router-dom'
-
+import Nav from '../templates/Nav';
 
 function Signup() {
     const isLogged = useSelector(isLoggedIn);
     return (
         <div>
             <body id="CareIOSignup">
+                <Nav />
                 <div className='careio_superwrapper'>
                     <div>
                         {isLogged 
