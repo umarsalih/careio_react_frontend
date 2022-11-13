@@ -12,12 +12,6 @@ const Hero = () => {
             <div className="care-hero__inner">
                 <div className="container">
                     <div className='row p-5'>
-                        <div className="header-img">
-                            <div className='logo__holder'>
-                            <img className='logo' src={require(`./../../images/brand/care-logo-white.png`)} alt="care.io"/>
-                            </div>
-                            
-                        </div>
                         <div className="bg-text">
                             <h1>We care. Metro Vancouver’s <br/>Home Service Finder</h1>
                             
