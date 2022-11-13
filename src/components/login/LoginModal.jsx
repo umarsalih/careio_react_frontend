@@ -83,8 +83,10 @@ export default function LoginModal() {
                         <h3>
                             No account yet?
                         </h3>
-                        <Link to='/signup'>
-                            Sign up with us
+                        <Link to='/signup' className='btn__sign-up'>
+                            <button data-bs-dismiss="modal">
+                                    Sign up with us
+                            </button>
                         </Link>
                     </div>
                 </div> {/* /.modal-content */}

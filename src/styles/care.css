@@ -78,8 +78,12 @@
 .modal .modal-content {
   border: none;
 }
-.modal#modalLogin button.login {
+.modal#loginModal button.login {
   margin-top: 2rem;
+}
+.modal#loginModal .btn__sign-up button {
+  border-radius: 0.5rem;
+  color: #fff;
 }
 .modal#bookingModal .modal-dialog {
   text-align: left;

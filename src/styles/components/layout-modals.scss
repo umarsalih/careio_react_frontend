@@ -27,9 +27,15 @@
         border: none
     }
 
-    &#modalLogin{
+    &#loginModal{
         button.login{
             margin-top: 2rem;
+        }
+        .btn__sign-up{
+            button{
+                border-radius: 0.5rem;
+                color: #fff;
+            }
         }
     }
     &#bookingModal{
