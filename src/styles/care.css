@@ -78,6 +78,11 @@
 .modal .modal-content {
   border: none;
 }
+.modal button:not(.react-datepicker__navigation), .modal .btn, .modal .btn-primary {
+  background-color: #5FAB8F;
+  border: 0;
+  padding: 1rem 3rem;
+}
 .modal#loginModal button.login {
   margin-top: 2rem;
 }

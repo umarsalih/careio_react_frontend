@@ -13,24 +13,25 @@ function Nav() {
   return (
     <div id="CareNav" className="navbar careio-nav">
             <Link to="/" className='logo-holder'>
-                <img src={require('./../../images/brand/care-logo-white.png')}/>
+                <img src={require('./../../images/brand/care-logo-white.png')} alt="logo"/>
             </Link>
             <nav>
                 <ul>
-                    {(path!=='/')?
+                    {(path!=='/')&&
                         <li>
                             <Link to="/">Home</Link>
                         </li>
-                    : ''
                     }
                     
                         { !isLogged ?  (
                             <Fragment>
-                            <li>
-                                <Link to="/signup" className="text-white mx-3">
-                                    Sign Up
-                                </Link>
-                            </li>
+                                 {(path!=='/signup')&&
+                                    <li>
+                                        <Link to="/signup" className="text-white mx-3">
+                                            Sign Up
+                                        </Link>
+                                    </li>
+                                }
                             <li>
                                 <span type="button" 
                                     className="text-white mx-3" 
