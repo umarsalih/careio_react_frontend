@@ -54,7 +54,7 @@
 1. Make sure the changes in your branch are saved, committed, and pushed. This is will ensure your changes are saved in the repository and that you won't lose it.
 2. Go to main branch `git checkout main`
 3. Pull the changes `git pull`
-4. Go back to your branch `git branch <YOUR BRANCH MAIN>`
+4. Go back to your branch `git branch <YOUR BRANCH NAME>`
 5. Time to merge! `git merge main`
 
 # Setup SASS
