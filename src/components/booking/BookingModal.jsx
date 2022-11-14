@@ -13,8 +13,8 @@ export default function BookingModal() {
 
     const [startDate, setStartDate] = useState(new Date());
     const [bookingDetails, setBookingDetails] = useState({
-        timeEnd: '06:00',
         timeStart: '07:00',
+        timeEnd: '09:00',
         ...bookingMeta,
         date: startDate.toDateString(),
         selectedServices: [],
@@ -145,6 +145,7 @@ export default function BookingModal() {
                                             id="inputStartTime" 
                                             data-value="timeStart"
                                             onChange={handleChange}
+                                            defaultValue={bookingDetails.timeStart}
                                         >
                                             {
                                                 operatingHours.map((timeObj, i) => {
@@ -171,6 +172,7 @@ export default function BookingModal() {
                                             data-value="timeEnd"
                                             id="inputEndTime" 
                                             onChange={handleChange}
+                                            defaultValue={bookingDetails.timeEnd}
                                         >
                                             {
                                                 operatingHours.map((timeObj, i) => {
