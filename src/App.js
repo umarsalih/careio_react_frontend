@@ -4,6 +4,7 @@ import './styles/style.css';
 import Home from "./components/pages/Home";
 import Signup from './components/pages/Signup';
 import MyBookings from './components/pages/MyBookings';
+import Checkout from './components/pages/Checkout';
 import {store} from './store'
 import { Routes,Route } from 'react-router-dom';
 import { Provider } from 'react-redux'
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/signup' element={<Signup/>} />
           <Route path='/my-bookings' element={<MyBookings/>} />
+          <Route path='/checkout' element={<Checkout/>} />
         </Routes>
         <LoginModal/>
       </div>
