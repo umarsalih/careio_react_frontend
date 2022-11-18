@@ -15,11 +15,12 @@ function App() {
     <Provider store={store}>
     
     <div id="CareIoApp" className='App'>
-      <Nav/>  
+      <Nav/>               
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/signup' element={<Signup/>} />
           <Route path='/my-bookings' element={<MyBookings/>} />
+        
         </Routes>
         <LoginModal/>
       </div>
