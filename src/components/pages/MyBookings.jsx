@@ -1,4 +1,4 @@
-import "./../../styles/mybookings.css";
+// import "./../../styles/mybookings.css";
 import BookingBanner from '../mybookings/BookingBanner'
 import React, { useRef, useState, useEffect, Fragment} from 'react';
 import BookingCards from '../mybookings/BookingCards';

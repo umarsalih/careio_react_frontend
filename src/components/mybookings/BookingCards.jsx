@@ -1,4 +1,4 @@
-import "./../../styles/mybookings.css";
+// import "./../../styles/mybookings.css";
 import { isPending } from '@reduxjs/toolkit';
 import React, {Fragment, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';

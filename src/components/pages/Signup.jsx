@@ -1,6 +1,6 @@
 import React from 'react'
-import "./../../styles/style.css";
-import "./../../styles/layout-signup.css";
+// import "./../../styles/style.css";
+// import "./../../styles/layout-signup.css";
 import SignupInfo from './Signup-info';
 import SignupForm from './Signup-form';
 import { useSelector } from 'react-redux';

@@ -14,85 +14,10 @@
 }
 #CareIOHome .care-hero__inner {
   background-color: rgba(60, 79, 117, 0.8);
-  
   display: flex;
   min-height: 50vh;
   align-items: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #CareIOHome .care-hero__inner h1 {
   color: #fff;
   font-size: 2.5rem;
@@ -124,6 +49,156 @@
 }
 #CareIOHome .care-partner-tabs .tab-pane:not(.show) {
   display: none;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+#container-01 {
+  display: flex;
+  flex-direction: row;
+}
+
+.signupInfo {
+  width: 60%;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  /* background-image: url(../images/image\ 6.png); */
+  background-repeat: no-repeat;
+}
+
+.signupInfo-headertext h1 {
+  font-size: 3em;
+  font-weight: 100;
+  padding-left: 1em;
+}
+
+.signupInfo-textbox1, .signupInfo-textbox2 {
+  margin: 5%;
+}
+
+.signupForm {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formElementsContainer {
+  background-color: #F7F7F2;
+  padding: 3em;
+}
+
+.formElementsContainer input {
+  margin: 25px 30px;
+  padding: 10px;
+}
+
+#inputAddress {
+  width: 80%;
+}
+
+.signupForm button {
+  padding: 1em;
+  border-radius: 10px;
+}
+
+#signupFreeBtn {
+  background-color: #5EAB91;
+}
+
+#signupPremiumBtn {
+  background-color: #3C4F75;
+}
+
+#signupFreeBtn, #signupPremiumBtn {
+  width: 40%;
+  margin: 3em 2em;
+  color: white;
+  border: none;
+}
+
+/*  booking banner css-------------------*/
+#CareIOHome .bookingBanner {
+  background-size: cover;
+  margin: 0;
+  background-position: center;
+}
+
+#CareIOHome .bookingBanner__inner {
+  background-color: #3C4F75;
+  display: flex;
+  min-height: 50vh;
+  align-items: center;
+}
+
+#CareIOHome .bookingBanner__inner h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+#CareIOHome .bookingBanner__inner span {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+/* ----endo booking banner css-------------------------*/
+/*--------------booking card css---*/
+/*------just this row tag is messing with the home pages css can you find any solution to separate them  means my row tag and yours*/
+/*---end of booking card css-----*/
+.navbar.careio-nav {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #282D37;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.logo {
+  color: #FFFFFF;
+  font-size: 25px;
+  margin-left: 1em;
+}
+
+.logo-holder {
+  max-width: 160px;
+}
+.logo-holder img {
+  width: 100%;
+}
+
+p {
+  color: #555;
 }
 
 .modal .care--modal-close__wrapper {
@@ -279,51 +354,50 @@
   margin: 2px 4px;
 }
 
-.navbar.careio-nav {
+.booking-card .row {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.booking-card .card {
+  margin: 3%;
+  box-shadow: 0.25rem 0.75rem 0.75rem rgba(40, 45, 55, 0.1);
+}
+.booking-card .card-body {
+  display: block;
+  text-align: left;
+  margin: 5%;
+}
+.booking-card .status {
+  font-size: large;
+}
+.booking-card .status span {
+  font-size: large;
+}
+.booking-card .bookingDetail {
+  font-size: 1.8rem;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+.booking-card .bookingDetail strong {
+  font-size: 1.8rem;
+}
+.booking-card .otherBookingDetails {
   display: flex;
-  align-items: center;
-  padding: 20px;
-  background: #282D37;
-  padding-left: 60px;
-  padding-right: 60px;
+  margin-bottom: 2%;
 }
-
-nav {
-  flex: 1;
-  text-align: right;
+.booking-card .otherBookingDetails .cellLeft {
+  min-width: 50%;
 }
-
-nav ul {
-  display: inline-flex;
-  align-items: center;
-  list-style: none;
+.booking-card .otherBookingDetails .cellRight {
+  min-width: 50%;
 }
-
-nav ul li {
-  display: inline-block;
-  margin: 0 1rem;
-}
-
-a {
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-.logo {
-  color: #FFFFFF;
-  font-size: 25px;
-  margin-left: 1em;
-}
-
-.logo-holder {
-  max-width: 160px;
-}
-.logo-holder img {
-  width: 100%;
-}
-
-p {
-  color: #555;
+.booking-card .bookingCarButtons .mod-button {
+  background-color: #3C4F75 !important;
+  color: #fff;
+  padding: 8px 30px;
+  margin: 20px 0px;
+  margin-right: 10px;
+  border-radius: 10px;
 }
 
 * {
