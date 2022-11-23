@@ -1,109 +1,39 @@
 // /*  booking banner css-------------------*/
 
-// #CareIOHome .bookingBanner {
-//     background-size: cover;
-//     margin: 0;
-//     background-position: center;
-//   }
-//   #CareIOHome .bookingBanner__inner {
-//     background-color: #3C4F75;
-//     display: flex;
-//     min-height: 50vh;
-//     align-items: center;
-//   }
-  
-  
-//   #CareIOHome .bookingBanner__inner h1 {
-//     color: #fff;
-//     font-size: 2.5rem;
-  
-//     font-weight: 200;
-//   }
-  
-//   #CareIOHome .bookingBanner__inner span {
-//     color: #fff;
-//     font-size: 2.5rem;
-  
-//     font-weight: 500;
-//   }
-  
-  
-  
-  
-//   /* ----endo booking banner css-------------------------*/
-  
-//   /*--------------booking card css---*/
- 
-//   /*------just this row tag is messing with the home pages css can you find any solution to separate them  means my row tag and yours*/
-
-//   // .row{
-//   //   padding-left: 15%;
-//   //   padding-right: 15%;
-  
-//   // }
-  
-//   // .card{
-//   //   margin:  3%;
-//   //   box-shadow: 0.25rem 0.75rem 0.75rem rgba(40, 45, 55, 0.1);
-//   // }
-  
-//   // .card-body{
-//   //   display: block;
-//   //   text-align: left;
-//   //   margin: 5%;
-//   //      }
-  
-  
-//   //  .status{
-//   //   font-size: large;
-//   //  }
-  
-//   //  .status span{
-//   //   font-size: large;
-//   //   }
-  
-//   //   .bookingDetail{
+#CareIOMyBookings{
+    .bookingBanner {
+        background-size: cover;
+        margin: 0;
+        background-position: center;
+      }
+      .bookingBanner__inner {
+        background-color: #3C4F75;
+        display: flex;
+        min-height: 50vh;
+        align-items: center;
+      }
       
-//   //     font-size: 1.8rem;
-//   //     margin-top: 2%;
-//   //     margin-bottom: 4%;
-  
-//   //   }
-//   //   .bookingDetail strong{
-//   //     font-size: 1.8rem;
-//   //   }
-  
-//   //   .otherBookingDetails{
-//   //     display: flex;
-//   //     margin-bottom: 2%;
-  
-//   //   }
-//   //   .otherBookingDetails .cellLeft{
-//   //    min-width: 50%;
-  
-//   //   }
-//   //   .otherBookingDetails .cellRight{
-//   //     min-width: 50%;
-//   //    }
-  
-//   //    .bookingCarButtons .mod-button {
-//   //     background-color: #3C4F75!important;
-//   //     color: #fff;
-//   //     padding: 8px 30px;
-//   //     margin: 20px 0px;
-//   //     margin-right: 10px;
-//   //     border-radius: 10px;
-  
-//   //     }
+      
+      .bookingBanner__inner h1 {
+        color: #fff;
+        font-size: 2.5rem;
+      
+        font-weight: 200;
+      }
+      
+      .bookingBanner__inner span {
+        color: #fff;
+        font-size: 2.5rem;
+      
+        font-weight: 500;
+      }
+
+}
+
   
   
   
-  
-  
-  
-  
-  
-//   /*---end of booking card css-----*/
+
   
   
   
