@@ -26,6 +26,7 @@ const PartnerCard = ({
 
   return (
     <Fragment>
+        
         <div className="care-partner-card__outter mx-md-4 col-md-12 mx-lg-0 col-lg-6 p-2 mt-0 mb-1">
         <div className='care-partner-card'>
             <div className="image">
