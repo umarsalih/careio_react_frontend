@@ -12,7 +12,7 @@ function Signup() {
     return (
         <div id="CareIOSignup">
             <div className='careio_superwrapper'>
-                <section id="container-01" className="section-full">
+                <section id="container-01" className="container-fluid" x-class="section-full">
                     <div className='row'>
                         <SignupInfo/>
                         <SignupForm/>

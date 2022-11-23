@@ -1,89 +1,102 @@
-* {
+#CareIOSignup{
     font-family: 'Roboto', sans-serif;
-}
 
-#container-01 {
-    display: flex;
-    flex-direction: row;
-    padding: 0 5%;
-}
+    #container-01 {
+        display: flex;
+        flex-direction: row;
+        padding: 0 5%;
+    }
+    
+    .signupInfo {
+        // width: 60%;
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        /* background-image: url(../images/image\ 6.png); */
+        background-repeat: no-repeat;
+    }
+    
+    .signupInfo-headertext h1 {
+        font-size: 3em;
+        font-weight: 100;
+        padding-left: 1em;
+    }
+    
+    .signupInfo-textbox1, .signupInfo-textbox2 {
+        margin: 5%;
+    }
+    
+    .signupForm {
+        // width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .formElementsContainer {
+        background-color: #F7F7F2;
+        padding: 3em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .formElementsContainer input {
+        margin: 25px 30px;
+        padding: 10px;
+    }
+    
+    #inputAddress {
+        width: 80%;
+    }
+    
+    .signupForm button {
+        padding: 1em;
+        border-radius: 10px;
+    }
+    
+    #signupFreeBtn {
+        background-color: #5EAB91;
+    }
+    
+    #signupPremiumBtn {
+        background-color: #3C4F75;
+    }
+    
+    #signupFreeBtn, #signupPremiumBtn {
+        width: 40%;
+        margin: 3em 2em;
+        color: white;
+        border: none;
+    }
+    
+    .holder {
+        line-height: 2.5em;
+    }
+    
+    .signup-subheading {
+        color: #3C4F75;
+        font-size: 1.4em;
+        font-weight: 400;
+    }
+    
+    .nav-item button {
+        background-color: #F7F7F2;
+        color: #3C4F75;
+        width: 23em;
+    }
+    
+    .nav-item button[aria-selected="false"] {
+        background-color: #3C4F75;
+        color: #F7F7F2;
+    }
+    
+    
 
-.signupInfo {
-    width: 60%;
-    padding: 100px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    /* background-image: url(../images/image\ 6.png); */
-    background-repeat: no-repeat;
 }
-
-.signupInfo-headertext h1 {
-    font-size: 3em;
-    font-weight: 100;
-    padding-left: 1em;
-}
-
-.signupInfo-textbox1, .signupInfo-textbox2 {
-    margin: 5%;
-}
-
-.signupForm {
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.formElementsContainer {
-    background-color: #F7F7F2;
-    padding: 3em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.formElementsContainer input {
-    margin: 25px 30px;
-    padding: 10px;
-}
-
-#inputAddress {
-    width: 80%;
-}
-
-.signupForm button {
-    padding: 1em;
-    border-radius: 10px;
-}
-
-#signupFreeBtn {
-    background-color: #5EAB91;
-}
-
-#signupPremiumBtn {
-    background-color: #3C4F75;
-}
-
-#signupFreeBtn, #signupPremiumBtn {
-    width: 40%;
-    margin: 3em 2em;
-    color: white;
-    border: none;
-}
-
-.holder {
-    line-height: 2.5em;
-}
-
-.signup-subheading {
-    color: #3C4F75;
-    font-size: 1.4em;
-    font-weight: 400;
-}
-

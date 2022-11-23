@@ -5,7 +5,7 @@ import React from 'react'
 function SignupForm() {
     return (
         <div
-            class="signupForm col-12 col-sm-12  col-md-8 col-lg-6 order-sm-1 order-md-2">
+            class="signupForm col-12 col-sm-12 col-md-8 col-lg-6 order-sm-1 order-md-2">
             <form className='signup-form' action=''>
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">

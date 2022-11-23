@@ -51,17 +51,15 @@
   display: none;
 }
 
-* {
+#CareIOSignup {
   font-family: "Roboto", sans-serif;
 }
-
-#container-01 {
+#CareIOSignup #container-01 {
   display: flex;
   flex-direction: row;
+  padding: 0 5%;
 }
-
-.signupInfo {
-  width: 60%;
+#CareIOSignup .signupInfo {
   padding: 100px 0;
   display: flex;
   flex-direction: column;
@@ -71,89 +69,70 @@
   /* background-image: url(../images/image\ 6.png); */
   background-repeat: no-repeat;
 }
-
-.signupInfo-headertext h1 {
+#CareIOSignup .signupInfo-headertext h1 {
   font-size: 3em;
   font-weight: 100;
   padding-left: 1em;
 }
-
-.signupInfo-textbox1, .signupInfo-textbox2 {
+#CareIOSignup .signupInfo-textbox1, #CareIOSignup .signupInfo-textbox2 {
   margin: 5%;
 }
-
-.signupForm {
-  width: 55%;
+#CareIOSignup .signupForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.formElementsContainer {
+#CareIOSignup .formElementsContainer {
   background-color: #F7F7F2;
   padding: 3em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
-
-.formElementsContainer input {
+#CareIOSignup .formElementsContainer input {
   margin: 25px 30px;
   padding: 10px;
 }
-
-#inputAddress {
+#CareIOSignup #inputAddress {
   width: 80%;
 }
-
-.signupForm button {
+#CareIOSignup .signupForm button {
   padding: 1em;
   border-radius: 10px;
 }
-
-#signupFreeBtn {
+#CareIOSignup #signupFreeBtn {
   background-color: #5EAB91;
 }
-
-#signupPremiumBtn {
+#CareIOSignup #signupPremiumBtn {
   background-color: #3C4F75;
 }
-
-#signupFreeBtn, #signupPremiumBtn {
+#CareIOSignup #signupFreeBtn, #CareIOSignup #signupPremiumBtn {
   width: 40%;
   margin: 3em 2em;
   color: white;
   border: none;
 }
-
-/*  booking banner css-------------------*/
-#CareIOHome .bookingBanner {
-  background-size: cover;
-  margin: 0;
-  background-position: center;
+#CareIOSignup .holder {
+  line-height: 2.5em;
 }
-
-#CareIOHome .bookingBanner__inner {
+#CareIOSignup .signup-subheading {
+  color: #3C4F75;
+  font-size: 1.4em;
+  font-weight: 400;
+}
+#CareIOSignup .nav-item button {
+  background-color: #F7F7F2;
+  color: #3C4F75;
+  width: 23em;
+}
+#CareIOSignup .nav-item button[aria-selected=false] {
   background-color: #3C4F75;
-  display: flex;
-  min-height: 50vh;
-  align-items: center;
+  color: #F7F7F2;
 }
 
-#CareIOHome .bookingBanner__inner h1 {
-  color: #fff;
-  font-size: 2.5rem;
-  font-weight: 200;
-}
-
-#CareIOHome .bookingBanner__inner span {
-  color: #fff;
-  font-size: 2.5rem;
-  font-weight: 500;
-}
-
-/* ----endo booking banner css-------------------------*/
-/*--------------booking card css---*/
-/*------just this row tag is messing with the home pages css can you find any solution to separate them  means my row tag and yours*/
-/*---end of booking card css-----*/
 .navbar.careio-nav {
   display: flex;
   align-items: center;
