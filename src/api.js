@@ -1,6 +1,41 @@
 // Booking
 import axios from 'axios';
 
+
+// 
+
+export const sendRequest = async (options = {
+    method: 'POST', 
+    body: {},
+    url: "http://localhost:8080"
+}, cb) => {
+    console.log({options})
+    const {method, body, url} = options
+    try{
+        const options = {
+            url,
+            method,
+            headers: { 
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Authorization' : "Basic cm9vdDpyb290",
+                'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
+                'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
+            },
+            json: true 
+        }
+
+        if (body && body !== {} ) options[body] = body
+        const res = await axios(options);
+        if(cb) cb()
+        return res.data
+    } catch(e){
+        console.error(`[careio::error] ${e.message}`)
+        return {}
+    }
+
+}
+
 export const createBooking = async (bookingObj, cb) => {
     if(!bookingObj) bookingObj ={
         "userId": 10,
@@ -61,6 +96,10 @@ export const getBookings = async(cb) => {
 }
 
 
+
+
+
+// :: LEGACY ::
 // this was at booking modal
 export const initCreateBooking = async (user, partner, bookingDetails) =>{
     const data = {
