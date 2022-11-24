@@ -1,8 +1,8 @@
 import React from 'react'
 // import "./../../styles/style.css";
 // import "./../../styles/layout-signup.css";
-import SignupInfo from './Signup-info';
-import SignupForm from './Signup-form';
+import SignupForm from '../signup/Signup-form';
+import SignupInfo from '../signup/Signup-info';
 import { useSelector } from 'react-redux';
 import { isLoggedIn } from '../../store/login-store';
 import { Link } from 'react-router-dom'
