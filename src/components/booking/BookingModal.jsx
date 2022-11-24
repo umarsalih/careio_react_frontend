@@ -6,7 +6,7 @@ import axios from 'axios'
 import { bookingPartner, bookingMeta, updateBookingMeta } 
 from '../../store/booking-store';
 import { currentUser } from '../../store/login-store';
-import { useResolvedPath } from 'react-router-dom';
+import { Link, useResolvedPath } from 'react-router-dom';
 
 export default function BookingModal() {
     const dispatch = useDispatch()
@@ -212,8 +212,9 @@ export default function BookingModal() {
                                 <div className='booking-summary-meta'>
                                     <h4>You are booking {partner.firstName} for {jobLength} hours for the total price of ${jobLength*partner.rate} on<br/>{bookingDetails.date}</h4>
                                     
+                                    <Link to="/my-bookings">
                                     <button id="SubmitBooking" className="login btn btn-primary
-                                    my-2">Confirm and checkout</button>
+                                    my-2" data-bs-dismiss="modal" aria-label="Close">Confirm and checkout</button></Link>
                                 </div>
                             </div>
                         </div>

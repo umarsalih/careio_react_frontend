@@ -2,14 +2,13 @@
 @import "./utils-colors.scss";
 
 // this imports layout styling
-@import "./pages/home.scss", "./pages/signup.scss", "./pages/my-bookings.scss"; 
+@import "./pages/home.scss", "./pages/signup.scss", "./pages/my-bookings.scss", "./pages/checkout.scss"; 
 
+// modules
 @import "./modules/nav.scss", "./modules/modals.scss";
 
 // this import components styling
-@import  "./components/partner-card.scss", "./components/booking-card.scss" ;
-
-// import nav styling
+@import  "./components/partner-card.scss", "./components/booking-card.scss" , "./components/stripe-dummy.scss";
 
 
 * {

@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updatePartner } from '../../store/booking-store';
 import { isLoggedIn } from '../../store/login-store';
 
-
 const BookingCard = ({
         partnerId = 41,
         firstName = "John",
