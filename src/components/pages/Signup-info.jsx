@@ -20,28 +20,24 @@ function SignupInfo(props) {
     
                     <div className="signupInfo-textbox1">
                         <h5 className='signup-subheading'>What you get as a free-tier client?</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eligendi quod
-                            nobis hic dolore consequuntur aut officiis ad nulla dolorem.</p>
+                        <p>Allows to browse and find partners that would provide you the service you require, and the service 
+                        is still provided as usual.</p>
     
                         <ul>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
+                            <li>Allows for a maximum of three bookings per month</li>
                         </ul>
                     </div>
     
                     <div className="signupInfo-textbox2">
                         <h5 className='signup-subheading'>Why go
                                 premium?</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eligendi quod
-                            nobis hic dolore consequuntur aut officiis ad nulla dolorem.</p>
+                                <p>Going premium with Care.io would guarantee a better client experience. Get the most out of 
+                                your time and money by subscribing to our premium model made for you.</p>
     
                         <ul>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
+                            <li>Unlimited bookings.</li>
+                            <li>On demand and instant service</li>
+                            <li>Worry free and swift service</li>
                         </ul>
                     </div>
                 </div>
@@ -63,28 +59,23 @@ function SignupInfo(props) {
     
                     <div className="signupInfo-textbox1">
                         <h5 className='signup-subheading'>What you get as a free-tier service partner?</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eligendi quod
-                            nobis hic dolore consequuntur aut officiis ad nulla dolorem.</p>
+                        <p>Using the free tier would still allow for you to be displayed in the partner page and you can market yourself
+                        accordingly.</p>
     
                         <ul>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
+                            <li>Allows to only list one service per partner.</li>
                         </ul>
                     </div>
     
                     <div className="signupInfo-textbox2">
                         <h5 className='signup-subheading'>Why go
                                 premium?</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eligendi quod
-                            nobis hic dolore consequuntur aut officiis ad nulla dolorem.</p>
+                        <p>The added benefit of our premium package would bring you more opportunity and would allow you to reach
+                        out to a larger client market.</p>
     
                         <ul>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, velit.</li>
+                            <li>Allows listing of multiple services.</li>
+                            <li>Your profiles would be given priority and will be listed at the top.</li>
                         </ul>
                     </div>
                 </div>
