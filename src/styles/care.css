@@ -51,6 +51,158 @@
   display: none;
 }
 
+#CareIOSignup {
+  font-family: "Roboto", sans-serif;
+}
+#CareIOSignup #container-01 {
+  display: flex;
+  flex-direction: row;
+  padding: 0 5%;
+}
+#CareIOSignup .signupInfo {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  /* background-image: url(../images/image\ 6.png); */
+  background-repeat: no-repeat;
+}
+#CareIOSignup .signupInfo-headertext h1 {
+  font-size: 3em;
+  font-weight: 100;
+  padding-left: 1em;
+}
+#CareIOSignup .signupInfo-textbox1, #CareIOSignup .signupInfo-textbox2 {
+  margin: 5%;
+}
+#CareIOSignup .signupForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 0;
+}
+#CareIOSignup .formElementsContainer {
+  background-color: #F7F7F2;
+  padding: 3em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#CareIOSignup .formElementsContainer input {
+  margin: 25px 30px;
+  padding: 10px;
+}
+#CareIOSignup #inputAddress {
+  width: 80%;
+}
+#CareIOSignup .signupForm button {
+  padding: 1em;
+  border-radius: 10px;
+}
+#CareIOSignup #signupFreeBtn {
+  background-color: #5EAB91;
+}
+#CareIOSignup #signupPremiumBtn {
+  background-color: #3C4F75;
+}
+#CareIOSignup #signupFreeBtn, #CareIOSignup #signupPremiumBtn {
+  width: 40%;
+  margin: 3em 2em;
+  color: white;
+  border: none;
+}
+#CareIOSignup .holder {
+  line-height: 2.5em;
+}
+#CareIOSignup .signup-subheading {
+  color: #3C4F75;
+  font-size: 1.4em;
+  font-weight: 400;
+}
+#CareIOSignup .nav-item button {
+  background-color: #F7F7F2;
+  color: #3C4F75;
+  width: 23em;
+}
+#CareIOSignup .nav-item button[aria-selected=false] {
+  background-color: #3C4F75;
+  color: #F7F7F2;
+}
+
+#CareIOMyBookings .bookingBanner {
+  background-size: cover;
+  margin: 0;
+  background-position: center;
+}
+#CareIOMyBookings .bookingBanner__inner {
+  background-color: #3C4F75;
+  display: flex;
+  min-height: 50vh;
+  align-items: center;
+}
+#CareIOMyBookings .bookingBanner__inner h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+#CareIOMyBookings .bookingBanner__inner span {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.navbar.careio-nav {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #282D37;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.logo {
+  color: #FFFFFF;
+  font-size: 25px;
+  margin-left: 1em;
+}
+
+.logo-holder {
+  max-width: 160px;
+}
+.logo-holder img {
+  width: 100%;
+}
+
+p {
+  color: #555;
+}
+
 .modal .care--modal-close__wrapper {
   color: #fff;
   border: 0 none !important;
@@ -77,6 +229,11 @@
 }
 .modal .modal-content {
   border: none;
+}
+.modal button:not(.react-datepicker__navigation), .modal .btn, .modal .btn-primary {
+  background-color: #5FAB8F;
+  border: 0;
+  padding: 1rem 3rem;
 }
 .modal#loginModal button.login {
   margin-top: 2rem;
@@ -199,51 +356,143 @@
   margin: 2px 4px;
 }
 
-.navbar.careio-nav {
+.booking-card .row {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.booking-card .card {
+  margin: 3%;
+  box-shadow: 0.25rem 0.75rem 0.75rem rgba(40, 45, 55, 0.1);
+}
+.booking-card .card-body {
+  display: block;
+  text-align: left;
+  margin: 5%;
+}
+.booking-card .status {
+  font-size: large;
+}
+.booking-card .status span {
+  font-size: large;
+}
+.booking-card .bookingDetail {
+  font-size: 1.8rem;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+.booking-card .bookingDetail strong {
+  font-size: 1.8rem;
+}
+.booking-card .otherBookingDetails {
   display: flex;
-  align-items: center;
-  padding: 20px;
-  background: #282D37;
-  padding-left: 60px;
-  padding-right: 60px;
+  margin-bottom: 2%;
+}
+.booking-card .otherBookingDetails .cellLeft {
+  min-width: 50%;
+}
+.booking-card .otherBookingDetails .cellRight {
+  min-width: 50%;
+}
+.booking-card .bookingCarButtons .mod-button {
+  background-color: #3C4F75 !important;
+  color: #fff;
+  padding: 8px 30px;
+  margin: 20px 0px;
+  margin-right: 10px;
+  border-radius: 10px;
 }
 
-nav {
-  flex: 1;
+#StripeDummy form {
+  width: 480px;
+  margin: 20px 0;
+}
+#StripeDummy .group {
+  background: white;
+  box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+#StripeDummy label {
+  position: relative;
+  color: #8898AA;
+  font-weight: 300;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+#StripeDummy .group label:not(:last-child) {
+  border-bottom: 1px solid #F0F5FA;
+}
+#StripeDummy label > span {
+  width: 120px;
   text-align: right;
+  margin-right: 30px;
 }
-
-nav ul {
-  display: inline-flex;
-  align-items: center;
-  list-style: none;
+#StripeDummy .field {
+  background: transparent;
+  font-weight: 300;
+  border: 0;
+  color: #31325F;
+  outline: none;
+  flex: 1;
+  padding-right: 10px;
+  padding-left: 10px;
+  cursor: text;
 }
-
-nav ul li {
-  display: inline-block;
-  margin: 0 1rem;
+#StripeDummy .field::-webkit-input-placeholder {
+  color: #CFD7E0;
 }
-
-a {
-  text-decoration: none;
-  color: #FFFFFF;
+#StripeDummy .field::-moz-placeholder {
+  color: #CFD7E0;
 }
-
-.logo {
-  color: #FFFFFF;
-  font-size: 25px;
-  margin-left: 1em;
-}
-
-.logo-holder {
-  max-width: 160px;
-}
-.logo-holder img {
+#StripeDummy button {
+  float: left;
+  display: block;
+  background: #666EE8;
+  color: white;
+  box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  border: 0;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 400;
   width: 100%;
+  height: 40px;
+  line-height: 38px;
+  outline: none;
 }
-
-p {
-  color: #555;
+#StripeDummy button:focus {
+  background: #555ABF;
+}
+#StripeDummy button:active {
+  background: #43458B;
+}
+#StripeDummy .outcome {
+  float: left;
+  width: 100%;
+  padding-top: 8px;
+  min-height: 24px;
+  text-align: center;
+}
+#StripeDummy .success,
+#StripeDummy .error {
+  display: none;
+  font-size: 13px;
+}
+#StripeDummy .success.visible,
+#StripeDummy .error.visible {
+  display: inline;
+}
+#StripeDummy .error {
+  color: #E4584C;
+}
+#StripeDummy .success {
+  color: #666EE8;
+}
+#StripeDummy .success .token {
+  font-weight: 500;
+  font-size: 13px;
 }
 
 * {

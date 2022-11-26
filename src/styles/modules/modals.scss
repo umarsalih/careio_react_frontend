@@ -26,6 +26,12 @@
     .modal-content{
         border: none
     }
+    button:not(.react-datepicker__navigation), .btn, .btn-primary{
+        background-color: $CARE_GREEN;
+        border: 0;
+        padding: 1rem 3rem;
+    }
+    
 
     &#loginModal{
         button.login{

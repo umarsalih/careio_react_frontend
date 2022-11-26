@@ -8,8 +8,9 @@ import Nav from '../templates/Nav';
 
 const Home = () => {
     return (
+        
+        
         <Fragment>
-            <Nav />
             <div id="CareIOHome">
                 <div className="careio__superwrapper">
                     <div className="hero__holder">
@@ -20,7 +21,6 @@ const Home = () => {
                     </div>{ /* end of careio__body */ }
 
                     <div id="CareIOMOdals">
-                        <LoginModal/>
                         <BookingModal/>
                     </div>
                 </div>    

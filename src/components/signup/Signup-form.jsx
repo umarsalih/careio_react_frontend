@@ -1,15 +1,16 @@
-import React from 'react'
-import "./../../styles/style.css";
-import "./../../styles/layout-signup.css";
+import React, { useState } from 'react'
+// import "./../../styles/style.css";
+// import "./../../styles/layout-signup.css";
 
-function SignupForm() {
+function SignupForm(props) {
+
     return (
         <div
-            class="signupForm col-12 col-sm-12  col-md-8 col-lg-6 order-sm-1 order-md-2">
-            <form action=''>
+            class="signupForm col-12 col-sm-12 col-md-8 col-lg-6 order-sm-1 order-md-2">
+            <form className='signup-form' action=''>
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">
-                        <button
+                        <button onClick={() => props.setClientView(true)}
                             className="nav-link active"
                             id="home-tab"
                             data-bs-toggle="tab"
@@ -21,6 +22,7 @@ function SignupForm() {
                     </li>
                     <li className="nav-item" role="presentation">
                         <button
+                            onClick={() => props.setClientView(false)}
                             className="nav-link"
                             id="profile-tab"
                             data-bs-toggle="tab"
