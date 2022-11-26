@@ -38,19 +38,21 @@ export const sendRequest = async (options = {
 
 export const createBooking = async (bookingObj, cb) => {
     if(!bookingObj) bookingObj ={
-        "userId": 10,
-        "serviceProviderId": 21,
-        "bookingDate": "01-04-2023",
-        "startTime": "10:00",
-        "endTime": "12:00",
-        "totalPrice": 123,
-        "bookingKey": "123",
-        "isFinished": 0
+        
+        // "bookingID": 2,
+        "userId": 3,
+        "serviceProviderId": 4,
+        "bookingDate": "2021-01-01T00:00:00",
+        "startTime": "2021-01-01T00:00:00",
+        "endTime": "2021-01-01T00:00:00",
+        "totalPrice": 200,
+        "bookingKey": "1",
+        "isFinished": 1
     }
 
     try{
         const options = {
-            url: 'http://localhost:8080/booking/',
+            url: 'http://localhost:8080/booking',
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json',
@@ -59,7 +61,7 @@ export const createBooking = async (bookingObj, cb) => {
                 'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
                 'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
             },
-            body: bookingObj,
+            data: bookingObj,
             json: true 
             };
         const res = await axios(options);
