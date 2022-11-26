@@ -1,5 +1,6 @@
 import React from 'react'
 import StripeDummy from '../checkout/StripeDummy';
+import CheckoutModal from '../checkout/CheckoutModal';
 
 // https://blog.logrocket.com/integrating-stripe-react-stripe-js/
 
@@ -25,6 +26,7 @@ export default function Checkout() {
         </div>
       </div>
         
+    <CheckoutModal/>    
     </div>
   )
 }

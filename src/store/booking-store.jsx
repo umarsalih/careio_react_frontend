@@ -20,6 +20,7 @@ const bookingSlice = createSlice({
       totalPrice: 25,
       isFinished: null,
       bookingKey: null,
+      jobLength: 2
     }
   },
   reducers: {

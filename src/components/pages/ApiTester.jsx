@@ -1,5 +1,5 @@
 // import React from 'react'
-import {sendRequest, createBooking, getBookings} from './../../api'
+import {sendRequest, createBooking, getBookings} from '../../api'
 
 import React, { useRef, useState, useEffect, Fragment} from 'react';
 

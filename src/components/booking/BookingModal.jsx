@@ -7,6 +7,7 @@ import { bookingPartner, bookingMeta, updateBookingMeta }
 from '../../store/booking-store';
 import { currentUser } from '../../store/login-store';
 import { Link, useResolvedPath } from 'react-router-dom';
+import BookingSummary from './BookingSummary';
 
 export default function BookingModal() {
     const dispatch = useDispatch()
@@ -35,7 +36,8 @@ export default function BookingModal() {
             setJobLength(endInt-strInt)
             setBookingDetails({
                 ...bookingDetails,
-                totalPrice: endInt-strInt
+                totalPrice: jobLength*partner.rate,
+                jobLength: jobLength
             })
             _updateBookingMeta()
         }
@@ -51,6 +53,14 @@ export default function BookingModal() {
         setBookingDetails({
             ...bookingDetails,
             [propKey]: evt.target.value
+        })
+        _updateBookingMeta()
+    }
+
+    const updateMetaPrice = () => {
+        setBookingDetails({
+            ...bookingDetails,
+            totalPrice: jobLength*partner.rate
         })
         _updateBookingMeta()
     }
@@ -211,9 +221,10 @@ export default function BookingModal() {
                                 </div>
                                 <div className='booking-summary-meta'>
                                     <h4>You are booking {partner.firstName} for {jobLength} hours for the total price of ${jobLength*partner.rate} on<br/>{bookingDetails.date}</h4>
+                                    {/* <BookingSummary/> */}
                                     
-                                    <Link to="/my-bookings">
-                                    <button id="SubmitBooking" className="login btn btn-primary
+                                    <Link to="/checkout">
+                                    <button onClick={updateMetaPrice} id="SubmitBooking" className="login btn btn-primary
                                     my-2" data-bs-dismiss="modal" aria-label="Close">Confirm and checkout</button></Link>
                                 </div>
                             </div>
