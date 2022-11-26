@@ -9,7 +9,7 @@ function Nav() {
     const dispatch = useDispatch()
     const path = useLocation().pathname
     
-
+    
   return (
     <div id="CareNav" className="navbar careio-nav">
             <Link to="/" className='logo-holder'>
@@ -43,12 +43,21 @@ function Nav() {
                             </Fragment>
                         ) : (
                             <Fragment>
-                                
+                                <Fragment>
                                 <li>
                                     <span className='text-light'>
                                     Welcome, {user.username}
                                     </span>
                                 </li>
+                                <li>
+                                <span type="button"
+                                        data-bs-toggle="modal"
+                                    >
+                                        <Link to="/my-bookings" className="text-white mx-3">My Bookings</Link>
+                                    </span>
+                                </li>
+                                </Fragment>
+                                <Fragment>
                                 <li>
                                     <span type="button" 
                                         className="text-white mx-3" 
@@ -58,6 +67,7 @@ function Nav() {
                                         Log Out
                                     </span>
                                 </li>
+                                </Fragment>
                             </Fragment>
                         )}
                 </ul>
