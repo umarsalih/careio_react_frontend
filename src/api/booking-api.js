@@ -54,6 +54,7 @@ export const getBookings = async(cb) => {
         const res = await axios(options);
         console.log({res})
         if(cb) cb()
+        return res.data
     } catch(e) {
         console.error(`[careio::error] ${e}`)
     }
