@@ -87,7 +87,7 @@ export const getBookings = async(cb) => {
                 'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
             },
             json: true,
-            url: 'http://localhost:8080/booking/',
+            url: 'http://localhost:8080/booking',
             };
         const res = await axios(options);
         console.log({res})
