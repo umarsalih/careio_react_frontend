@@ -1,12 +1,13 @@
 import React from 'react'
-import { bookingPartner, bookingMeta, updateBookingMeta }  from '../../store/booking-store';
+import { booking, bookingPartner, bookingMeta, updateBookingMeta }  from '../../store/booking-store';
 import { useSelector, useDispatch } from 'react-redux';
 
 export default function BookingSummary() {
-  const booking =  useSelector(bookingMeta)
+  const meta =  useSelector(bookingMeta)
+  const partner =  useSelector(bookingPartner)
   return (
     <div>
-      <h4>You are booking {booking.partner.firstName} for {booking.bookingMeta.jobLength} hours for the total price of ${booking.bookingMeta.totalPrice} on<br/>{booking.bookingMeta.date}</h4>
+      <h4>You are booking {partner.firstName} for {meta.jobLength} hours for the total price of ${meta.totalPrice} on<br/>{meta.date}</h4>
     </div>
   )
 }

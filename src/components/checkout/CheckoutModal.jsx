@@ -2,9 +2,12 @@ import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector} from 'react-redux';
 import { setLogin, setUser, currentUser } from '../../store/login-store';
+
 import BookingSummary from '../booking/BookingSummary';
 
+
 export default function CheckoutModal() {
+
     
   return (
     <Fragment>

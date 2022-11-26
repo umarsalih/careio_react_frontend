@@ -11,18 +11,21 @@ import BookingSummary from './BookingSummary';
 
 export default function BookingModal() {
     const dispatch = useDispatch()
+    const partner = useSelector(bookingPartner)
+    const user = useSelector(currentUser)
 
     const [startDate, setStartDate] = useState(new Date());
     const [bookingDetails, setBookingDetails] = useState({
-        timeStart: '07:00',
-        timeEnd: '09:00',
         ...bookingMeta,
         date: startDate.toDateString(),
+        timeStart: '07:00',
+        timeEnd: '09:00',
         selectedServices: [],
-        totalPrice: 0
+        totalPrice: 0,
+        partnerId: partner.partnerId,
+        userId: user.userId,
     });
-    const partner = useSelector(bookingPartner)
-    const user = useSelector(currentUser)
+    
 
     const [jobLength, setJobLength] = useState(2);
 
@@ -57,19 +60,21 @@ export default function BookingModal() {
         _updateBookingMeta()
     }
 
-    const updateMetaPrice = () => {
+    const finalizeMeta = () => {
         setBookingDetails({
             ...bookingDetails,
-            totalPrice: jobLength*partner.rate
+            // date: startDate.toDateString(),
+            totalPrice: jobLength*partner.rate,
+            userId: user.userId,
         })
         _updateBookingMeta()
     }
     
-    const handleDateChange = (date) =>{
-        setStartDate(date)
+    const handleDateChange = (d) =>{
+        setStartDate(d)
         setBookingDetails({
             ...bookingDetails,
-            date: date.toDateString(),
+            date: d.toDateString()
         })
         _updateBookingMeta()
     }
@@ -96,7 +101,6 @@ export default function BookingModal() {
 
   return (
     <Fragment>
-        
         <div className="modal modal-lg fade" id="bookingModal" tabIndex="-1" aria-labelledby="bookingModal" aria-hidden="true">
 
             <div className="modal-dialog modal-dialog-centered">
@@ -108,6 +112,7 @@ export default function BookingModal() {
                             <h3>
                             Booking {partner.firstName} {partner.lastName}
                             </h3>
+                            {user.userId}
 
                             <div className='booking-form text-left'>
                                 <div className="my-4">
@@ -140,6 +145,7 @@ export default function BookingModal() {
                                 <div className="input-group date">
                                     <DatePicker 
                                         selected={startDate} 
+                                        // dateFormat="yyyy-MM-dd"
                                         onChange={(date) => {    
                                             handleDateChange(date)
                                         }}      
@@ -224,7 +230,7 @@ export default function BookingModal() {
                                     {/* <BookingSummary/> */}
                                     
                                     <Link to="/checkout">
-                                    <button onClick={updateMetaPrice} id="SubmitBooking" className="login btn btn-primary
+                                    <button onClick={finalizeMeta} id="SubmitBooking" className="login btn btn-primary
                                     my-2" data-bs-dismiss="modal" aria-label="Close">Confirm and checkout</button></Link>
                                 </div>
                             </div>

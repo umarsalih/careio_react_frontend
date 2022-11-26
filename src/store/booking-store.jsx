@@ -13,7 +13,7 @@ const bookingSlice = createSlice({
     bookingMeta:{
       userId: 1,
       partnerId: 2,
-      date: "10-11-2022",
+      date: "2022-12-15",
       timeStart: "07:00",
       timeEnd: "09:00",
       selectedServices: ["cleaning"],
@@ -35,6 +35,7 @@ const bookingSlice = createSlice({
 
 export const { updatePartner, updateBookingMeta } = bookingSlice.actions
 export const bookingPartner = (state) => state.booking.partner
-export const bookingMeta = (state) => state.booking
+export const booking = (state) => state.booking
+export const bookingMeta = (state) => state.booking.bookingMeta
 
 export default bookingSlice.reducer

@@ -5,15 +5,19 @@ from '../../store/booking-store';
 import { currentUser } from '../../store/login-store';
 import { createBooking } from '../../api/booking-api'
 
-export default function StripeDummy() {
+// https://blog.logrocket.com/integrating-stripe-react-stripe-js/
+
+export default function StripeDummy({
+  bookingFunc = ()=>{}
+}) {
   const dispatch = useDispatch()
-  const bookingDetails = useSelector(bookingMeta).bookingMeta
+  const meta = useSelector(bookingMeta)
   const partner = useSelector(bookingPartner)
   const user = useSelector(currentUser)
 
   return (
     <div id='StripeDummy'>
-        {bookingDetails.date}
+        {meta.date}
         {/* <form action="//httpbin.org/post" method="POST"> */}
           <input type="hidden" name="token" />
           <div className="group">
@@ -61,8 +65,14 @@ export default function StripeDummy() {
               </select>
             </label>
           </div>
-          <button type="submit" data-bs-toggle="modal" 
-                            data-bs-target="#checkoutModal">Pay ${bookingDetails.totalPrice}</button>
+          <button 
+            type="submit" 
+            data-bs-toggle="modal" 
+            data-bs-target="#checkoutModal"
+            onClick={bookingFunc}
+          >
+                Pay ${meta.totalPrice}
+          </button>
           <div className="outcome">
             <div className="error"></div>
             <div className="success">

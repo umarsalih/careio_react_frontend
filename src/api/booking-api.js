@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export const createBooking = async (bookingObj, cb) => {
+
     if(!bookingObj) bookingObj ={
         "userId": 3,
         "serviceProviderId": 4,
