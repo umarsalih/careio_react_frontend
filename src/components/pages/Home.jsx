@@ -8,8 +8,6 @@ import Nav from '../templates/Nav';
 
 const Home = () => {
     return (
-        
-        
         <Fragment>
             <div id="CareIOHome">
                 <div className="careio__superwrapper">

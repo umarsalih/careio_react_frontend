@@ -4,7 +4,7 @@ import './styles/care.css';
 import Home from "./components/pages/Home";
 import Signup from './components/pages/Signup';
 import MyBookings from './components/pages/MyBookings';
-import ApiTester  from './components/pages/ApiTester';
+// import ApiTester  from './components/pages/ApiTester';
 import Checkout from './components/pages/Checkout';
 import {store} from './store'
 import { Routes,Route } from 'react-router-dom';
@@ -23,7 +23,7 @@ function App() {
           <Route path='/signup' element={<Signup/>} />
           <Route path='/my-bookings' element={<MyBookings/>} />
           <Route path='/checkout' element={<Checkout/>} />
-          <Route path='/api-tests' element={<ApiTester/>} />
+          {/* <Route path='/api-tests' element={<ApiTester/>} /> */}
         </Routes>
         <LoginModal/>
       </div>

@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector} from 'react-redux';
 import { setLogin, setUser, currentUser } from '../../store/login-store';
-import axios from 'axios'
+import { login } from './../../api/user-api'
 
 export default function LoginModal() {
     const dispatch = useDispatch()
@@ -13,21 +13,12 @@ export default function LoginModal() {
     const user = useSelector(currentUser)
     const initLogin = async (evt) =>{
         evt.preventDefault()
-        // const data = {
-        //     username: loginMeta.username,
-        //     password: loginMeta.password
-        // }
-        // try{
-        //     const res = await axios.post('/login/client', {
-        //         headers : { 
-        //             'Content-Type': 'application/json',
-        //             'Accept': 'application/json'
-        //         },
-        //         data
-        //     })
-        // } catch(e) {
-        //     console.error(`[careio::error] ${e}`)
-        // }
+
+        login({
+            un: loginMeta.username,
+            pw: loginMeta.password,
+        })
+        
         dispatch(setUser({
             ...currentUser,
             username: loginMeta.username

@@ -6,6 +6,7 @@ import { bookingPartner, bookingMeta, updateBookingMeta }
 from '../../store/booking-store';
 import { useSelector, useDispatch } from 'react-redux';
 import BookingSummary from '../booking/BookingSummary';
+import BookingCard from '../mybookings/BookingCard';
 // import checkoutCard from '../checkout/CheckoutCard';
 import { Fragment } from 'react';
 
@@ -14,7 +15,6 @@ import { Fragment } from 'react';
 export default function Checkout() {
   
   const meta =  useSelector(bookingMeta)
-  
 
   const {userId, partnerId, date, timeEnd, timeStart, selectedServices, totalPrice, isFinished, bookingKey, jobLength} = meta
   
@@ -40,36 +40,27 @@ export default function Checkout() {
   return (
     <div id="CareIOCheckout">
       <div className="container">
+        
+      <div className='heading'><p>Confirm and Checkout</p></div> 
         <div className="row">
-          <div className='col-md-6'>
+        
+              
+                  
+                  <BookingCard
+                      partnerId = {meta.userId}
+                      firstName = "John"
+                      lastName = "Sharma"
+                      isFinished = {meta.isFinished}
+                      bookingDate={meta.date}
+                      startTime = {meta.timeStart}
+                      endTime = {meta.timeEnd}
+                      totalPrice = {meta.totalPrice}
+                      jobLength = {meta.jobLength}
+                  />
             
-            <Fragment>
-              <div className='checkoutLeft'>
-             <div className='heading'><p>Confirm and Checkout</p></div> 
             
-            <div className="booking-card">
-            <div className="card">
-            <div className="card-body">
-    
-            <p className="bookingDetailcheckout">You are booking <strong> John <br/>Sharma </strong> for<strong> 8 hours </strong>for the <br/>total price of<strong> $260 </strong></p>
-            <p className='summary'>Appointment Summary</p>
-            <div className='otherBookingDetails'>
-            <div className='cellLeft'>PRICE PER HOUR <br/> $28</div>
-            <div className='cellRight'>APPOINTMENT DATE <br/> Today,Nov 01 2022</div>
-           
-            </div>
-            <div className='otherBookingDetails'>
-            <div className='cellLeft'>SERVICE TYPE <br/> Carpentry</div>
-            <div  className='cellRight'>APPOINTMENT HOUR <br/> 10 AM-06 PM</div>
        
-       </div>
-     </div>
-   </div>
- </div>
- </div>
- </Fragment>
-
-          </div> 
+        
           <div className='col-md-6'>
             <StripeDummy
               bookingFunc={book}
