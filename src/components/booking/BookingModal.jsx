@@ -63,6 +63,7 @@ export default function BookingModal() {
     const finalizeMeta = () => {
         setBookingDetails({
             ...bookingDetails,
+            partnerId: partner.partnerId,
             totalPrice: jobLength*partner.rate,
             userId: user.userId,
         })
@@ -111,7 +112,6 @@ export default function BookingModal() {
                             <h3>
                             Booking {partner.firstName} {partner.lastName}
                             </h3>
-                            {user.userId}
 
                             <div className='booking-form text-left'>
                                 <div className="my-4">

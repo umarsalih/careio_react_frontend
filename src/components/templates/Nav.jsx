@@ -19,7 +19,7 @@ function Nav() {
                 <ul>
                     {(path!=='/')&&
                         <li>
-                            <Link to="/">Home</Link>
+                            {/* <Link to="/">Home</Link> */}
                         </li>
                     }
                     
@@ -50,18 +50,13 @@ function Nav() {
                                     </span>
                                 </li>
                                 <li>
-                                <span type="button"
-                                        data-bs-toggle="modal"
-                                    >
-                                        <Link to="/my-bookings" className="text-white mx-3">My Bookings</Link>
-                                    </span>
                                 </li>
                                 </Fragment>
                                 <Fragment>
                                 <li>
-                                    <span type="button" 
+                                    <Link to="/my-bookings" className="text-white mx-3">My Bookings</Link>
+                                    <span
                                         className="text-white mx-3" 
-                                        data-bs-toggle="modal" 
                                         onClick={() => dispatch(setLogin(false))}
                                     >
                                         Log Out

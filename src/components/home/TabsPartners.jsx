@@ -1,12 +1,20 @@
 import React, { Fragment,  useState, useEffect} from 'react';
 import PartnerCollection from '../partners/PartnersCollection';
-import axios from 'axios'
+import { allPartners, setAllPartners } from '../../store/partners-store';
+import { getPartners } from '../../api/partners-api';
+import { useDispatch, useSelector } from 'react-redux';
+// import axios from 'axios'
 
 const TabsPartners = (props) => {
+    const dispatch = useDispatch()
     const [partners, setPartners] = useState([])
     
     const fetchPartners = async () =>{
-        let res
+        let res = await getPartners()
+        console.log({res})
+        setPartners(res.data)
+        return dispatch(setAllPartners(res.data))
+        /* let res
         try{
             res = await axios.get('/mock-data/1 - partners_all.json', {
                 headers : { 
@@ -22,10 +30,12 @@ const TabsPartners = (props) => {
         if(res.status === 200 && res.data.length){
             try{
                 setPartners(res.data)
+                return dispatch(setAllPartners(res.data))
             }catch(e){
                 console.error(`[careio::error] ${e}`)
             }
-        } 
+        } */
+
     }
 
     useEffect(()=>{

@@ -11,6 +11,7 @@ import BookingSummary from '../booking/BookingSummary';
 export default function Checkout() {
   
   const meta =  useSelector(bookingMeta)
+  
 
   const {userId, partnerId, date, timeEnd, timeStart, selectedServices, totalPrice, isFinished, bookingKey, jobLength} = meta
   console.log({meta})

@@ -4,7 +4,7 @@ import { updatePartner } from '../../store/booking-store';
 import { isLoggedIn } from '../../store/login-store';
 
 const PartnerCard = ({
-        partnerId = 41,
+        partnerId = 2,
         firstName = "John",
         lastName = "Smith",
         services = ["cleaning", "lawn maintenance"],
@@ -13,31 +13,25 @@ const PartnerCard = ({
     }) => {
 
     const isLogged = useSelector(isLoggedIn)
-
-    const [partnerObj] = useState({
-            partnerId,
-            firstName,
-            lastName,
-            services,
-            rate,
-            desc
-    })
     const dispatch = useDispatch()
 
   return (
     <Fragment>
-        
         <div className="care-partner-card__outter mx-md-4 col-md-12 mx-lg-0 col-lg-6 p-2 mt-0 mb-1">
         <div className='care-partner-card'>
-            <div className="image">
-                <img src={require(`./../../images/partners/partner-${partnerId}.jpg`)} alt={firstName}/>
-            </div>
+            {partnerId &&
+                (
+                    <div className="image">
+                        <img src={require(`./../../images/partners/partner-${partnerId}.jpg`)} alt={firstName}/>
+                    </div>
+                )
+            }
             <div className="meta__outter">
                 <div className='meta'>
                     <h4 className="partner-name">{firstName} {lastName}</h4>
                     <h5><strong>${rate}</strong><small>/hr</small></h5>
                     <p>{desc}</p>
-                    
+                    <small>{partnerId}</small>
                     <ul className="partner-services">
                         {
                             services.map( (s, i) => (

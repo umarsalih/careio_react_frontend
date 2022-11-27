@@ -4,7 +4,7 @@ const bookingSlice = createSlice({
   name: 'booking',
   initialState: {
     partner:{
-      partnerId : 41,
+      partnerId : 1,
       firstName : "John",
       lastName : "Smith",
       services : ["cleaning", "lawn maintenance", "aged care"],
