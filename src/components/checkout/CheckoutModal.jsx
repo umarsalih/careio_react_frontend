@@ -19,16 +19,19 @@ export default function CheckoutModal() {
                         <h3>
                             Order Confirmed
                         </h3>
-                        <BookingSummary/>
+                        <div className='my-5'>
+                            <BookingSummary/>
+                        </div>
+                        
                     
-                        <Link to='/my-bookings' className='btn__sign-up'>
-                            <button data-bs-dismiss="modal">
+                        <Link to='/my-bookings' className='my-3'>
+                            <button className='btn btn-primary' data-bs-dismiss="modal">
                                     Check out my bookings
                             </button>
                         </Link>
                         <br/>
-                        <Link to='/' className='btn-secondary'>
-                            <button data-bs-dismiss="modal">
+                        <Link to='/'  className='my-3'>
+                            <button className='btn bg-transparent' data-bs-dismiss="modal">
                                     Return home
                             </button>
                         </Link>
