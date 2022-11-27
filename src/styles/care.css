@@ -145,6 +145,11 @@
   min-height: 50vh;
   align-items: center;
 }
+
+#CareIOMyBookings .bookingBanner__inner .container{
+  margin-bottom: 5%;
+}
+
 #CareIOMyBookings .bookingBanner__inner h1 {
   color: #fff;
   font-size: 2.5rem;
@@ -155,6 +160,45 @@
   font-size: 2.5rem;
   font-weight: 500;
 }
+
+#CareIOMyBookings .careio__body  .container .row{
+    margin-left:5%;
+    margin-right:5%;
+    margin-top: -14%;
+  }
+
+  #CareIOCheckout .container .row .col-md-6 .heading p{
+     text-align: center;
+     font-style: normal;
+     font-size: 2.5rem;
+     
+  }
+
+  #CareIOCheckout .container .row .col-md-6 .checkoutLeft{
+ 
+    margin-top: 4%;
+    
+
+  }
+  .booking-card .bookingDetailcheckout {
+    font-size: 1.8rem;
+    margin-top: 2%;
+    text-align: center;
+
+  }
+
+  .booking-card .bookingDetailcheckout strong {
+    font-size: 2rem;
+  }
+  
+  .booking-card .summary {
+    margin-top: 5%;
+    font-size: 1.5rem;
+  }
+
+  
+  
+  
 
 .navbar.careio-nav {
   display: flex;
@@ -394,7 +438,7 @@ p {
   min-width: 50%;
 }
 .booking-card .bookingCarButtons .mod-button {
-  background-color: #3C4F75 !important;
+  background-color: #5EAB91 ;
   color: #fff;
   padding: 8px 30px;
   margin: 20px 0px;
