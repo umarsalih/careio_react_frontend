@@ -10,9 +10,10 @@ const BookingCard = ({
         partnerId = 41,
         firstName = "John",
         lastName = "Sharma",
-        is_finished = 0,
+        isFinished = 0,
+        bookingDate=null,
         startTime = null,
-        finishTime = null,
+        endTime = null,
         totalPrice = 208,
         jobLength = 4
     }) => {
@@ -25,18 +26,18 @@ const BookingCard = ({
     <div className="booking-card col-sm-6">
       <div className="card">
         <div className="card-body">
-          <h5 className="status">Status: <span> {is_finished}</span></h5>
+          <h5 className="status">Status: <span> {isFinished}</span></h5>
           <p className="bookingDetail">You are booking <strong> {firstName} <br/>{lastName} </strong> 
           for<strong> {jobLength} hours </strong>for the <br/>total price of<strong> $ {totalPrice}</strong></p>
           <div className='otherBookingDetails'>
               <div className='cellLeft'>PRICE PER HOUR <br/> ${totalPrice}</div>
-              <div className='cellRight'>APPOINTMENT DATE <br/> Today,Nov 01 2022</div>
+              <div className='cellRight'>APPOINTMENT DATE <br/> {bookingDate} </div>
               
           </div>
 
           <div className='otherBookingDetails'>
           <div className='cellLeft'>SERVICE TYPE <br/> Carpentry</div>
-          <div className='cellRight'>APPOINTMENT HOUR <br/> 10 AM-06 PM</div>
+          <div className='cellRight'>APPOINTMENT HOUR <br/> {startTime}-{endTime}</div>
           
           </div>
 

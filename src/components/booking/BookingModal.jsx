@@ -63,7 +63,6 @@ export default function BookingModal() {
     const finalizeMeta = () => {
         setBookingDetails({
             ...bookingDetails,
-            // date: startDate.toDateString(),
             totalPrice: jobLength*partner.rate,
             userId: user.userId,
         })
