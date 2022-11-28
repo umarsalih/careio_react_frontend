@@ -63,7 +63,8 @@ export const createUser = async (userObj, cb) => {
             };
         const res = await axios(options);
         if(cb) cb()
-        return res.data
+        console.log({res})
+        return res
     } catch(e){
         console.error(`[careio::error] ${e.message}`)
         return {}

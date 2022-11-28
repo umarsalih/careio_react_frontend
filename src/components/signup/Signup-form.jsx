@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
+// import { useHistory } from "react-router-dom";
 import {createUser} from './../../api/user-api'
+import { useDispatch, useSelector} from 'react-redux';
+import { setLogin, setUser, currentUser } from '../../store/login-store';
 
 function SignupForm(props) {
+    const dispatch = useDispatch()
+    // let history = useHistory();
+    
     const [newUserMeta, setNewUser] = useState({
         email : "robert@gmail.com",
         password : "password123",
@@ -15,7 +21,14 @@ function SignupForm(props) {
 
     const initCreateUser = (evt) => {
         evt.preventDefault();
-        createUser(newUserMeta)
+        const res = createUser(newUserMeta)
+        if(res.status === 201){
+            dispatch(setUser({
+                ...currentUser,
+                username: newUserMeta.firstName
+            }))
+
+        }
     }
 
     const handleChange = async(evt) =>{
