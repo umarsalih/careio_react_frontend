@@ -60,6 +60,25 @@ export default function BookingModal() {
         _updateBookingMeta()
     }
 
+    const handleChangeServices = async(evt) =>{
+        const val = evt.target.value
+        let servArrCopy = [...bookingDetails.selectedServices]
+        if(evt.target.checked){
+            servArrCopy.push(val)
+        }else{
+            servArrCopy = servArrCopy.filter( s => s!== val)
+        }
+        console.log({servArrCopy})
+        
+        setBookingDetails({
+            ...bookingDetails,
+            selectedServices: servArrCopy
+        })
+        _updateBookingMeta()
+    }
+
+
+
     const finalizeMeta = () => {
         setBookingDetails({
             ...bookingDetails,
@@ -113,6 +132,8 @@ export default function BookingModal() {
                             Booking {partner.firstName} {partner.lastName}
                             </h3>
 
+                            {bookingDetails.selectedServices.map(s => <>s, </>)}
+
                             <div className='booking-form text-left'>
                                 <div className="my-4">
                                     <h4>Price Per Hour</h4>
@@ -129,8 +150,10 @@ export default function BookingModal() {
                                                         key={i}
                                                         className="form-check-input" 
                                                         type="checkbox" 
-                                                        name="option1" 
-                                                        value="something" 
+                                                        data-value="selectedServices"
+                                                        value={serv} 
+                                                        onChange={handleChangeServices}
+
                                                     />
                                                     <label className="form-check-label">{serv}</label>
                                                 </div>

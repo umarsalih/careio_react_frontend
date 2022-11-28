@@ -70,6 +70,7 @@ export default function MyBookings() {
                                         endTime = {endTime}
                                         totalPrice = {b.totalPrice}
                                         jobLength = {jobLen}
+                                        services = {b.serviceBookMap}
                                     />
                                 })
                             

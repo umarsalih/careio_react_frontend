@@ -4,6 +4,7 @@ import React, {Fragment, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updatePartner } from '../../store/booking-store';
 import { isLoggedIn } from '../../store/login-store';
+import { resolveIdToService } from '../../utils';
 
 
 const BookingCard = ({
@@ -16,7 +17,8 @@ const BookingCard = ({
         endTime = null,
         totalPrice = 208,
         jobLength = 4,
-        partnerEmail = null
+        partnerEmail = null,
+        services=[]
     }) => {
 
     const isLogged = useSelector(isLoggedIn)
@@ -50,7 +52,12 @@ const BookingCard = ({
           </div>
 
           <div className='otherBookingDetails'>
-          <div className='cellLeft'>SERVICE TYPE <br/> Carpentry</div>
+          <div className='cellLeft'>SERVICE TYPE <br/> 
+          {
+            services
+          }
+          
+          </div>
           <div className='cellRight'>APPOINTMENT HOUR <br/> {startTime} - {endTime}</div>
           
           </div>

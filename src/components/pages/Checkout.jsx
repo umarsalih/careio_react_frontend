@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import StripeDummy from '../checkout/StripeDummy';
 import CheckoutModal from '../checkout/CheckoutModal';
 import {createBooking, getBookings} from '../../api/booking-api'
@@ -10,16 +10,23 @@ import BookingCard from '../mybookings/BookingCard';
 import { Fragment } from 'react';
 import emailjs from "emailjs-com";
 import { useSearchParams } from 'react-router-dom';
+import { resolveServiceToId } from '../../utils';
 
 export default function Checkout() {
   
   const meta =  useSelector(bookingMeta)
   const partner = useSelector(bookingPartner)
 
-  const {userId, partnerId, date, timeEnd, timeStart, selectedServices, totalPrice, isFinished, bookingKey, jobLength} = meta
+  const {userId, partnerId, date, timeEnd, timeStart, selectedServices, totalPrice, status, bookingKey, jobLength} = meta
   
   let isoDate = new Date(date)
   isoDate = isoDate.toISOString().substr(0,10)
+  let services = []
+  selectedServices.map((serviceStr, i) => {
+    services.push( resolveServiceToId(serviceStr) )
+  })
+  
+  
   const bookingData = {
     userId,
     partnerId: partner.partnerId,

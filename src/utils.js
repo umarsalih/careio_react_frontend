@@ -6,3 +6,24 @@ export const getJobLength = (strStart, strEnd) =>{
 
     return endInt-strInt;
 }
+
+const servicesArr = [
+    'cleaning',
+    'lawn maintenance',
+    'moving',
+    'repairs',
+    'haircut',
+    'manicure and pedicure',
+    'massage and facials',
+    'nanny service',
+    'aged care'
+]
+
+export const resolveServiceToId = (serviceStr) => {
+    return servicesArr.findIndex( s =>  s == serviceStr )
+    
+}
+
+export const resolveIdToService = (serviceId) => {
+    return servicesArr[serviceId]
+}
