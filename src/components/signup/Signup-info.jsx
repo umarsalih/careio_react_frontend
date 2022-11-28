@@ -11,7 +11,7 @@ function SignupInfo(props) {
             <div
                 className="signupInfo col-12 col-sm-12 col-md-4 col-lg-6 order-sm-2 order-md-1">
                 <div className='holder' >
-                    <div class="signupInfo-headertext">
+                    <div className="signupInfo-headertext">
                         <h1>Sign up as a client <br/>
                             
                             with Care.io</h1>
@@ -50,7 +50,7 @@ function SignupInfo(props) {
             <div
                 className="signupInfo col-12 col-sm-12 col-md-4 col-lg-6 order-sm-2 order-md-1">
                 <div className='holder' >
-                    <div class="signupInfo-headertext">
+                    <div className="signupInfo-headertext">
                         <h1>Sign up as a service partner <br/>
                             
                             with Care.io</h1>

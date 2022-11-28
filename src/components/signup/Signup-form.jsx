@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-// import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {createUser} from './../../api/user-api'
 import { useDispatch, useSelector} from 'react-redux';
 import { setLogin, setUser, currentUser } from '../../store/login-store';
 
 function SignupForm(props) {
     const dispatch = useDispatch()
-    // let history = useHistory();
+    const navigate = useNavigate();
     
     const [newUserMeta, setNewUser] = useState({
         email : "robert@gmail.com",
@@ -19,15 +19,19 @@ function SignupForm(props) {
         province : "British Columbia" 
     });
 
-    const initCreateUser = (evt) => {
+    const initCreateUser = async (evt) => {
         evt.preventDefault();
-        const res = createUser(newUserMeta)
+        const res =  await createUser(newUserMeta)
         if(res.status === 201){
+            console.log('user create success')
             dispatch(setUser({
                 ...currentUser,
-                username: newUserMeta.firstName
+                ...newUserMeta,
+                username: newUserMeta.firstName,
+                userId: res.data.customerId
             }))
-
+            dispatch(setLogin(true))
+            navigate("/")
         }
     }
 
@@ -41,7 +45,7 @@ function SignupForm(props) {
 
     return (
         <div
-            class="signupForm col-12 col-sm-12 col-md-8 col-lg-6 order-sm-1 order-md-2">
+            className="signupForm col-12 col-sm-12 col-md-8 col-lg-6 order-sm-1 order-md-2">
             
             <form className='signup-form' action='#'>
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
@@ -166,7 +170,7 @@ function SignupForm(props) {
                         </div>
                     </div>
                     <div
-                        class="tab-pane fade"
+                        className="tab-pane fade"
                         id="profile"
                         role="tabpanel"
                         aria-labelledby="profile-tab">
@@ -182,7 +186,7 @@ function SignupForm(props) {
 
                             <input type="text" placeholder='Hourly rate'/>
 
-                            <label for="cars">Start hours:</label>
+                            {/* <label>Start hours:</label>
                             <select name="cars" id="cars">
                                 <option value="volvo">7am</option>
                                 <option value="saab">8am</option>
@@ -192,7 +196,7 @@ function SignupForm(props) {
                                 <option value="saab">12am</option>
                             </select>
 
-                            <label for="cars">End hours:</label>
+                            <label>End hours:</label>
                             <select name="cars" id="cars">
                                 <option value="volvo">7am</option>
                                 <option value="saab">8am</option>
@@ -200,9 +204,9 @@ function SignupForm(props) {
                                 <option value="saab">10am</option>
                                 <option value="volvo">11am</option>
                                 <option value="saab">12am</option>
-                            </select>
+                            </select> */}
 
-                            <div className='formElementsContainer-servicesList'>
+                            {/* <div className='formElementsContainer-servicesList'>
                                 <input
                                     type="checkbox"
                                     id='serviceCarpentry'
@@ -253,7 +257,7 @@ function SignupForm(props) {
                                     name='serviceAgedCare'
                                     value='AgedCare'/>
                                 <label for="serviceAgedCare">Aged care</label>
-                            </div>
+                            </div> */}
 
                             <input id="inputAddress" type="text" placeholder="Street Address"/>
 
