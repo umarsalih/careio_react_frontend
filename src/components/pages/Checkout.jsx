@@ -22,13 +22,15 @@ export default function Checkout() {
   isoDate = isoDate.toISOString().substr(0,10)
   const bookingData = {
     userId,
-    serviceProviderId: partnerId,
+    partnerId: partner.partnerId,
+    serviceProviderId: partner.partnerId,
     bookingDate: isoDate+"T00:00:00",
     startTime: isoDate + "T" + timeStart + ":00",
     endTime: isoDate + "T" + timeEnd + ":00",
     totalPrice: totalPrice,
     bookingKey: "1",
-    isFinished: 1,
+    status: 1,
+    serviceBookMap: [1,2,3]
   }
   console.log({bookingData})
 

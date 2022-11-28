@@ -11,7 +11,7 @@ export const createBooking = async (bookingObj, cb) => {
         "endTime": "2021-01-01T00:00:00",
         "totalPrice": 200,
         "bookingKey": "1",
-        "isFinished": 1
+        "status": 1
     }
 
     try{

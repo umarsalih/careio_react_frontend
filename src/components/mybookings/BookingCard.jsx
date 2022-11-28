@@ -10,7 +10,7 @@ const BookingCard = ({
         partnerId = 41,
         firstName = "John",
         lastName = "Sharma",
-        isFinished = 0,
+        status = 0,
         bookingDate=null,
         startTime = null,
         endTime = null,
@@ -39,7 +39,7 @@ const BookingCard = ({
     <div className="booking-card col-sm-6">
       <div className="card">
         <div className="card-body">
-          <h5 className="status">Status: <span> {resolveStatus(isFinished)}</span></h5>
+          <h5 className="status">Status: <span> {resolveStatus(status)}</span></h5>
           <p className="bookingDetail">You are booking <strong> {firstName} {lastName} </strong> 
           for<strong> {jobLength} hours </strong>for the total price of<strong> ${totalPrice}</strong></p>
           <div className='otherBookingDetails'>

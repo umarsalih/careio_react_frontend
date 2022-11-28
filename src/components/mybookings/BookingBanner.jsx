@@ -21,6 +21,7 @@ const BookingBanner = () => {
                     {
                         !isLogged ?  (
                             <div>
+                                <h1>Login or sign up to view your bookings</h1>
                                 <Link to="/signup" className="btn btn-primary">
                                     Sign Up
                                 </Link>

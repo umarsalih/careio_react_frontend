@@ -30,7 +30,7 @@ const PartnerCard = ({
                 <div className='meta'>
                     <h4 className="partner-name">{firstName} {lastName}</h4>
                     <h5><strong>${rate}</strong><small>/hr</small></h5>
-                    <p>{desc}</p>
+                    <p>{desc} <small>({partnerId})</small></p> 
                     <ul className="partner-services">
                         {
                             services.map( (s, i) => (
@@ -46,7 +46,7 @@ const PartnerCard = ({
                         data-bs-toggle="modal" 
                         data-bs-target="#bookingModal"
                         onClick={() => dispatch(updatePartner({
-                            partnerId,
+                            partnerId: partnerId,
                             firstName,
                             lastName,
                             services,

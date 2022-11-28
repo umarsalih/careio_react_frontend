@@ -24,6 +24,7 @@ function SignupForm(props) {
         const res =  await createUser(newUserMeta)
         if(res.status === 201){
             console.log('user create success')
+            console.log(res.data)
             dispatch(setUser({
                 ...currentUser,
                 ...newUserMeta,
