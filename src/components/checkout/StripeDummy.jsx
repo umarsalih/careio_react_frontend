@@ -8,7 +8,7 @@ import { createBooking } from '../../api/booking-api'
 // https://blog.logrocket.com/integrating-stripe-react-stripe-js/
 
 export default function StripeDummy({
-  bookingFunc = ()=>{}
+  bookingFunc = ()=>{}, triggerEmail = ()=>{}
 }) {
   const dispatch = useDispatch()
   const meta = useSelector(bookingMeta)
@@ -18,7 +18,7 @@ export default function StripeDummy({
   return (
     <div id='StripeDummy'>
         {meta.date}
-        {/* <form action="//httpbin.org/post" method="POST"> */}
+        <form onSubmit={triggerEmail}>
           <input type="hidden" name="token" />
           <div className="group">
             <label>
@@ -79,7 +79,7 @@ export default function StripeDummy({
               Success! Your Stripe token is <span className="token"></span>
             </div>
           </div>
-        {/* </form> */}
+        </form>
     </div>
   )
 }

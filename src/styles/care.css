@@ -1,3 +1,4 @@
+
 #CareIOHome button:not(.react-datepicker__navigation), #CareIOHome .btn, #CareIOHome .btn-primary {
   background-color: #5FAB8F;
   border: 0;
@@ -66,7 +67,6 @@
   justify-content: center;
   align-items: center;
   text-align: left;
-  /* background-image: url(../images/image\ 6.png); */
   background-repeat: no-repeat;
 }
 #CareIOSignup .signupInfo-headertext h1 {

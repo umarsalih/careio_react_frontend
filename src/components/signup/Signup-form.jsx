@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 
 function SignupForm(props) {
 
+
+
     return (
         <div
             class="signupForm col-12 col-sm-12 col-md-8 col-lg-6 order-sm-1 order-md-2">
@@ -40,11 +42,11 @@ function SignupForm(props) {
                         role="tabpanel"
                         aria-labelledby='home-tab'>
                         <div className='formElementsContainer'>
-                            <input type="text" placeholder="First name"/>
+                            <input type="text" placeholder="First name" name='fname'/>
 
-                            <input type="text" placeholder="Last name"/>
+                            <input type="text" placeholder="Last name" name='lname'/>
 
-                            <input type="text" placeholder="Email"/>
+                            <input type="text" placeholder="Email" name='email'/>
 
                             <input type="text" placeholder="Mobile Number"/>
 

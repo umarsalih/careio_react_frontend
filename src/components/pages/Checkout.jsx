@@ -9,6 +9,7 @@ import BookingSummary from '../booking/BookingSummary';
 import BookingCard from '../mybookings/BookingCard';
 // import checkoutCard from '../checkout/CheckoutCard';
 import { Fragment } from 'react';
+import emailjs from "emailjs-com";
 
 
 
@@ -31,6 +32,20 @@ export default function Checkout() {
     isFinished: 1,
   }
   console.log({bookingData})
+
+  function sendEmail(e) {
+    console.log("Send email function called")
+    e.preventDefault();
+
+        emailjs.sendForm('service_d03ugcn', 'template_o8f7r9m', e.target, 'j1SHfAPi7_cWPr_hK')
+          .then((result) => {
+              console.log(result.text);
+              console.log("Successful");
+          }, (error) => {
+              console.log(error.text);
+              console.log("Failure");
+          });
+  }
     
   const book = async () => {
       const bReq = await createBooking(bookingData)
@@ -64,6 +79,7 @@ export default function Checkout() {
           <div className='col-md-6'>
             <StripeDummy
               bookingFunc={book}
+              triggerEmail={sendEmail}
             />
           </div>
 
