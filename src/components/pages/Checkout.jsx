@@ -59,11 +59,11 @@ export default function Checkout() {
       <div className='heading'><p>Confirm and Checkout</p></div> 
         <div className="row">            
             <BookingCard
-                partnerId = {meta.userId}
+                partnerId = {partner.partnerId}
                 firstName = {partner.firstName}
                 lastName = {partner.lastName}
                 isFinished = {meta.isFinished}
-                bookingDate={meta.date}
+                bookingDate = {meta.date}
                 startTime = {meta.timeStart}
                 endTime = {meta.timeEnd}
                 totalPrice = {meta.totalPrice}
