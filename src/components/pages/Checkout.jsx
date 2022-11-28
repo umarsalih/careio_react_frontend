@@ -37,6 +37,8 @@ export default function Checkout() {
       console.log({bReq})
   }
 
+
+
   return (
     <div id="CareIOCheckout">
       <div className="container">
@@ -64,6 +66,7 @@ export default function Checkout() {
           <div className='col-md-6'>
             <StripeDummy
               bookingFunc={book}
+              
             />
           </div>
 
