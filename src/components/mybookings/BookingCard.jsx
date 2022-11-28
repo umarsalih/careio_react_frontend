@@ -15,7 +15,8 @@ const BookingCard = ({
         startTime = null,
         endTime = null,
         totalPrice = 208,
-        jobLength = 4
+        jobLength = 4,
+        partnerEmail = null
     }) => {
 
     const isLogged = useSelector(isLoggedIn)
@@ -40,8 +41,8 @@ const BookingCard = ({
       <div className="card">
         <div className="card-body">
           <h5 className="status">Status: <span> {resolveStatus(status)}</span></h5>
-          <p className="bookingDetail">You are booking <strong> {firstName} {lastName} </strong> 
-          for<strong> {jobLength} hours </strong>for the total price of<strong> ${totalPrice}</strong></p>
+          <p className="bookingDetail">You are booking <strong> {firstName} {lastName} </strong> for<strong> {jobLength} hours </strong>for the total price of<strong> ${totalPrice}</strong></p>
+          
           <div className='otherBookingDetails'>
               <div className='cellLeft'>PRICE PER HOUR <br/> ${totalPrice}</div>
               <div className='cellRight'>APPOINTMENT DATE <br/> {strDate} </div>
@@ -53,6 +54,8 @@ const BookingCard = ({
           <div className='cellRight'>APPOINTMENT HOUR <br/> {startTime} - {endTime}</div>
           
           </div>
+
+          {partnerEmail && <small>{partnerEmail}</small>}
 
           {/* <div className='bookingCarButtons'> 
           <button type="button" className="btn mod-button">Edit</button>

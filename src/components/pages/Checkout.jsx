@@ -68,6 +68,7 @@ export default function Checkout() {
                 endTime = {meta.timeEnd}
                 totalPrice = {meta.totalPrice}
                 jobLength = {meta.jobLength}
+                partnerEmail = {partner.email}
             />
           <div className='col-md-6'>
             <StripeDummy

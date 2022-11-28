@@ -9,7 +9,8 @@ const PartnerCard = ({
         lastName = "Smith",
         services = ["cleaning", "lawn maintenance"],
         rate = 26,
-        desc = "Fixer of things"
+        desc = "Fixer of things",
+        email = null
     }) => {
 
     const isLogged = useSelector(isLoggedIn)
@@ -51,7 +52,8 @@ const PartnerCard = ({
                             lastName,
                             services,
                             rate,
-                            desc
+                            desc,
+                            email
                         }))}
                         >
                         Book

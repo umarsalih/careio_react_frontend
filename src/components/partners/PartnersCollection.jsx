@@ -20,6 +20,7 @@ const PartnerCollection = ({
                             services={partner.services}
                             rate={partner.hourly_rate}
                             desc={partner.desc}
+                            email={partner.email}
                         />
                     }
                 })
