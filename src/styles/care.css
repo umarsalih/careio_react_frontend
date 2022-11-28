@@ -94,11 +94,8 @@
   justify-content: space-evenly;
 }
 #CareIOSignup .formElementsContainer input {
-  margin: 25px 30px;
+  margin: 12px;
   padding: 10px;
-}
-#CareIOSignup #inputAddress {
-  width: 80%;
 }
 #CareIOSignup .signupForm button {
   padding: 1em;
@@ -127,7 +124,11 @@
 #CareIOSignup .nav-item button {
   background-color: #F7F7F2;
   color: #3C4F75;
-  width: 23em;
+  width: auto;
+  border-radius: 8px 8px 0 0;
+  margin-left: 8px;
+  padding: 12px;
+  min-width: 240px;
 }
 #CareIOSignup .nav-item button[aria-selected=false] {
   background-color: #3C4F75;
@@ -145,11 +146,6 @@
   min-height: 50vh;
   align-items: center;
 }
-
-#CareIOMyBookings .bookingBanner__inner .container{
-  margin-bottom: 5%;
-}
-
 #CareIOMyBookings .bookingBanner__inner h1 {
   color: #fff;
   font-size: 2.5rem;
@@ -160,45 +156,6 @@
   font-size: 2.5rem;
   font-weight: 500;
 }
-
-#CareIOMyBookings .careio__body  .container .row{
-    margin-left:5%;
-    margin-right:5%;
-    margin-top: -14%;
-  }
-
-  #CareIOCheckout .container .row .col-md-6 .heading p{
-     text-align: center;
-     font-style: normal;
-     font-size: 2.5rem;
-     
-  }
-
-  #CareIOCheckout .container .row .col-md-6 .checkoutLeft{
- 
-    margin-top: 4%;
-    
-
-  }
-  .booking-card .bookingDetailcheckout {
-    font-size: 1.8rem;
-    margin-top: 2%;
-    text-align: center;
-
-  }
-
-  .booking-card .bookingDetailcheckout strong {
-    font-size: 2rem;
-  }
-  
-  .booking-card .summary {
-    margin-top: 5%;
-    font-size: 1.5rem;
-  }
-
-  
-  
-  
 
 .navbar.careio-nav {
   display: flex;
@@ -353,7 +310,6 @@ p {
   max-width: 100%;
   max-height: 100%;
 }
-
 #ui-datepicker-div {
   filter: drop-shadow(12px 12px 40px #282D37);
 }
@@ -438,7 +394,7 @@ p {
   min-width: 50%;
 }
 .booking-card .bookingCarButtons .mod-button {
-  background-color: #5EAB91 ;
+  background-color: #3C4F75 !important;
   color: #fff;
   padding: 8px 30px;
   margin: 20px 0px;

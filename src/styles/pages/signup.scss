@@ -46,15 +46,17 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
+
+        
     }
     
     .formElementsContainer input {
-        margin: 25px 30px;
-        padding: 10px;
+        margin: 12px;
+        padding: 10px;   
     }
     
     #inputAddress {
-        width: 80%;
+        // width: 80%;
     }
     
     .signupForm button {
@@ -90,7 +92,12 @@
     .nav-item button {
         background-color: #F7F7F2;
         color: #3C4F75;
-        width: 23em;
+        width: auto;
+        border-radius: 8px 8px 0 0;
+        margin-left: 8px;
+        padding: 12px;
+        min-width: 240px;
+        
     }
     
     .nav-item button[aria-selected="false"] {

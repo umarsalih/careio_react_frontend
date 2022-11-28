@@ -6,9 +6,7 @@ import { setLogin, setUser, currentUser } from '../../store/login-store';
 import BookingSummary from '../booking/BookingSummary';
 
 
-export default function CheckoutModal() {
-
-    
+export default function CheckoutModal() {    
   return (
     <Fragment>
         <div className="modal fade" id="checkoutModal" tabIndex="-1" aria-labelledby="" aria-hidden="true">
@@ -21,9 +19,7 @@ export default function CheckoutModal() {
                         </h3>
                         <div className='my-5'>
                             <BookingSummary/>
-                        </div>
-                        
-                    
+                        </div>     
                         <Link to='/my-bookings' className='my-3'>
                             <button className='btn btn-primary' data-bs-dismiss="modal">
                                     Check out my bookings

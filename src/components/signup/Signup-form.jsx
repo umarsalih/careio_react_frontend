@@ -38,21 +38,70 @@ function SignupForm(props) {
                         className="tab-pane fade show active"
                         id='home'
                         role="tabpanel"
-                        aria-labelledby='home-tab'>
-                        <div className='formElementsContainer'>
-                            <input type="text" placeholder="First name"/>
+                        aria-labelledby='home-tab'
+                    >
+                        
+                        <div className='formElementsContainer row text-left'>
+                            <div className='col-md-6'>
+                                <label>Email</label>
+                                <input type="text" className='form-control col-md-6' placeholder="Email"/>
+                            </div> 
+                            <div className='col-md-6'>
+                                <label>Password</label>
+                                <input type="password" className='form-control col-md-6' placeholder="Email"/>
+                            </div>    
 
-                            <input type="text" placeholder="Last name"/>
+                            <hr className='my-3'/>
 
-                            <input type="text" placeholder="Email"/>
+                            <div className='col-md-6'>
+                                <label>First Name</label>
+                                <input type="text" className='form-control ' placeholder="First name"/>
+                            </div>
+                            
+                            
+                            <div className='col-md-6'>
+                                <label>Last Name</label>
+                                <input type="text" className='form-control' placeholder="Last name"/>
+                            </div>
 
-                            <input type="text" placeholder="Mobile Number"/>
+                            <div className='col-md-6'>
+                                <label>Mobile</label>
+                                <input 
+                                type="text" className='form-control ' placeholder="Mobile Number"
+                                />
+                            </div>
+                            <div className='col-md-6'>&nbsp;</div>
 
-                            <input id="inputAddress" type="text" placeholder="Street Address"/>
+                            <hr className='my-3'/>
 
-                            <input type="text" placeholder="City"/>
+                            <div className='col-12'>
+                                <label>Street Address</label>
+                                <input 
+                                    id="inputAddress" 
+                                    type="text" 
+                                    className='form-control' 
+                                    placeholder="Street Address"
+                                />
+                            </div>
 
-                            <input type="text" placeholder="Province"/>
+                            <div className='col-md-6'>
+                                <label>City</label>
+                                <input 
+                                    type="text" 
+                                    className='form-control' placeholder="City"
+                                />
+                            </div>
+
+                            <div className='col-md-6'>
+                                <label htmlFor="">Province</label>
+                                <input type="text" className='form-control' placeholder="Province"/>
+                            </div>
+
+                            
+                            
+                            
+                            
+                            
 
                             <button id="signupFreeBtn" type="">Sign up FREE</button>
                             <button id="signupPremiumBtn" type="">Sign up Premium</button>
