@@ -1,13 +1,36 @@
 import React, { useState } from 'react'
-// import "./../../styles/style.css";
-// import "./../../styles/layout-signup.css";
+import {createUser} from './../../api/user-api'
 
 function SignupForm(props) {
+    const [newUserMeta, setNewUser] = useState({
+        email : "robert@gmail.com",
+        password : "password123",
+        firstName : "Robert",
+        lastName : "California",
+        contact : "987 654 3210",
+        address : "123A Something St, 6th Ave",
+        city : "New Westminster",
+        province : "British Columbia" 
+    });
+
+    const initCreateUser = (evt) => {
+        evt.preventDefault();
+        createUser(newUserMeta)
+    }
+
+    const handleChange = async(evt) =>{
+        const propKey = evt.target.dataset.name
+        setNewUser({
+            ...newUserMeta,
+            [propKey]: evt.target.value
+        })
+    }
 
     return (
         <div
             class="signupForm col-12 col-sm-12 col-md-8 col-lg-6 order-sm-1 order-md-2">
-            <form className='signup-form' action=''>
+            
+            <form className='signup-form' action='#'>
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">
                         <button onClick={() => props.setClientView(true)}
@@ -39,29 +62,48 @@ function SignupForm(props) {
                         id='home'
                         role="tabpanel"
                         aria-labelledby='home-tab'
-                    >
-                        
+                    >   
                         <div className='formElementsContainer row text-left'>
                             <div className='col-md-6'>
                                 <label>Email</label>
-                                <input type="text" className='form-control col-md-6' placeholder="Email"/>
+                                <input 
+                                    type="text" 
+                                    className='form-control' 
+                                    placeholder="Email"
+                                    data-name="email"
+                                    onInput={handleChange}
+                                />
                             </div> 
                             <div className='col-md-6'>
                                 <label>Password</label>
-                                <input type="password" className='form-control col-md-6' placeholder="Email"/>
+                                <input type="password" 
+                                    className='form-control' 
+                                    placeholder=""
+                                    data-name="password"
+                                    onInput={handleChange}
+                                />
                             </div>    
 
                             <hr className='my-3'/>
 
                             <div className='col-md-6'>
                                 <label>First Name</label>
-                                <input type="text" className='form-control ' placeholder="First name"/>
+                                <input 
+                                    type="text" 
+                                    className='form-control' 
+                                    placeholder="First name"
+                                    data-name="firstName"
+                                    onInput={handleChange}
+                                    />
                             </div>
                             
                             
                             <div className='col-md-6'>
                                 <label>Last Name</label>
-                                <input type="text" className='form-control' placeholder="Last name"/>
+                                <input type="text" className='form-control' placeholder="Last name"
+                                data-name="lastName"
+                                onInput={handleChange}
+                            />
                             </div>
 
                             <div className='col-md-6'>
@@ -81,6 +123,8 @@ function SignupForm(props) {
                                     type="text" 
                                     className='form-control' 
                                     placeholder="Street Address"
+                                    data-name="address"
+                                    onInput={handleChange}
                                 />
                             </div>
 
@@ -89,22 +133,23 @@ function SignupForm(props) {
                                 <input 
                                     type="text" 
                                     className='form-control' placeholder="City"
+                                    data-name="city"
+                                    onInput={handleChange}
                                 />
                             </div>
 
                             <div className='col-md-6'>
                                 <label htmlFor="">Province</label>
-                                <input type="text" className='form-control' placeholder="Province"/>
+                                <input type="text" className='form-control' placeholder="Province"
+                                data-name="province"
+                                onInput={handleChange}
+                            />
                             </div>
 
-                            
-                            
-                            
-                            
-                            
-
-                            <button id="signupFreeBtn" type="">Sign up FREE</button>
-                            <button id="signupPremiumBtn" type="">Sign up Premium</button>
+                        
+                            <button onClick={initCreateUser} id="signupFreeBtn" type="" className='btn btn-primary'>
+                                Sign up FREE
+                            </button>
                         </div>
                     </div>
                     <div
