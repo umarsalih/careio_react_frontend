@@ -2,20 +2,19 @@ import React from 'react'
 import StripeDummy from '../checkout/StripeDummy';
 import CheckoutModal from '../checkout/CheckoutModal';
 import {createBooking, getBookings} from '../../api/booking-api'
-import { bookingPartner, bookingMeta, updateBookingMeta } 
-from '../../store/booking-store';
+import { bookingPartner, bookingMeta, updateBookingMeta } from '../../store/booking-store';
+import { allPartners } from '../../store/partners-store';
 import { useSelector, useDispatch } from 'react-redux';
 import BookingSummary from '../booking/BookingSummary';
 import BookingCard from '../mybookings/BookingCard';
-// import checkoutCard from '../checkout/CheckoutCard';
 import { Fragment } from 'react';
 import emailjs from "emailjs-com";
-
-
+import { useSearchParams } from 'react-router-dom';
 
 export default function Checkout() {
   
   const meta =  useSelector(bookingMeta)
+  const partner = useSearchParams(bookingPartner)
 
   const {userId, partnerId, date, timeEnd, timeStart, selectedServices, totalPrice, isFinished, bookingKey, jobLength} = meta
   
@@ -57,25 +56,18 @@ export default function Checkout() {
       <div className="container">
         
       <div className='heading'><p>Confirm and Checkout</p></div> 
-        <div className="row">
-        
-              
-                  
-                  <BookingCard
-                      partnerId = {meta.userId}
-                      firstName = "John"
-                      lastName = "Sharma"
-                      isFinished = {meta.isFinished}
-                      bookingDate={meta.date}
-                      startTime = {meta.timeStart}
-                      endTime = {meta.timeEnd}
-                      totalPrice = {meta.totalPrice}
-                      jobLength = {meta.jobLength}
-                  />
-            
-            
-       
-        
+        <div className="row">            
+            <BookingCard
+                partnerId = {meta.userId}
+                firstName = {partner.firstName}
+                lastName = {partner.lastName}
+                isFinished = {meta.isFinished}
+                bookingDate={meta.date}
+                startTime = {meta.timeStart}
+                endTime = {meta.timeEnd}
+                totalPrice = {meta.totalPrice}
+                jobLength = {meta.jobLength}
+            />
           <div className='col-md-6'>
             <StripeDummy
               bookingFunc={book}
