@@ -63,6 +63,6 @@
     - Ensure you have node: https://nodejs.org/en/download/
 2. Check if you have sass in system `sass -v`
     - If not, install sass `npm install -g sass`
-3. In this directory run `sass --watch frontend/styles/main.scss frontend/styles/main.css`
+3. In this directory run `sass --watch src/styles/care.scss src/styles/care.css`
 4. Read this documenation for nesting with sass: https://www.w3schools.com/sass/sass_nesting.php
 

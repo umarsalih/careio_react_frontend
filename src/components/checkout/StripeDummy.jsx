@@ -69,7 +69,7 @@ export default function StripeDummy({
             type="submit" 
             data-bs-toggle="modal" 
             data-bs-target="#checkoutModal"
-            onClick={bookingFunc}
+            // onClick={bookingFunc}
           >
                 Pay ${meta.totalPrice}
           </button>

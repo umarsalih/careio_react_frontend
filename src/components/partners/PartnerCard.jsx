@@ -31,7 +31,6 @@ const PartnerCard = ({
                     <h4 className="partner-name">{firstName} {lastName}</h4>
                     <h5><strong>${rate}</strong><small>/hr</small></h5>
                     <p>{desc}</p>
-                    <small>{partnerId}</small>
                     <ul className="partner-services">
                         {
                             services.map( (s, i) => (

@@ -58,6 +58,9 @@
   display: flex;
   flex-direction: row;
   padding: 0 5%;
+  background-image: url("./../images/signup-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 65%;
 }
 #CareIOSignup .signupInfo {
   padding: 100px 0;
@@ -67,7 +70,6 @@
   align-items: center;
   text-align: left;
   /* background-image: url(../images/image\ 6.png); */
-  background-repeat: no-repeat;
 }
 #CareIOSignup .signupInfo-headertext h1 {
   font-size: 3em;
@@ -94,11 +96,8 @@
   justify-content: space-evenly;
 }
 #CareIOSignup .formElementsContainer input {
-  margin: 25px 30px;
+  margin: 12px;
   padding: 10px;
-}
-#CareIOSignup #inputAddress {
-  width: 80%;
 }
 #CareIOSignup .signupForm button {
   padding: 1em;
@@ -127,7 +126,11 @@
 #CareIOSignup .nav-item button {
   background-color: #F7F7F2;
   color: #3C4F75;
-  width: 23em;
+  width: auto;
+  border-radius: 8px 8px 0 0;
+  margin-left: 8px;
+  padding: 12px;
+  min-width: 240px;
 }
 #CareIOSignup .nav-item button[aria-selected=false] {
   background-color: #3C4F75;
@@ -309,7 +312,6 @@ p {
   max-width: 100%;
   max-height: 100%;
 }
-
 #ui-datepicker-div {
   filter: drop-shadow(12px 12px 40px #282D37);
 }

@@ -1,15 +1,55 @@
 import React, { useState } from 'react'
-// import "./../../styles/style.css";
-// import "./../../styles/layout-signup.css";
+import { useNavigate } from "react-router-dom";
+import {createUser} from './../../api/user-api'
+import { useDispatch, useSelector} from 'react-redux';
+import { setLogin, setUser, currentUser } from '../../store/login-store';
 
 function SignupForm(props) {
+    const dispatch = useDispatch()
+    const navigate = useNavigate();
+    
+    const [newUserMeta, setNewUser] = useState({
+        email : "robert@gmail.com",
+        password : "password123",
+        firstName : "Robert",
+        lastName : "California",
+        contact : "987 654 3210",
+        address : "123A Something St, 6th Ave",
+        city : "New Westminster",
+        province : "British Columbia" 
+    });
+
+    const initCreateUser = async (evt) => {
+        evt.preventDefault();
+        const res =  await createUser(newUserMeta)
+        if(res.status === 201){
+            console.log('user create success')
+            dispatch(setUser({
+                ...currentUser,
+                ...newUserMeta,
+                username: newUserMeta.firstName,
+                userId: res.data.customerId
+            }))
+            dispatch(setLogin(true))
+            navigate("/")
+        }
+    }
+
+    const handleChange = async(evt) =>{
+        const propKey = evt.target.dataset.name
+        setNewUser({
+            ...newUserMeta,
+            [propKey]: evt.target.value
+        })
+    }
 
 
 
     return (
         <div
-            class="signupForm col-12 col-sm-12 col-md-8 col-lg-6 order-sm-1 order-md-2">
-            <form className='signup-form' action=''>
+            className="signupForm col-12 col-sm-12 col-md-8 col-lg-6 order-sm-1 order-md-2">
+            
+            <form className='signup-form' action='#'>
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">
                         <button onClick={() => props.setClientView(true)}
@@ -40,28 +80,99 @@ function SignupForm(props) {
                         className="tab-pane fade show active"
                         id='home'
                         role="tabpanel"
-                        aria-labelledby='home-tab'>
-                        <div className='formElementsContainer'>
-                            <input type="text" placeholder="First name" name='fname'/>
+                        aria-labelledby='home-tab'
+                    >   
+                        <div className='formElementsContainer row text-left'>
+                            <div className='col-md-6'>
+                                <label>Email</label>
+                                <input 
+                                    type="text" 
+                                    className='form-control' 
+                                    placeholder="Email"
+                                    data-name="email"
+                                    onInput={handleChange}
+                                />
+                            </div> 
+                            <div className='col-md-6'>
+                                <label>Password</label>
+                                <input type="password" 
+                                    className='form-control' 
+                                    placeholder=""
+                                    data-name="password"
+                                    onInput={handleChange}
+                                />
+                            </div>    
 
-                            <input type="text" placeholder="Last name" name='lname'/>
+                            <hr className='my-3'/>
 
-                            <input type="text" placeholder="Email" name='email'/>
+                            <div className='col-md-6'>
+                                <label>First Name</label>
+                                <input 
+                                    type="text" 
+                                    className='form-control' 
+                                    placeholder="First name"
+                                    data-name="firstName"
+                                    onInput={handleChange}
+                                    />
+                            </div>
+                            
+                            
+                            <div className='col-md-6'>
+                                <label>Last Name</label>
+                                <input type="text" className='form-control' placeholder="Last name"
+                                data-name="lastName"
+                                onInput={handleChange}
+                            />
+                            </div>
 
-                            <input type="text" placeholder="Mobile Number"/>
+                            <div className='col-md-6'>
+                                <label>Mobile</label>
+                                <input 
+                                type="text" className='form-control ' placeholder="Mobile Number"
+                                />
+                            </div>
+                            <div className='col-md-6'>&nbsp;</div>
 
-                            <input id="inputAddress" type="text" placeholder="Street Address"/>
+                            <hr className='my-3'/>
 
-                            <input type="text" placeholder="City"/>
+                            <div className='col-12'>
+                                <label>Street Address</label>
+                                <input 
+                                    id="inputAddress" 
+                                    type="text" 
+                                    className='form-control' 
+                                    placeholder="Street Address"
+                                    data-name="address"
+                                    onInput={handleChange}
+                                />
+                            </div>
 
-                            <input type="text" placeholder="Province"/>
+                            <div className='col-md-6'>
+                                <label>City</label>
+                                <input 
+                                    type="text" 
+                                    className='form-control' placeholder="City"
+                                    data-name="city"
+                                    onInput={handleChange}
+                                />
+                            </div>
 
-                            <button id="signupFreeBtn" type="">Sign up FREE</button>
-                            <button id="signupPremiumBtn" type="">Sign up Premium</button>
+                            <div className='col-md-6'>
+                                <label htmlFor="">Province</label>
+                                <input type="text" className='form-control' placeholder="Province"
+                                data-name="province"
+                                onInput={handleChange}
+                            />
+                            </div>
+
+                        
+                            <button onClick={initCreateUser} id="signupFreeBtn" type="" className='btn btn-primary'>
+                                Sign up FREE
+                            </button>
                         </div>
                     </div>
                     <div
-                        class="tab-pane fade"
+                        className="tab-pane fade"
                         id="profile"
                         role="tabpanel"
                         aria-labelledby="profile-tab">
@@ -77,7 +188,7 @@ function SignupForm(props) {
 
                             <input type="text" placeholder='Hourly rate'/>
 
-                            <label for="cars">Start hours:</label>
+                            {/* <label>Start hours:</label>
                             <select name="cars" id="cars">
                                 <option value="volvo">7am</option>
                                 <option value="saab">8am</option>
@@ -87,7 +198,7 @@ function SignupForm(props) {
                                 <option value="saab">12am</option>
                             </select>
 
-                            <label for="cars">End hours:</label>
+                            <label>End hours:</label>
                             <select name="cars" id="cars">
                                 <option value="volvo">7am</option>
                                 <option value="saab">8am</option>
@@ -95,9 +206,9 @@ function SignupForm(props) {
                                 <option value="saab">10am</option>
                                 <option value="volvo">11am</option>
                                 <option value="saab">12am</option>
-                            </select>
+                            </select> */}
 
-                            <div className='formElementsContainer-servicesList'>
+                            {/* <div className='formElementsContainer-servicesList'>
                                 <input
                                     type="checkbox"
                                     id='serviceCarpentry'
@@ -148,7 +259,7 @@ function SignupForm(props) {
                                     name='serviceAgedCare'
                                     value='AgedCare'/>
                                 <label for="serviceAgedCare">Aged care</label>
-                            </div>
+                            </div> */}
 
                             <input id="inputAddress" type="text" placeholder="Street Address"/>
 

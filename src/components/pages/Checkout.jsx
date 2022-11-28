@@ -14,7 +14,7 @@ import { useSearchParams } from 'react-router-dom';
 export default function Checkout() {
   
   const meta =  useSelector(bookingMeta)
-  const partner = useSearchParams(bookingPartner)
+  const partner = useSelector(bookingPartner)
 
   const {userId, partnerId, date, timeEnd, timeStart, selectedServices, totalPrice, isFinished, bookingKey, jobLength} = meta
   
@@ -34,18 +34,17 @@ export default function Checkout() {
 
   function sendEmail(e) {
     console.log("Send email function called")
-    e.preventDefault();
-
-        emailjs.sendForm('service_d03ugcn', 'template_o8f7r9m', e.target, 'j1SHfAPi7_cWPr_hK')
-          .then((result) => {
-              console.log(result.text);
-              console.log("Successful");
-          }, (error) => {
-              console.log(error.text);
-              console.log("Failure");
-          });
-  }
-    
+    e.preventDefault()
+    book()
+    emailjs.sendForm('service_d03ugcn', 'template_o8f7r9m', e.target, 'j1SHfAPi7_cWPr_hK')
+      .then((result) => {
+          console.log(result.text);
+          console.log("Successful");
+      }, (error) => {
+          console.log(error.text);
+          console.log("Failure");
+      });
+  }    
   const book = async () => {
       const bReq = await createBooking(bookingData)
       console.log({bReq})
