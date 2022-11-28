@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-// import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {createUser} from './../../api/user-api'
 import { useDispatch, useSelector} from 'react-redux';
 import { setLogin, setUser, currentUser } from '../../store/login-store';
 
 function SignupForm(props) {
     const dispatch = useDispatch()
-    // let history = useHistory();
+    const navigate = useNavigate();
     
     const [newUserMeta, setNewUser] = useState({
         email : "robert@gmail.com",
@@ -25,10 +25,13 @@ function SignupForm(props) {
         if(res.status === 201){
             console.log('user create success')
             dispatch(setUser({
+                ...currentUser,
                 ...newUserMeta,
                 username: newUserMeta.firstName,
                 userId: res.data.customerId
             }))
+            dispatch(setLogin(true))
+            navigate("/")
         }
     }
 
