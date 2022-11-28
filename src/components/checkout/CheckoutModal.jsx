@@ -6,9 +6,7 @@ import { setLogin, setUser, currentUser } from '../../store/login-store';
 import BookingSummary from '../booking/BookingSummary';
 
 
-export default function CheckoutModal() {
-
-    
+export default function CheckoutModal() {    
   return (
     <Fragment>
         <div className="modal fade" id="checkoutModal" tabIndex="-1" aria-labelledby="" aria-hidden="true">
@@ -19,16 +17,17 @@ export default function CheckoutModal() {
                         <h3>
                             Order Confirmed
                         </h3>
-                        <BookingSummary/>
-                    
-                        <Link to='/my-bookings' className='btn__sign-up'>
-                            <button data-bs-dismiss="modal">
+                        <div className='my-5'>
+                            <BookingSummary/>
+                        </div>     
+                        <Link to='/my-bookings' className='my-3'>
+                            <button className='btn btn-primary' data-bs-dismiss="modal">
                                     Check out my bookings
                             </button>
                         </Link>
                         <br/>
-                        <Link to='/' className='btn-secondary'>
-                            <button data-bs-dismiss="modal">
+                        <Link to='/'  className='my-3'>
+                            <button className='btn bg-transparent' data-bs-dismiss="modal">
                                     Return home
                             </button>
                         </Link>
