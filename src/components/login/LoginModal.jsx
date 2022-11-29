@@ -2,17 +2,27 @@ import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector} from 'react-redux';
 import { setLogin, setUser, currentUser } from '../../store/login-store';
-import { login } from './../../api/user-api'
+import { login, getAllUsers } from './../../api/user-api'
 
 export default function LoginModal() {
     const dispatch = useDispatch()
     const [loginMeta, setLoginMeta] = useState({
-        username: 'user',
+        email: 'hello@partners.com',
         password: 'password'
     });
     const user = useSelector(currentUser)
     const initLogin = async (evt) =>{
         evt.preventDefault()
+
+        const users = getAllUsers();
+
+        users.forEach(u => {
+            if(u.email == loginMeta.email){
+                
+                return
+            }
+            
+        });
 
         login({
             un: loginMeta.username,
@@ -52,9 +62,9 @@ export default function LoginModal() {
                     </h3>
                     <form action="/">
                         <div className="form-group">
-                            <label htmlFor="care-user-un">Username</label>
-                            <input type="text" 
-                                data-name='username'
+                            <label htmlFor="care-user-un">Email</label>
+                            <input type="email" 
+                                data-name='email'
                                 onInput={handleChange}
                                 className="form-control"  id="inputUsername" aria-describedby="emailHelp" placeholder="user"/>
                         </div>
