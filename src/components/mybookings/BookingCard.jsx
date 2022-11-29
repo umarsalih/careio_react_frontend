@@ -27,7 +27,7 @@ const BookingCard = ({
         default: 
           return "Pending"
         case 0:
-          return "Cancelled"
+          return "Pending"
         case 1:
           return "Pending"  
         case 2:
