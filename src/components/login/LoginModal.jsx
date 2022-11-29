@@ -20,7 +20,7 @@ export default function LoginModal() {
         })
         
         dispatch(setUser({
-            ...currentUser,
+            ...user,
             username: loginMeta.username
         }))
         dispatch(setLogin(true))

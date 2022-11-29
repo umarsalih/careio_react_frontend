@@ -5,11 +5,13 @@ import BookingCard from '../mybookings/BookingCard';
 import { getBookings } from '../../api/booking-api';
 import { getJobLength } from '../../utils';
 import { allPartners, setAllPartners } from '../../store/partners-store';
+import { currentUser } from '../../store/login-store';
 import { getPartners } from '../../api/partners-api';
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function MyBookings() {
     const dispatch = useDispatch()
+    const user = useSelector(currentUser)
     const [bookings, setBookings] = useState([])
     const [partners, setPartners] = useState([])
 
@@ -54,6 +56,7 @@ export default function MyBookings() {
                         {
                             Array.isArray(bookings) && 
                                 bookings.reverse().map( b => {
+                                    if(b.userId !== user.userId) return
                                     const bookingDate = b.bookingDate.substr(0,10);
                                     const startTime = b.startTime.substr(11,5);
                                     const endTime = b.endTime.substr(11,5);

@@ -6,7 +6,7 @@ const loginSlice = createSlice({
     isLoggedIn: false,
     user: {
       username: 'username',
-      userId: 1,
+      userId: 2,
       firstName: "Bob",
       lastName: "Doe",
       address: "Burnaby",
