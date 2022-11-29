@@ -46,7 +46,7 @@ function Nav() {
                                 <Fragment>
                                 <li>
                                     <span className='text-light'>
-                                    Welcome, {user.username}
+                                    Welcome, {user.firstName}
                                     </span>
                                 </li>
                                 <li>

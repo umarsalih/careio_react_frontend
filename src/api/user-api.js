@@ -73,7 +73,7 @@ export const createUser = async (userObj, cb) => {
 }
 
 export const getAllUsers = async(cb) => {
-    console.log('[getBookings]')
+    console.log('[getUsers]')
     try{
         const options = {
             method: 'GET',
@@ -85,7 +85,7 @@ export const getAllUsers = async(cb) => {
                 'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
             },
             json: true,
-            url: `${baseApi}/users`,
+            url: `${baseApi}/customers`,
             };
         const res = await axios(options);
         console.log({res})

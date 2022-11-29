@@ -1,1 +1,1 @@
-export const baseApi = "http://localhost:8080" // 'http://careioservices-env.eba-4fm5zmfm.ap-northeast-1.elasticbeanstalk.com' // 
+export const baseApi =  "http://localhost:8080" // 'http://careioservices-env.eba-4fm5zmfm.ap-northeast-1.elasticbeanstalk.com'

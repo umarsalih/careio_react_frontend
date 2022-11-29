@@ -14,30 +14,35 @@ export default function LoginModal() {
     const initLogin = async (evt) =>{
         evt.preventDefault()
 
-        const users = getAllUsers();
+        const users = await getAllUsers()
+        console.log({users})
 
-        users.forEach(u => {
+        let userFound
+        users.forEach((u) => {
+            console.log({u})
             if(u.email == loginMeta.email){
-                
-                return
+                userFound = u;
             }
-            
         });
+        console.log({userFound})
 
-        login({
-            un: loginMeta.username,
-            pw: loginMeta.password,
-        })
-        
-        dispatch(setUser({
-            ...user,
-            username: loginMeta.username
-        }))
-        dispatch(setLogin(true))
+        if (userFound && userFound.password == loginMeta.password){
+            dispatch(setUser({
+                ...user,
+                ...userFound,
+                email: loginMeta.email
+            }))
+            console.log({user})
+            dispatch(setLogin(true))
+        }else{
+            alert("Invalid email or password.")
+        }
         setLoginMeta({
             username: '',
             password: ''
         })
+        
+        
     }
 
     const handleChange = async(evt) =>{
@@ -66,7 +71,7 @@ export default function LoginModal() {
                             <input type="email" 
                                 data-name='email'
                                 onInput={handleChange}
-                                className="form-control"  id="inputUsername" aria-describedby="emailHelp" placeholder="user"/>
+                                className="form-control" id="inputUsername" aria-describedby="" placeholder="user@email.com"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="care_user-pw">Password</label>
