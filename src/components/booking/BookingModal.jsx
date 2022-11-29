@@ -131,9 +131,6 @@ export default function BookingModal() {
                             <h3>
                             Booking {partner.firstName} {partner.lastName}
                             </h3>
-
-                            {bookingDetails.selectedServices.map(s => <>s, </>)}
-
                             <div className='booking-form text-left'>
                                 <div className="my-4">
                                     <h4>Price Per Hour</h4>

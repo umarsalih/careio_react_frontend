@@ -53,9 +53,11 @@ const BookingCard = ({
 
           <div className='otherBookingDetails'>
           <div className='cellLeft'>SERVICE TYPE <br/> 
-          {
-            services
-          }
+          <ul>            
+            {
+              services.map((s,i)=> <li>{resolveIdToService(s)}</li>) 
+            }
+          </ul>
           
           </div>
           <div className='cellRight'>APPOINTMENT HOUR <br/> {startTime} - {endTime}</div>
