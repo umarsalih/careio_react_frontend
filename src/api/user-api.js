@@ -1,4 +1,4 @@
-import { baseApi } from "./index";
+import { baseApi, baseAuth } from "./index";
 import axios from 'axios';
 var basic = require('basic-authorization-header');
 window.Buffer = window.Buffer || require("buffer").Buffer; 
@@ -42,7 +42,8 @@ export const createUser = async (userObj, cb) => {
             "contact" : "778292183",
             "address" : "macci address",
             "city" : "Surrey",
-            "province" : "British Columbia" 
+            "province" : "British Columbia" ,
+            "roles" : "USER"
           }
     }
     
@@ -54,7 +55,7 @@ export const createUser = async (userObj, cb) => {
             headers: { 
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
-                'Authorization' : "Basic cm9vdDpyb290",
+                'Authorization' : baseAuth,
                 'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
                 'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
             },
@@ -80,7 +81,7 @@ export const getAllUsers = async(cb) => {
             headers: { 
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
-                'Authorization' : "Basic cm9vdDpyb290",
+                'Authorization' : baseAuth,
                 'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
                 'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
             },

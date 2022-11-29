@@ -50,7 +50,7 @@ export default function Checkout() {
     var templateParams = {
       fname: partner.firstName,
       date: meta.date,
-      booking_id: `${partnerId}::${userId}`,
+      booking_id: `crio00${partnerId}x00${userId}`,
       send_to_email: partner.email,
       booking_start: timeStart,
       booking_end: timeEnd,
@@ -68,7 +68,7 @@ export default function Checkout() {
     })
   }
     
-c  const book = async () => {
+ const book = async () => {
       const bReq = await createBooking(bookingData)
       console.log({bReq})
   }

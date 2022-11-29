@@ -16,7 +16,8 @@ function SignupForm(props) {
         contact : "987 654 3210",
         address : "123A Something St, 6th Ave",
         city : "New Westminster",
-        province : "British Columbia" 
+        province : "British Columbia",
+        roles: "USER"
     });
 
     const initCreateUser = async (evt) => {

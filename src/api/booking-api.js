@@ -1,5 +1,7 @@
 import axios from 'axios';
-import {baseApi} from './index'
+import {baseApi, baseAuth} from './index'
+var basic = require('basic-authorization-header');
+window.Buffer = window.Buffer || require("buffer").Buffer; 
 
 export const createBooking = async (bookingObj, cb) => {
 
@@ -21,7 +23,7 @@ export const createBooking = async (bookingObj, cb) => {
             headers: { 
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
-                'Authorization' : "Basic cm9vdDpyb290",
+                'Authorization' : baseAuth,
                 'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
                 'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
             },
@@ -46,7 +48,7 @@ export const getBookings = async(cb) => {
             headers: { 
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
-                'Authorization' : "Basic cm9vdDpyb290",
+                'Authorization' : baseAuth,
                 'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
                 'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
             },
