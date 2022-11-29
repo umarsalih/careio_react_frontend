@@ -41,19 +41,33 @@ export default function Checkout() {
   }
   console.log({bookingData})
 
+
   function sendEmail(e) {
     console.log("Send email function called")
-    e.preventDefault()
+    e.preventDefault();
     book()
-    emailjs.sendForm('service_d03ugcn', 'template_o8f7r9m', e.target, 'j1SHfAPi7_cWPr_hK')
-      .then((result) => {
-          console.log(result.text);
-          console.log("Successful");
-      }, (error) => {
-          console.log(error.text);
-          console.log("Failure");
-      });
-  }    
+
+    var templateParams = {
+      fname: "Umar",
+      date: meta.date,
+      booking_id: "123",
+      send_to_email: "macci.hello@gmail.com",
+      booking_start: "07:00",
+      booking_end: "08:00",
+      total_amt: "$100",
+      message: "Thank you for your service"
+    };
+
+    emailjs.send('service_d03ugcn', 'template_o8f7r9m', templateParams, 'j1SHfAPi7_cWPr_hK').
+    then((result)=> {
+      console.log(result.text);
+      console.log("Successful")
+    }, (error) => {
+      console.log(error.text)
+      console.log("Failure")
+    })
+  }
+    
   const book = async () => {
       const bReq = await createBooking(bookingData)
       console.log({bReq})
