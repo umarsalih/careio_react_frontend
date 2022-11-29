@@ -86,7 +86,7 @@ export const getAllUsers = async(cb) => {
                 'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
             },
             json: true,
-            url: `${baseApi}/customers`,
+            url: `${baseApi}/customer`,
             };
         const res = await axios(options);
         console.log({res})
