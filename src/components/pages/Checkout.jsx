@@ -50,12 +50,12 @@ export default function Checkout() {
     var templateParams = {
       fname: partner.firstName,
       date: meta.date,
-      booking_id: `crio00${partnerId}x00${userId}`,
+      booking_id: `00${partnerId}crio00${userId}`,
       send_to_email: partner.email,
       booking_start: timeStart,
       booking_end: timeEnd,
       total_amt: totalPrice,
-      message: "Thank you for your service"
+      message: "Thank you for trusting Care.IO"
     };
 
     emailjs.send('service_d03ugcn', 'template_o8f7r9m', templateParams, 'j1SHfAPi7_cWPr_hK').
