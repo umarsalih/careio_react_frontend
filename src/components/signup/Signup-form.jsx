@@ -22,7 +22,10 @@ function SignupForm(props) {
 
     const initCreateUser = async (evt) => {
         evt.preventDefault();
-        const res =  await createUser(newUserMeta)
+        const res =  await createUser({
+            ...newUserMeta,
+            username: newUserMeta.email
+        })
         if(res.status === 201){
             console.log('user create success')
             console.log(res.data)
